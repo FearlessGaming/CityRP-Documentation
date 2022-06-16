@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<title>CityRP Documentation</title>
+    	<link rel="stylesheet" href="../ldoc.css" type="text/css">
+
+		<link rel="stylesheet" href="../style.css" type="text/css">
+	</head>
+	<body>
+	<div id="container">
+		<div id="product">
+			<div id="product_logo"></div>
+			<div id="product_name"><big><b></b></big></div>
+			<div id="product_description"></div>
+		</div>
+		<!-- id="product" -->
+
+		<div id="main">
+
+			<!-- Menu -->
+			<div id="navigation">
+				<div class="ll-kind-header">
+					<h1>[FL] CityRP</h1>
+				</div>
+				<div class="ll-kind-body">
+					<ul>
+						<li><a href="../index.html">Index</a></li>
+					</ul>
+				</div>
+
+				<div class="ll-kind-header"><h2>Contents</h2></div>
+				<ul class="ll-kind-body">
+					<li><a href="#Functions">Functions</a></li>
+					<li><a href="#Fields">Fields</a></li>
+				</ul>
+
+
+
+				<div class="ll-kind-header"><h2>Tools</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../tools/oillamp.html">oillamp</a></li>
+					<li><a href="../tools/shadowremover.html">shadowremover</a></li>
+					<li><a href="../tools/smartwelder.html">smartwelder</a></li>
+					<li><strong>stackerv2</strong></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Modules</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../modules/notification.html">notification</a></li>
+					<li><a href="../modules/cityrp.data.html">cityrp.data</a></li>
+					<li><a href="../modules/cityrp.lang.html">cityrp.lang</a></li>
+					<li><a href="../modules/gamemode.core.libraries.sh_plugin.html">gamemode.core.libraries.sh_plugin</a></li>
+					<li><a href="../modules/gamemode.core.libraries.sh_util.html">gamemode.core.libraries.sh_util</a></li>
+					<li><a href="../modules/gamemode.core.libraries.sv_discordrelay.html">gamemode.core.libraries.sv_discordrelay</a></li>
+					<li><a href="../modules/undo.html">undo</a></li>
+					<li><a href="../modules/gamemode.core.libraries.thirdparty.sh_date.html">gamemode.core.libraries.thirdparty.sh_date</a></li>
+					<li><a href="../modules/fn.html">fn</a></li>
+					<li><a href="../modules/gamemode.core.metatables.sv_player.html">gamemode.core.metatables.sv_player</a></li>
+					<li><a href="../modules/gamemode.core.sv_commands.html">gamemode.core.sv_commands</a></li>
+					<li><a href="../modules/properties.html">properties</a></li>
+					<li><a href="../modules/plugins._gprotect.sh_gprotect_baseconfig.html">plugins._gprotect.sh_gprotect_baseconfig</a></li>
+					<li><a href="../modules/plugins._simplepropprotect.cl_spp.html">plugins._simplepropprotect.cl_spp</a></li>
+					<li><a href="../modules/plugins._simplepropprotect.sh_cppi.html">plugins._simplepropprotect.sh_cppi</a></li>
+					<li><a href="../modules/plugins._simplepropprotect.sv_spp.html">plugins._simplepropprotect.sv_spp</a></li>
+					<li><a href="../modules/plugins.animations.cl_init.html">plugins.animations.cl_init</a></li>
+					<li><a href="../modules/plugins.animations.library.sh_boneanimlib.html">plugins.animations.library.sh_boneanimlib</a></li>
+					<li><a href="../modules/plugins.animations.sh_plugin.html">plugins.animations.sh_plugin</a></li>
+					<li><a href="../modules/plugins.animations.sv_init.html">plugins.animations.sv_init</a></li>
+					<li><a href="../modules/plugins.anonymous.cl_init.html">plugins.anonymous.cl_init</a></li>
+					<li><a href="../modules/plugins.anonymous.sh_plugin.html">plugins.anonymous.sh_plugin</a></li>
+					<li><a href="../modules/plugins.anonymous.sv_init.html">plugins.anonymous.sv_init</a></li>
+					<li><a href="../modules/plugins.area.cl_init.html">plugins.area.cl_init</a></li>
+					<li><a href="../modules/plugins.area.player_commands.html">plugins.area.player_commands</a></li>
+					<li><a href="../modules/plugins.area.sh_plugin.html">plugins.area.sh_plugin</a></li>
+					<li><a href="../modules/plugins.area.sv_init.html">plugins.area.sv_init</a></li>
+					<li><a href="../modules/plugins.autokick.cl_init.html">plugins.autokick.cl_init</a></li>
+					<li><a href="../modules/plugins.autokick.sh_plugin.html">plugins.autokick.sh_plugin</a></li>
+					<li><a href="../modules/plugins.autokick.sv_init.html">plugins.autokick.sv_init</a></li>
+					<li><a href="../modules/plugins.bodymechanics.sh_plugin.html">plugins.bodymechanics.sh_plugin</a></li>
+					<li><a href="../modules/plugins.breakfree.sh_plugin.html">plugins.breakfree.sh_plugin</a></li>
+					<li><a href="../modules/plugins.breakfree.sv_init.html">plugins.breakfree.sv_init</a></li>
+					<li><a href="../modules/plugins.car_freeze.sv_init.html">plugins.car_freeze.sv_init</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.cl_deliveryhud.html">plugins.deliveryjobs.cl_deliveryhud</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.cl_init.html">plugins.deliveryjobs.cl_init</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.cl_npcgui.html">plugins.deliveryjobs.cl_npcgui</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.sv_config.html">plugins.deliveryjobs.sv_config</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.sv_init.html">plugins.deliveryjobs.sv_init</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.sv_main.html">plugins.deliveryjobs.sv_main</a></li>
+					<li><a href="../modules/plugins.extramenu.cl_init.html">plugins.extramenu.cl_init</a></li>
+					<li><a href="../modules/plugins.images.library.lib_tdui.html">plugins.images.library.lib_tdui</a></li>
+					<li><a href="../modules/plugins.images.library.ui_nstable.html">plugins.images.library.ui_nstable</a></li>
+					<li><a href="../modules/plugins.propertysystem.cl_init.html">plugins.propertysystem.cl_init</a></li>
+					<li><a href="../modules/plugins.tassiacore.metatables.sv_player.html">plugins.tassiacore.metatables.sv_player</a></li>
+					<li><a href="../modules/plugins.vehicledescription.cl_init.html">plugins.vehicledescription.cl_init</a></li>
+					<li><a href="../modules/plugins.vehicledescription.sv_init.html">plugins.vehicledescription.sv_init</a></li>
+					<li><a href="../modules/plugins.vehicles.cl_init.html">plugins.vehicles.cl_init</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Panels</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../panels/ixLabel.html">ixLabel</a></li>
+					<li><a href="../panels/new_fl_derma_elements.html">new_fl_derma_elements</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Weapons</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../weapons/cityrp_blindfold.html">cityrp_blindfold</a></li>
+					<li><a href="../weapons/cityrp_carry.html">cityrp_carry</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Topics</h2></div>
+				<ul class="ll-kind-body ">
+					<li><a href="../topics/documentation.md.html">documentation</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Credits</h2></div>
+				<ul class="ll-kind-body">
+					<li><p>Generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a>.</p></li>
+					<li><p>Generated using the <a href="https://limelightgaming.info">Limelight Theme</a>.</p></li>
+					<li><p>Last Updated at 2022-06-16 22:19:44.</p></li>
+				</div>
+</div>
+
+
+</div>
+
+
+			<div id="content">
+				<div class="ll-module-header"><h1>Tool <code>stackerv2</code></h1></div>
+				<div class="ll-module-body">
+					-- Localized Functions &amp; Variables
+
+
+
+				</div>
+
+
+
+
+
+
+
+<div class="ll-module-header"><h2>Tool Overview</h2></div>
+<div class="ll-module-body">
+
+<h3><a href="#Functions">Functions</a></h3>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:GetCount">TOOL:GetCount()</a></td>
+	<td class="summary">--  TOOL:GetCount()
+--
+--  Gets the maximum amount of props that can be stacked at a time</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:GetDirection">TOOL:GetDirection()</a></td>
+	<td class="summary">--  TOOL:GetDirection()
+--
+--  Gets the direction to stack the props</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:GetStackerMode">TOOL:GetStackerMode()</a></td>
+	<td class="summary">--  TOOL:GetStackerMode()
+--
+--  Gets the stacker mode (1 = MODE<em>WORLD, 2 = MODE</em>PROP)</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:GetOffsetX">TOOL:GetOffsetX()</a></td>
+	<td class="summary">--  TOOL:GetOffsetX(), TOOL:GetOffsetY(), TOOL:GetOffsetZ(), TOOL:GetOffsetVector()
+--
+--  Gets the distance to offset the position of the stacked props.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:GetRotateP">TOOL:GetRotateP()</a></td>
+	<td class="summary">--  TOOL:GetRotateP(), TOOL:GetRotateY(), TOOL:GetRotateR(), TOOL:GetRotateAngle()
+--
+--  Gets the value to rotate the angle of the stacked props.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:ShouldApplyFreeze">TOOL:ShouldApplyFreeze()</a></td>
+	<td class="summary">--  TOOL:ShouldFreeze()
+--
+--  Returns true if the stacked props should be spawned frozen.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:ShouldApplyWeld">TOOL:ShouldApplyWeld()</a></td>
+	<td class="summary">--  TOOL:ShouldWeld()
+--
+--  Returns true if the stacked props should be welded together.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:ShouldApplyNoCollide">TOOL:ShouldApplyNoCollide()</a></td>
+	<td class="summary">--  TOOL:ShouldNoCollide()
+--
+--  Returns true if the stacked props should be nocollided with each other.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:ShouldStackRelative">TOOL:ShouldStackRelative()</a></td>
+	<td class="summary">--  TOOL:ShouldStackRelative()
+--
+--  Returns true if the stacked props should be stacked relative to the new rotation.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:ShouldGhostAll">TOOL:ShouldGhostAll()</a></td>
+	<td class="summary">--  TOOL:ShouldGhostAll()
+--
+--  Returns true if the stacked props should all be ghosted or if only the
+--  first stacked prop should be ghosted.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:ShouldAddHalos">TOOL:ShouldAddHalos()</a></td>
+	<td class="summary">--  TOOL:ShouldAddHalos(), TOOL:GetHaloR(), TOOL:GetHaloG(), TOOL:GetHaloB() TOOL:GetHaloA() TOOL:GetHaloColor()
+--
+--  Returns true if the stacked props should have halos drawn on them for added visibility.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:ShouldApplyMaterial">TOOL:ShouldApplyMaterial()</a></td>
+	<td class="summary">--  TOOL:ShouldApplyMaterial()
+--
+--  Returns true if the stacked props should have the original prop's material applied.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:ShouldApplyColor">TOOL:ShouldApplyColor()</a></td>
+	<td class="summary">--  TOOL:ShouldApplyColor()
+--
+--  Returns true if the stacked props should have the original prop's color applied.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:ShouldApplyPhysicalProperties">TOOL:ShouldApplyPhysicalProperties()</a></td>
+	<td class="summary">--  TOOL:ShouldApplyPhysicalProperties()
+--
+--  Returns true if the stacked props should have the original prop's physicsl properties
+--  applied, including gravity, physics material, and weight.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:GetDelay">TOOL:GetDelay()</a></td>
+	<td class="summary">--  TOOL:GetDelay()
+--
+--  Returns the time in seconds that must pass before a player can use stacker again.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:Deploy">TOOL:Deploy()</a></td>
+	<td class="summary">--
+--   TOOL:Deploy()
+--
+--  Called when the player brings out this tool.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:Holster">TOOL:Holster()</a></td>
+	<td class="summary">--
+--   TOOL:Holster()
+--
+--  Called when the player switches to a different tool.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:OnRemove">TOOL:OnRemove()</a></td>
+	<td class="summary">--
+--   TOOL:OnRemove()
+--
+--  Should be called when the toolgun is somehow removed, but more than likely
+--  doesn't get called due to the way the gmod_tool was coded.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:OnDrop">TOOL:OnDrop()</a></td>
+	<td class="summary">--
+--   TOOL:OnDrop()
+--
+--  Should be called when when the toolgun is dropped, but more than likely
+--  doesn't get called due to the way to gmod_tool was coded.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:LeftClick">TOOL:LeftClick(trace)</a></td>
+	<td class="summary">--
+--  TOOL:LeftClick( table )
+--
+--  Attempts to create a stack of props relative to the entity being left clicked.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:ApplyMaterial">TOOL:ApplyMaterial(ent, material)</a></td>
+	<td class="summary">--
+--  TOOL:ApplyMaterial( entity, string )
+--
+--  Attempts to apply the original entity's material onto the stacked props.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:ApplyColor">TOOL:ApplyColor(ent, color)</a></td>
+	<td class="summary">--
+--  TOOL:ApplyColor( entity, color )
+--
+--  Attempts to apply the original entity's color onto the stacked props.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:ApplyFreeze">TOOL:ApplyFreeze(ply, ent)</a></td>
+	<td class="summary">--
+--  TOOL:ApplyFreeze( player, entity )
+--
+--  Attempts to spawn the stacked props frozen in place.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:ApplyWeld">TOOL:ApplyWeld(lastEnt, newEnt)</a></td>
+	<td class="summary">--
+--  TOOL:ApplyWeld( entity, entity )
+--
+--  Attempts to weld the new entity to the last entity</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:ApplyNoCollide">TOOL:ApplyNoCollide(stackerEnts)</a></td>
+	<td class="summary">--
+--  TOOL:ApplyNoCollide( table )
+--
+--  Attempts to nocollide all stacker entities with one another.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:ApplyPhysicalProperties">TOOL:ApplyPhysicalProperties(original, newEnt, boneID, properties)</a></td>
+	<td class="summary">--
+--  TOOL:ApplyPhysicalProperties( entity, entity, number, table )
+--
+--  Attempts to apply the original entity's Gravity/Physics Material properties
+--  and weight onto the stacked propa.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:CreateGhostStack">TOOL:CreateGhostStack(ent)</a></td>
+	<td class="summary">--
+--  TOOL:CreateGhostStack( entity, vector, angle )
+--
+--  Attempts to create a stack of ghosted props on the prop the player is currently
+--  looking at before they actually left click to create the stack.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:ReleaseGhostStack">TOOL:ReleaseGhostStack()</a></td>
+	<td class="summary">--
+--  TOOL:ReleaseGhostStack()
+--
+--  Attempts to remove all ghosted props in the stack.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:CheckGhostStack">TOOL:CheckGhostStack()</a></td>
+	<td class="summary">--
+--  TOOL:CheckGhostStack()
+--
+--  Attempts to validate the status of the ghosted props in the stack.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:UpdateGhostStack">TOOL:UpdateGhostStack(ent)</a></td>
+	<td class="summary">--
+--  TOOL:UpdateGhostStack( entity )
+--
+--  Attempts to update the positions and angles of all ghosted props in the stack.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL:Think">TOOL:Think()</a></td>
+	<td class="summary">--
+--  TOOL:Think()
+--
+--  While the stacker tool is equipped, this function will check to see if
+--  the player is looking at any props and attempt to create the stack of
+--  ghosted props before the players actually left clicks.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TOOL.BuildCPanel">TOOL.BuildCPanel(cpanel)</a></td>
+	<td class="summary">--
+--  TOOL.BuildCPanel( panel )
+--
+--  Builds the control panel menu that can be seen when holding Q and accessing
+--  the stacker menu.</td>
+	</tr>
+</table>
+<h3><a href="#Fields">Fields</a></h3>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#TOOL.Category">TOOL.Category</a></td>
+	<td class="summary">-- Tool Settings</td>
+	</tr>
+</table>
+</div>
+
+	<div class="ll-module-header"><h2 class="section-header "><a name="Functions"></a>Functions</h2></div>
+    <div class="ll-module-body">
+    <dl class="function">
+    <dt>
+    <a name = "TOOL:GetCount"></a>
+    <strong>TOOL:GetCount()</strong>
+    </dt>
+    <dd>
+    --  TOOL:GetCount()
+--
+--  Gets the maximum amount of props that can be stacked at a time
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:GetDirection"></a>
+    <strong>TOOL:GetDirection()</strong>
+    </dt>
+    <dd>
+    --  TOOL:GetDirection()
+--
+--  Gets the direction to stack the props
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:GetStackerMode"></a>
+    <strong>TOOL:GetStackerMode()</strong>
+    </dt>
+    <dd>
+    --  TOOL:GetStackerMode()
+--
+--  Gets the stacker mode (1 = MODE<em>WORLD, 2 = MODE</em>PROP)
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:GetOffsetX"></a>
+    <strong>TOOL:GetOffsetX()</strong>
+    </dt>
+    <dd>
+    --  TOOL:GetOffsetX(), TOOL:GetOffsetY(), TOOL:GetOffsetZ(), TOOL:GetOffsetVector()
+--
+--  Gets the distance to offset the position of the stacked props.
+--  These values are clamped to prevent server crashes from players
+--  using very high offset values.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:GetRotateP"></a>
+    <strong>TOOL:GetRotateP()</strong>
+    </dt>
+    <dd>
+    --  TOOL:GetRotateP(), TOOL:GetRotateY(), TOOL:GetRotateR(), TOOL:GetRotateAngle()
+--
+--  Gets the value to rotate the angle of the stacked props.
+--  These values are clamped to prevent server crashes from players
+--  using very high rotation values.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:ShouldApplyFreeze"></a>
+    <strong>TOOL:ShouldApplyFreeze()</strong>
+    </dt>
+    <dd>
+    --  TOOL:ShouldFreeze()
+--
+--  Returns true if the stacked props should be spawned frozen.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:ShouldApplyWeld"></a>
+    <strong>TOOL:ShouldApplyWeld()</strong>
+    </dt>
+    <dd>
+    --  TOOL:ShouldWeld()
+--
+--  Returns true if the stacked props should be welded together.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:ShouldApplyNoCollide"></a>
+    <strong>TOOL:ShouldApplyNoCollide()</strong>
+    </dt>
+    <dd>
+    --  TOOL:ShouldNoCollide()
+--
+--  Returns true if the stacked props should be nocollided with each other.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:ShouldStackRelative"></a>
+    <strong>TOOL:ShouldStackRelative()</strong>
+    </dt>
+    <dd>
+    --  TOOL:ShouldStackRelative()
+--
+--  Returns true if the stacked props should be stacked relative to the new rotation.
+--  Using this setting will allow you to create curved structures out of props.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:ShouldGhostAll"></a>
+    <strong>TOOL:ShouldGhostAll()</strong>
+    </dt>
+    <dd>
+    --  TOOL:ShouldGhostAll()
+--
+--  Returns true if the stacked props should all be ghosted or if only the
+--  first stacked prop should be ghosted.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:ShouldAddHalos"></a>
+    <strong>TOOL:ShouldAddHalos()</strong>
+    </dt>
+    <dd>
+    --  TOOL:ShouldAddHalos(), TOOL:GetHaloR(), TOOL:GetHaloG(), TOOL:GetHaloB() TOOL:GetHaloA() TOOL:GetHaloColor()
+--
+--  Returns true if the stacked props should have halos drawn on them for added visibility.
+--  Gets the RGBA values of the halo color.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:ShouldApplyMaterial"></a>
+    <strong>TOOL:ShouldApplyMaterial()</strong>
+    </dt>
+    <dd>
+    --  TOOL:ShouldApplyMaterial()
+--
+--  Returns true if the stacked props should have the original prop's material applied.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:ShouldApplyColor"></a>
+    <strong>TOOL:ShouldApplyColor()</strong>
+    </dt>
+    <dd>
+    --  TOOL:ShouldApplyColor()
+--
+--  Returns true if the stacked props should have the original prop's color applied.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:ShouldApplyPhysicalProperties"></a>
+    <strong>TOOL:ShouldApplyPhysicalProperties()</strong>
+    </dt>
+    <dd>
+    --  TOOL:ShouldApplyPhysicalProperties()
+--
+--  Returns true if the stacked props should have the original prop's physicsl properties
+--  applied, including gravity, physics material, and weight.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:GetDelay"></a>
+    <strong>TOOL:GetDelay()</strong>
+    </dt>
+    <dd>
+    --  TOOL:GetDelay()
+--
+--  Returns the time in seconds that must pass before a player can use stacker again.
+--  For example, if stackerv2_delay is set to 3, a player must wait 3 seconds in between each
+--  use of stacker's left click.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:Deploy"></a>
+    <strong>TOOL:Deploy()</strong>
+    </dt>
+    <dd>
+    --
+--   TOOL:Deploy()
+--
+--  Called when the player brings out this tool.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:Holster"></a>
+    <strong>TOOL:Holster()</strong>
+    </dt>
+    <dd>
+    --
+--   TOOL:Holster()
+--
+--  Called when the player switches to a different tool.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:OnRemove"></a>
+    <strong>TOOL:OnRemove()</strong>
+    </dt>
+    <dd>
+    --
+--   TOOL:OnRemove()
+--
+--  Should be called when the toolgun is somehow removed, but more than likely
+--  doesn't get called due to the way the gmod_tool was coded.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:OnDrop"></a>
+    <strong>TOOL:OnDrop()</strong>
+    </dt>
+    <dd>
+    --
+--   TOOL:OnDrop()
+--
+--  Should be called when when the toolgun is dropped, but more than likely
+--  doesn't get called due to the way to gmod_tool was coded.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:LeftClick"></a>
+    <strong>TOOL:LeftClick(trace)</strong>
+    </dt>
+    <dd>
+    --
+--  TOOL:LeftClick( table )
+--
+--  Attempts to create a stack of props relative to the entity being left clicked.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">trace</span>
+
+
+
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:ApplyMaterial"></a>
+    <strong>TOOL:ApplyMaterial(ent, material)</strong>
+    </dt>
+    <dd>
+    --
+--  TOOL:ApplyMaterial( entity, string )
+--
+--  Attempts to apply the original entity's material onto the stacked props.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ent</span>
+
+
+
+        </li>
+        <li><span class="parameter">material</span>
+
+
+
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:ApplyColor"></a>
+    <strong>TOOL:ApplyColor(ent, color)</strong>
+    </dt>
+    <dd>
+    --
+--  TOOL:ApplyColor( entity, color )
+--
+--  Attempts to apply the original entity's color onto the stacked props.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ent</span>
+
+
+
+        </li>
+        <li><span class="parameter">color</span>
+
+
+
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:ApplyFreeze"></a>
+    <strong>TOOL:ApplyFreeze(ply, ent)</strong>
+    </dt>
+    <dd>
+    --
+--  TOOL:ApplyFreeze( player, entity )
+--
+--  Attempts to spawn the stacked props frozen in place.  If not, spawn them unfrozen.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+
+
+
+        </li>
+        <li><span class="parameter">ent</span>
+
+
+
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:ApplyWeld"></a>
+    <strong>TOOL:ApplyWeld(lastEnt, newEnt)</strong>
+    </dt>
+    <dd>
+    --
+--  TOOL:ApplyWeld( entity, entity )
+--
+--  Attempts to weld the new entity to the last entity
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">lastEnt</span>
+
+
+
+        </li>
+        <li><span class="parameter">newEnt</span>
+
+
+
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:ApplyNoCollide"></a>
+    <strong>TOOL:ApplyNoCollide(stackerEnts)</strong>
+    </dt>
+    <dd>
+    --
+--  TOOL:ApplyNoCollide( table )
+--
+--  Attempts to nocollide all stacker entities with one another.
+--  This is roughly an O( ![N-1] ) operation, better than the previous O ( N^2 ) version.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">stackerEnts</span>
+
+
+
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:ApplyPhysicalProperties"></a>
+    <strong>TOOL:ApplyPhysicalProperties(original, newEnt, boneID, properties)</strong>
+    </dt>
+    <dd>
+    --
+--  TOOL:ApplyPhysicalProperties( entity, entity, number, table )
+--
+--  Attempts to apply the original entity's Gravity/Physics Material properties
+--  and weight onto the stacked propa.
+--
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">original</span>
+
+
+
+        </li>
+        <li><span class="parameter">newEnt</span>
+
+
+
+        </li>
+        <li><span class="parameter">boneID</span>
+
+
+
+        </li>
+        <li><span class="parameter">properties</span>
+
+
+
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:CreateGhostStack"></a>
+    <strong>TOOL:CreateGhostStack(ent)</strong>
+    </dt>
+    <dd>
+    --
+--  TOOL:CreateGhostStack( entity, vector, angle )
+--
+--  Attempts to create a stack of ghosted props on the prop the player is currently
+--  looking at before they actually left click to create the stack.  This acts
+--  as a visual aid for the player so they can see the results without actually creating
+--  the entities yet (if in multiplayer).
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ent</span>
+
+
+
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:ReleaseGhostStack"></a>
+    <strong>TOOL:ReleaseGhostStack()</strong>
+    </dt>
+    <dd>
+    --
+--  TOOL:ReleaseGhostStack()
+--
+--  Attempts to remove all ghosted props in the stack.
+--  This occurs when the player stops looking at a prop with the stacker tool equipped.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:CheckGhostStack"></a>
+    <strong>TOOL:CheckGhostStack()</strong>
+    </dt>
+    <dd>
+    --
+--  TOOL:CheckGhostStack()
+--
+--  Attempts to validate the status of the ghosted props in the stack.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:UpdateGhostStack"></a>
+    <strong>TOOL:UpdateGhostStack(ent)</strong>
+    </dt>
+    <dd>
+    --
+--  TOOL:UpdateGhostStack( entity )
+--
+--  Attempts to update the positions and angles of all ghosted props in the stack.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ent</span>
+
+
+
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL:Think"></a>
+    <strong>TOOL:Think()</strong>
+    </dt>
+    <dd>
+    --
+--  TOOL:Think()
+--
+--  While the stacker tool is equipped, this function will check to see if
+--  the player is looking at any props and attempt to create the stack of
+--  ghosted props before the players actually left clicks.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "TOOL.BuildCPanel"></a>
+    <strong>TOOL.BuildCPanel(cpanel)</strong>
+    </dt>
+    <dd>
+    --
+--  TOOL.BuildCPanel( panel )
+--
+--  Builds the control panel menu that can be seen when holding Q and accessing
+--  the stacker menu.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">cpanel</span>
+
+
+
+        </li>
+    </ul>
+</dd>
+</dl>
+</div>
+	<div class="ll-module-header"><h2 class="section-header "><a name="Fields"></a>Fields</h2></div>
+    <div class="ll-module-body">
+    <dl class="function">
+    <dt>
+    <a name = "TOOL.Category"></a>
+    <strong>TOOL.Category</strong>
+    </dt>
+    <dd>
+    -- Tool Settings
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+</dl>
+</div>
+</div>
+</div> <!-- id="content" -->
+</div>
+</div> <!-- id="main" -->
+<br class="clearfix">
+</div> <!-- id="container" -->
+</body>
+</html>

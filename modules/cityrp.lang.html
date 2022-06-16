@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<title>CityRP Documentation</title>
+    	<link rel="stylesheet" href="../ldoc.css" type="text/css">
+
+		<link rel="stylesheet" href="../style.css" type="text/css">
+	</head>
+	<body>
+	<div id="container">
+		<div id="product">
+			<div id="product_logo"></div>
+			<div id="product_name"><big><b></b></big></div>
+			<div id="product_description"></div>
+		</div>
+		<!-- id="product" -->
+
+		<div id="main">
+
+			<!-- Menu -->
+			<div id="navigation">
+				<div class="ll-kind-header">
+					<h1>[FL] CityRP</h1>
+				</div>
+				<div class="ll-kind-body">
+					<ul>
+						<li><a href="../index.html">Index</a></li>
+					</ul>
+				</div>
+
+				<div class="ll-kind-header"><h2>Contents</h2></div>
+				<ul class="ll-kind-body">
+					<li><a href="#Functions">Functions</a></li>
+				</ul>
+
+
+
+				<div class="ll-kind-header"><h2>Modules</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../modules/notification.html">notification</a></li>
+					<li><a href="../modules/cityrp.data.html">cityrp.data</a></li>
+					<li><strong>cityrp.lang</strong></li>
+					<li><a href="../modules/gamemode.core.libraries.sh_plugin.html">gamemode.core.libraries.sh_plugin</a></li>
+					<li><a href="../modules/gamemode.core.libraries.sh_util.html">gamemode.core.libraries.sh_util</a></li>
+					<li><a href="../modules/gamemode.core.libraries.sv_discordrelay.html">gamemode.core.libraries.sv_discordrelay</a></li>
+					<li><a href="../modules/undo.html">undo</a></li>
+					<li><a href="../modules/gamemode.core.libraries.thirdparty.sh_date.html">gamemode.core.libraries.thirdparty.sh_date</a></li>
+					<li><a href="../modules/fn.html">fn</a></li>
+					<li><a href="../modules/gamemode.core.metatables.sv_player.html">gamemode.core.metatables.sv_player</a></li>
+					<li><a href="../modules/gamemode.core.sv_commands.html">gamemode.core.sv_commands</a></li>
+					<li><a href="../modules/properties.html">properties</a></li>
+					<li><a href="../modules/plugins._gprotect.sh_gprotect_baseconfig.html">plugins._gprotect.sh_gprotect_baseconfig</a></li>
+					<li><a href="../modules/plugins._simplepropprotect.cl_spp.html">plugins._simplepropprotect.cl_spp</a></li>
+					<li><a href="../modules/plugins._simplepropprotect.sh_cppi.html">plugins._simplepropprotect.sh_cppi</a></li>
+					<li><a href="../modules/plugins._simplepropprotect.sv_spp.html">plugins._simplepropprotect.sv_spp</a></li>
+					<li><a href="../modules/plugins.animations.cl_init.html">plugins.animations.cl_init</a></li>
+					<li><a href="../modules/plugins.animations.library.sh_boneanimlib.html">plugins.animations.library.sh_boneanimlib</a></li>
+					<li><a href="../modules/plugins.animations.sh_plugin.html">plugins.animations.sh_plugin</a></li>
+					<li><a href="../modules/plugins.animations.sv_init.html">plugins.animations.sv_init</a></li>
+					<li><a href="../modules/plugins.anonymous.cl_init.html">plugins.anonymous.cl_init</a></li>
+					<li><a href="../modules/plugins.anonymous.sh_plugin.html">plugins.anonymous.sh_plugin</a></li>
+					<li><a href="../modules/plugins.anonymous.sv_init.html">plugins.anonymous.sv_init</a></li>
+					<li><a href="../modules/plugins.area.cl_init.html">plugins.area.cl_init</a></li>
+					<li><a href="../modules/plugins.area.player_commands.html">plugins.area.player_commands</a></li>
+					<li><a href="../modules/plugins.area.sh_plugin.html">plugins.area.sh_plugin</a></li>
+					<li><a href="../modules/plugins.area.sv_init.html">plugins.area.sv_init</a></li>
+					<li><a href="../modules/plugins.autokick.cl_init.html">plugins.autokick.cl_init</a></li>
+					<li><a href="../modules/plugins.autokick.sh_plugin.html">plugins.autokick.sh_plugin</a></li>
+					<li><a href="../modules/plugins.autokick.sv_init.html">plugins.autokick.sv_init</a></li>
+					<li><a href="../modules/plugins.bodymechanics.sh_plugin.html">plugins.bodymechanics.sh_plugin</a></li>
+					<li><a href="../modules/plugins.breakfree.sh_plugin.html">plugins.breakfree.sh_plugin</a></li>
+					<li><a href="../modules/plugins.breakfree.sv_init.html">plugins.breakfree.sv_init</a></li>
+					<li><a href="../modules/plugins.car_freeze.sv_init.html">plugins.car_freeze.sv_init</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.cl_deliveryhud.html">plugins.deliveryjobs.cl_deliveryhud</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.cl_init.html">plugins.deliveryjobs.cl_init</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.cl_npcgui.html">plugins.deliveryjobs.cl_npcgui</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.sv_config.html">plugins.deliveryjobs.sv_config</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.sv_init.html">plugins.deliveryjobs.sv_init</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.sv_main.html">plugins.deliveryjobs.sv_main</a></li>
+					<li><a href="../modules/plugins.extramenu.cl_init.html">plugins.extramenu.cl_init</a></li>
+					<li><a href="../modules/plugins.images.library.lib_tdui.html">plugins.images.library.lib_tdui</a></li>
+					<li><a href="../modules/plugins.images.library.ui_nstable.html">plugins.images.library.ui_nstable</a></li>
+					<li><a href="../modules/plugins.propertysystem.cl_init.html">plugins.propertysystem.cl_init</a></li>
+					<li><a href="../modules/plugins.tassiacore.metatables.sv_player.html">plugins.tassiacore.metatables.sv_player</a></li>
+					<li><a href="../modules/plugins.vehicledescription.cl_init.html">plugins.vehicledescription.cl_init</a></li>
+					<li><a href="../modules/plugins.vehicledescription.sv_init.html">plugins.vehicledescription.sv_init</a></li>
+					<li><a href="../modules/plugins.vehicles.cl_init.html">plugins.vehicles.cl_init</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Panels</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../panels/ixLabel.html">ixLabel</a></li>
+					<li><a href="../panels/new_fl_derma_elements.html">new_fl_derma_elements</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Weapons</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../weapons/cityrp_blindfold.html">cityrp_blindfold</a></li>
+					<li><a href="../weapons/cityrp_carry.html">cityrp_carry</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Tools</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../tools/oillamp.html">oillamp</a></li>
+					<li><a href="../tools/shadowremover.html">shadowremover</a></li>
+					<li><a href="../tools/smartwelder.html">smartwelder</a></li>
+					<li><a href="../tools/stackerv2.html">stackerv2</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Topics</h2></div>
+				<ul class="ll-kind-body ">
+					<li><a href="../topics/documentation.md.html">documentation</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Credits</h2></div>
+				<ul class="ll-kind-body">
+					<li><p>Generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a>.</p></li>
+					<li><p>Generated using the <a href="https://limelightgaming.info">Limelight Theme</a>.</p></li>
+					<li><p>Last Updated at 2022-06-16 22:19:44.</p></li>
+				</div>
+</div>
+
+
+</div>
+
+
+			<div id="content">
+				<div class="ll-module-header"><h1>Module <code>cityrp.lang</code></h1></div>
+				<div class="ll-module-body">
+					Multi-language phrase support.
+
+
+
+<p>Helix has support for multiple languages, and you can easily leverage this system for use in your own schema, plugins, etc.
+Languages will be loaded from the schema and any plugins in <code>languages/sh_languagename.lua</code>, where <code>languagename</code> is the id of a
+language (<code>english</code> for English, <code>french</code> for French, etc). The structure of a language file is a table of phrases with the key
+as its phrase ID and the value as its translation for that language. For example, in <code>plugins/area/sh_english.lua</code>:</p>
+
+<pre>
+LANGUAGE = {
+    area = <span class="string">"Area"</span>,
+    areas = <span class="string">"Areas"</span>,
+    areaEditMode = <span class="string">"Area Edit Mode"</span>,
+    <span class="comment">-- etc.
+</span>}
+</pre>
+
+<p>The phrases defined in these language files can be used with the <code>L</code> global function:</p>
+
+<pre>
+<span class="global">print</span>(L(<span class="string">"areaEditMode"</span>))
+&gt; Area Edit Mode
+</pre>
+
+<p>All phrases are formatted with <a href="https://www.lua.org/manual/5.3/manual.html#pdf-string.format">string.format</a>, so if you wish to add some info in a phrase you can use standard Lua string
+formatting arguments:</p>
+
+<pre>
+<span class="global">print</span>(L(<span class="string">"areaDeleteConfirm"</span>, <span class="string">"Test"</span>))
+&gt; Are you sure you want to delete the area <span class="string">"Test"</span>?
+</pre>
+
+<p>Phrases are also usable on the server, but only when trying to localize a phrase based on a client's preferences. The server
+does not have a set language. An example:</p>
+
+<pre>
+Entity(<span class="number">1</span>):ChatPrint(L(<span class="string">"areaEditMode"</span>))
+&gt; <span class="comment">-- "Area Edit Mode" will print in the player's chatbox</span>
+</pre>
+
+
+				</div>
+
+
+
+
+
+
+
+<div class="ll-module-header"><h2>Module Overview</h2></div>
+<div class="ll-module-body">
+
+<h3><a href="#Functions">Functions</a></h3>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.lang.LoadFromDir"><span class='state state-client state-server'>cityrp.lang.LoadFromDir(directory)</span></a></td>
+	<td class="summary">Loads language files from a directory.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.lang.AddTable"><span class='state state-client state-server'>cityrp.lang.AddTable(language, data)</span></a></td>
+	<td class="summary">Adds phrases to a language.</td>
+	</tr>
+</table>
+</div>
+
+	<div class="ll-module-header"><h2 class="section-header "><a name="Functions"></a>Functions</h2></div>
+    <div class="ll-module-body">
+    <dl class="function">
+    <dt>
+    <a name = "cityrp.lang.LoadFromDir"></a>
+    <strong><span class='state state-client state-server'>cityrp.lang.LoadFromDir(directory)</span></strong>
+    </dt>
+    <dd>
+    Loads language files from a directory.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Internal:</h3>
+    <ul>
+         <span class='tag-internal'>This function is internal. Whilst you can call it, you probably shouldn't.</span>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">directory</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+         Directory to load language files from
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "cityrp.lang.AddTable"></a>
+    <strong><span class='state state-client state-server'>cityrp.lang.AddTable(language, data)</span></strong>
+    </dt>
+    <dd>
+    Adds phrases to a language.  This is used when you aren't adding entries through the files in the <code>languages/</code> folder. A
+ common use case is adding language phrases in a single-file plugin.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">language</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+         The ID of the language
+        </li>
+        <li><span class="parameter">data</span>
+            <span class="types"><span class="type">tab</span></span>
+         Language data to add to the given language
+        </li>
+    </ul>
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">cityrp.lang.AddTable(<span class="string">"english"</span>, {
+	myPhrase = <span class="string">"My Phrase"</span>
+})</pre>
+    </ul>
+</dd>
+</dl>
+</div>
+</div>
+</div> <!-- id="content" -->
+</div>
+</div> <!-- id="main" -->
+<br class="clearfix">
+</div> <!-- id="container" -->
+</body>
+</html>

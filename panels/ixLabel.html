@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<title>CityRP Documentation</title>
+    	<link rel="stylesheet" href="../ldoc.css" type="text/css">
+
+		<link rel="stylesheet" href="../style.css" type="text/css">
+	</head>
+	<body>
+	<div id="container">
+		<div id="product">
+			<div id="product_logo"></div>
+			<div id="product_name"><big><b></b></big></div>
+			<div id="product_description"></div>
+		</div>
+		<!-- id="product" -->
+
+		<div id="main">
+
+			<!-- Menu -->
+			<div id="navigation">
+				<div class="ll-kind-header">
+					<h1>[FL] CityRP</h1>
+				</div>
+				<div class="ll-kind-body">
+					<ul>
+						<li><a href="../index.html">Index</a></li>
+					</ul>
+				</div>
+
+				<div class="ll-kind-header"><h2>Contents</h2></div>
+				<ul class="ll-kind-body">
+					<li><a href="#Functions">Functions</a></li>
+				</ul>
+
+
+
+				<div class="ll-kind-header"><h2>Panels</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><strong>ixLabel</strong></li>
+					<li><a href="../panels/new_fl_derma_elements.html">new_fl_derma_elements</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Modules</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../modules/notification.html">notification</a></li>
+					<li><a href="../modules/cityrp.data.html">cityrp.data</a></li>
+					<li><a href="../modules/cityrp.lang.html">cityrp.lang</a></li>
+					<li><a href="../modules/gamemode.core.libraries.sh_plugin.html">gamemode.core.libraries.sh_plugin</a></li>
+					<li><a href="../modules/gamemode.core.libraries.sh_util.html">gamemode.core.libraries.sh_util</a></li>
+					<li><a href="../modules/gamemode.core.libraries.sv_discordrelay.html">gamemode.core.libraries.sv_discordrelay</a></li>
+					<li><a href="../modules/undo.html">undo</a></li>
+					<li><a href="../modules/gamemode.core.libraries.thirdparty.sh_date.html">gamemode.core.libraries.thirdparty.sh_date</a></li>
+					<li><a href="../modules/fn.html">fn</a></li>
+					<li><a href="../modules/gamemode.core.metatables.sv_player.html">gamemode.core.metatables.sv_player</a></li>
+					<li><a href="../modules/gamemode.core.sv_commands.html">gamemode.core.sv_commands</a></li>
+					<li><a href="../modules/properties.html">properties</a></li>
+					<li><a href="../modules/plugins._gprotect.sh_gprotect_baseconfig.html">plugins._gprotect.sh_gprotect_baseconfig</a></li>
+					<li><a href="../modules/plugins._simplepropprotect.cl_spp.html">plugins._simplepropprotect.cl_spp</a></li>
+					<li><a href="../modules/plugins._simplepropprotect.sh_cppi.html">plugins._simplepropprotect.sh_cppi</a></li>
+					<li><a href="../modules/plugins._simplepropprotect.sv_spp.html">plugins._simplepropprotect.sv_spp</a></li>
+					<li><a href="../modules/plugins.animations.cl_init.html">plugins.animations.cl_init</a></li>
+					<li><a href="../modules/plugins.animations.library.sh_boneanimlib.html">plugins.animations.library.sh_boneanimlib</a></li>
+					<li><a href="../modules/plugins.animations.sh_plugin.html">plugins.animations.sh_plugin</a></li>
+					<li><a href="../modules/plugins.animations.sv_init.html">plugins.animations.sv_init</a></li>
+					<li><a href="../modules/plugins.anonymous.cl_init.html">plugins.anonymous.cl_init</a></li>
+					<li><a href="../modules/plugins.anonymous.sh_plugin.html">plugins.anonymous.sh_plugin</a></li>
+					<li><a href="../modules/plugins.anonymous.sv_init.html">plugins.anonymous.sv_init</a></li>
+					<li><a href="../modules/plugins.area.cl_init.html">plugins.area.cl_init</a></li>
+					<li><a href="../modules/plugins.area.player_commands.html">plugins.area.player_commands</a></li>
+					<li><a href="../modules/plugins.area.sh_plugin.html">plugins.area.sh_plugin</a></li>
+					<li><a href="../modules/plugins.area.sv_init.html">plugins.area.sv_init</a></li>
+					<li><a href="../modules/plugins.autokick.cl_init.html">plugins.autokick.cl_init</a></li>
+					<li><a href="../modules/plugins.autokick.sh_plugin.html">plugins.autokick.sh_plugin</a></li>
+					<li><a href="../modules/plugins.autokick.sv_init.html">plugins.autokick.sv_init</a></li>
+					<li><a href="../modules/plugins.bodymechanics.sh_plugin.html">plugins.bodymechanics.sh_plugin</a></li>
+					<li><a href="../modules/plugins.breakfree.sh_plugin.html">plugins.breakfree.sh_plugin</a></li>
+					<li><a href="../modules/plugins.breakfree.sv_init.html">plugins.breakfree.sv_init</a></li>
+					<li><a href="../modules/plugins.car_freeze.sv_init.html">plugins.car_freeze.sv_init</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.cl_deliveryhud.html">plugins.deliveryjobs.cl_deliveryhud</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.cl_init.html">plugins.deliveryjobs.cl_init</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.cl_npcgui.html">plugins.deliveryjobs.cl_npcgui</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.sv_config.html">plugins.deliveryjobs.sv_config</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.sv_init.html">plugins.deliveryjobs.sv_init</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.sv_main.html">plugins.deliveryjobs.sv_main</a></li>
+					<li><a href="../modules/plugins.extramenu.cl_init.html">plugins.extramenu.cl_init</a></li>
+					<li><a href="../modules/plugins.images.library.lib_tdui.html">plugins.images.library.lib_tdui</a></li>
+					<li><a href="../modules/plugins.images.library.ui_nstable.html">plugins.images.library.ui_nstable</a></li>
+					<li><a href="../modules/plugins.propertysystem.cl_init.html">plugins.propertysystem.cl_init</a></li>
+					<li><a href="../modules/plugins.tassiacore.metatables.sv_player.html">plugins.tassiacore.metatables.sv_player</a></li>
+					<li><a href="../modules/plugins.vehicledescription.cl_init.html">plugins.vehicledescription.cl_init</a></li>
+					<li><a href="../modules/plugins.vehicledescription.sv_init.html">plugins.vehicledescription.sv_init</a></li>
+					<li><a href="../modules/plugins.vehicles.cl_init.html">plugins.vehicles.cl_init</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Weapons</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../weapons/cityrp_blindfold.html">cityrp_blindfold</a></li>
+					<li><a href="../weapons/cityrp_carry.html">cityrp_carry</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Tools</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../tools/oillamp.html">oillamp</a></li>
+					<li><a href="../tools/shadowremover.html">shadowremover</a></li>
+					<li><a href="../tools/smartwelder.html">smartwelder</a></li>
+					<li><a href="../tools/stackerv2.html">stackerv2</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Topics</h2></div>
+				<ul class="ll-kind-body ">
+					<li><a href="../topics/documentation.md.html">documentation</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Credits</h2></div>
+				<ul class="ll-kind-body">
+					<li><p>Generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a>.</p></li>
+					<li><p>Generated using the <a href="https://limelightgaming.info">Limelight Theme</a>.</p></li>
+					<li><p>Last Updated at 2022-06-16 22:19:44.</p></li>
+				</div>
+</div>
+
+
+</div>
+
+
+			<div id="content">
+				<div class="ll-module-header"><h1>Panel <code>ixLabel</code></h1></div>
+				<div class="ll-module-body">
+					Alternative to DLabel that adds extra functionality.
+
+
+<p> This panel is meant for drawing single-line text. It can add extra kerning (spaces between letters), and it can forcefully
+ scale the text down to fit the current width, without cutting off any letters. Text scaling is most useful when docking this
+ this panel without knowing what the width could be. For example, text scaling is used for the character name in the character
+ status menu.</p>
+
+<pre>
+<span class="keyword">local</span> label = vgui.Create(<span class="string">"ixLabel"</span>)
+label:SetText(<span class="string">"hello world"</span>)
+label:SetFont(<span class="string">"ixMenuButtonHugeFont"</span>)
+label:SetContentAlignment(<span class="number">5</span>)
+label:SetTextColor(Color(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>))
+label:SetBackgroundColor(Color(<span class="number">200</span>, <span class="number">30</span>, <span class="number">30</span>, <span class="number">255</span>))
+label:SetPadding(<span class="number">8</span>)
+label:SetScaleWidth(<span class="keyword">true</span>)
+label:SizeToContents()
+</pre>
+
+
+				</div>
+
+
+
+
+
+
+
+<div class="ll-module-header"><h2>Panel Overview</h2></div>
+<div class="ll-module-body">
+
+<h3><a href="#Functions">Functions</a></h3>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#SetText"><span class='state state-client'>SetText(text)</span></a></td>
+	<td class="summary">Sets the text for this label to display.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#GetText"><span class='state state-client'>GetText()</span></a></td>
+	<td class="summary">Returns the current text for this panel.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SetTextColor"><span class='state state-client'>SetTextColor(color)</span></a></td>
+	<td class="summary">Sets the color of the text to use when drawing.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#GetTextColor"><span class='state state-client'>GetTextColor()</span></a></td>
+	<td class="summary">Returns the current text color for this panel.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SetBackgroundColor"><span class='state state-client'>SetBackgroundColor(color)</span></a></td>
+	<td class="summary">Sets the color of the background to draw behind the text.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#GetBackgroundColor"><span class='state state-client'>GetBackgroundColor()</span></a></td>
+	<td class="summary">Returns the current background color for this panel.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SetKerning"><span class='state state-client'>SetKerning(kerning)</span></a></td>
+	<td class="summary">Sets the spacing between each character of the text in pixels.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#GetKerning"><span class='state state-client'>GetKerning()</span></a></td>
+	<td class="summary">Returns the current kerning for this panel.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SetFont"><span class='state state-client'>SetFont(font)</span></a></td>
+	<td class="summary">Sets the font used to draw the text.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#GetFont"><span class='state state-client'>GetFont()</span></a></td>
+	<td class="summary">Returns the current font for this panel.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SetContentAlignment"><span class='state state-client'>SetContentAlignment(alignment)</span></a></td>
+	<td class="summary">Changes how the text is aligned when drawing.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#GetContentAlignment"><span class='state state-client'>GetContentAlignment()</span></a></td>
+	<td class="summary">Returns the current content alignment for this panel.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SetScaleWidth"><span class='state state-client'>SetScaleWidth(bScale)</span></a></td>
+	<td class="summary">Whether or not to scale the width of the text down to fit the width of this panel, if needed.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#GetScaleWidth"><span class='state state-client'>GetScaleWidth()</span></a></td>
+	<td class="summary">Returns whether or not this panel will scale its text down to fit its width.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SetPadding"><span class='state state-client'>SetPadding(padding)</span></a></td>
+	<td class="summary">How much spacing to use around the text when its drawn.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#GetPadding"><span class='state state-client'>GetPadding()</span></a></td>
+	<td class="summary">Returns how much padding this panel has around its text.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#PANEL:SetDropShadow"><span class='state state-client'>PANEL:SetDropShadow(distance[, color])</span></a></td>
+	<td class="summary">Sets the drop shadow to draw behind the text.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#PANEL:CalculateAlignment"><span class='state state-client'>PANEL:CalculateAlignment(width, height, textWidth, textHeight)</span></a></td>
+	<td class="summary">Returns the X and Y location of the text taking into account the text alignment and padding.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#PANEL:DrawKernedText"><span class='state state-client'>PANEL:DrawKernedText(width, height)</span></a></td>
+	<td class="summary">Draws the current text with the current kerning.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#PANEL:DrawText"><span class='state state-client'>PANEL:DrawText(width, height)</span></a></td>
+	<td class="summary">Draws the current text.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#PANEL:GetContentSize"><span class='state state-client'>PANEL:GetContentSize([bCalculate=false])</span></a></td>
+	<td class="summary">Returns the size of the text, taking into account the current kerning.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#PANEL:SizeToContents"><span class='state state-client'>PANEL:SizeToContents()</span></a></td>
+	<td class="summary">Sets the size of the panel to fit the content size with the current padding.</td>
+	</tr>
+</table>
+</div>
+
+	<div class="ll-module-header"><h2 class="section-header "><a name="Functions"></a>Functions</h2></div>
+    <div class="ll-module-body">
+    <dl class="function">
+    <dt>
+    <a name = "SetText"></a>
+    <strong><span class='state state-client'>SetText(text)</span></strong>
+    </dt>
+    <dd>
+    Sets the text for this label to display.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+         Text to display
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "GetText"></a>
+    <strong><span class='state state-client'>GetText()</span></strong>
+    </dt>
+    <dd>
+    Returns the current text for this panel.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+        Current text
+    </ol>
+</dd>
+    <dt>
+    <a name = "SetTextColor"></a>
+    <strong><span class='state state-client'>SetTextColor(color)</span></strong>
+    </dt>
+    <dd>
+    Sets the color of the text to use when drawing.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+            <span class="types"><span class="type">Color</span></span>
+         New color to use
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "GetTextColor"></a>
+    <strong><span class='state state-client'>GetTextColor()</span></strong>
+    </dt>
+    <dd>
+    Returns the current text color for this panel.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">color</span></span>
+        Current text color
+    </ol>
+</dd>
+    <dt>
+    <a name = "SetBackgroundColor"></a>
+    <strong><span class='state state-client'>SetBackgroundColor(color)</span></strong>
+    </dt>
+    <dd>
+    Sets the color of the background to draw behind the text.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+            <span class="types"><span class="type">Color</span></span>
+         New color to use
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "GetBackgroundColor"></a>
+    <strong><span class='state state-client'>GetBackgroundColor()</span></strong>
+    </dt>
+    <dd>
+    Returns the current background color for this panel.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">color</span></span>
+        Current background color
+    </ol>
+</dd>
+    <dt>
+    <a name = "SetKerning"></a>
+    <strong><span class='state state-client'>SetKerning(kerning)</span></strong>
+    </dt>
+    <dd>
+    Sets the spacing between each character of the text in pixels.  Set to <code>0</code> to disable. Kerning is disabled by default.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">kerning</span>
+            <span class="types"><span class="type">number</span></span>
+         How far apart to draw each letter
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "GetKerning"></a>
+    <strong><span class='state state-client'>GetKerning()</span></strong>
+    </dt>
+    <dd>
+    Returns the current kerning for this panel.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        Current kerning
+    </ol>
+</dd>
+    <dt>
+    <a name = "SetFont"></a>
+    <strong><span class='state state-client'>SetFont(font)</span></strong>
+    </dt>
+    <dd>
+    Sets the font used to draw the text.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+         Name of the font to use
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "GetFont"></a>
+    <strong><span class='state state-client'>GetFont()</span></strong>
+    </dt>
+    <dd>
+    Returns the current font for this panel.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+        Name of current font
+    </ol>
+</dd>
+    <dt>
+    <a name = "SetContentAlignment"></a>
+    <strong><span class='state state-client'>SetContentAlignment(alignment)</span></strong>
+    </dt>
+    <dd>
+    Changes how the text is aligned when drawing.  Valid content alignment values include numbers <code>1</code> through <code>9</code>. Each number's
+ corresponding alignment is based on its position on a numpad. For example, <code>1</code> is bottom-left, <code>5</code> is centered, <code>9</code> is
+ top-right, etc.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">alignment</span>
+            <span class="types"><span class="type">number</span></span>
+         Alignment to use
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "GetContentAlignment"></a>
+    <strong><span class='state state-client'>GetContentAlignment()</span></strong>
+    </dt>
+    <dd>
+    Returns the current content alignment for this panel.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        Current content alignment
+    </ol>
+</dd>
+    <dt>
+    <a name = "SetScaleWidth"></a>
+    <strong><span class='state state-client'>SetScaleWidth(bScale)</span></strong>
+    </dt>
+    <dd>
+    Whether or not to scale the width of the text down to fit the width of this panel, if needed.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bScale</span>
+            <span class="types"><span class="type">bool</span></span>
+         Whether or not to scale
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "GetScaleWidth"></a>
+    <strong><span class='state state-client'>GetScaleWidth()</span></strong>
+    </dt>
+    <dd>
+    Returns whether or not this panel will scale its text down to fit its width.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        Whether or not this panel will scale its text
+    </ol>
+</dd>
+    <dt>
+    <a name = "SetPadding"></a>
+    <strong><span class='state state-client'>SetPadding(padding)</span></strong>
+    </dt>
+    <dd>
+    How much spacing to use around the text when its drawn.  This uses uniform padding on the top, left, right, and bottom of
+ this panel.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">padding</span>
+            <span class="types"><span class="type">number</span></span>
+         Padding to use
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "GetPadding"></a>
+    <strong><span class='state state-client'>GetPadding()</span></strong>
+    </dt>
+    <dd>
+    Returns how much padding this panel has around its text.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        Current padding
+    </ol>
+</dd>
+    <dt>
+    <a name = "PANEL:SetDropShadow"></a>
+    <strong><span class='state state-client'>PANEL:SetDropShadow(distance[, color])</span></strong>
+    </dt>
+    <dd>
+    Sets the drop shadow to draw behind the text.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">distance</span>
+            <span class="types"><span class="type">number</span></span>
+         How far away to draw the shadow in pixels. Set to <code>0</code> to disable
+        </li>
+        <li><span class="parameter">color</span>
+            <span class="types"><span class="type">Color</span></span>
+         Color of the shadow. Defaults to a dimmed version of the text color
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "PANEL:CalculateAlignment"></a>
+    <strong><span class='state state-client'>PANEL:CalculateAlignment(width, height, textWidth, textHeight)</span></strong>
+    </dt>
+    <dd>
+    Returns the X and Y location of the text taking into account the text alignment and padding.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Internal:</h3>
+    <ul>
+         <span class='tag-internal'>This function is internal. Whilst you can call it, you probably shouldn't.</span>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         Width of the panel
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         Height of the panel
+        </li>
+        <li><span class="parameter">textWidth</span>
+            <span class="types"><span class="type">number</span></span>
+         Width of the text
+        </li>
+        <li><span class="parameter">textHeight</span>
+            <span class="types"><span class="type">number</span></span>
+         Height of the text
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><span class="type">number</span></span>
+        X location to draw the text</li>
+        <li>
+           <span class="types"><span class="type">number</span></span>
+        Y location to draw the text</li>
+    </ol>
+</dd>
+    <dt>
+    <a name = "PANEL:DrawKernedText"></a>
+    <strong><span class='state state-client'>PANEL:DrawKernedText(width, height)</span></strong>
+    </dt>
+    <dd>
+    Draws the current text with the current kerning.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Internal:</h3>
+    <ul>
+         <span class='tag-internal'>This function is internal. Whilst you can call it, you probably shouldn't.</span>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         Width of the panel
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         Height of the panel
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "PANEL:DrawText"></a>
+    <strong><span class='state state-client'>PANEL:DrawText(width, height)</span></strong>
+    </dt>
+    <dd>
+    Draws the current text.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Internal:</h3>
+    <ul>
+         <span class='tag-internal'>This function is internal. Whilst you can call it, you probably shouldn't.</span>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         Width of the panel
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         Height of the panel
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "PANEL:GetContentSize"></a>
+    <strong><span class='state state-client'>PANEL:GetContentSize([bCalculate=false])</span></strong>
+    </dt>
+    <dd>
+    Returns the size of the text, taking into account the current kerning.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bCalculate</span>
+            <span class="types"><span class="type">bool</span></span>
+         Whether or not to recalculate the content size instead of using the cached copy
+         (<em>default</em> false)
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><span class="type">number</span></span>
+        Width of the text</li>
+        <li>
+           <span class="types"><span class="type">number</span></span>
+        Height of the text</li>
+    </ol>
+</dd>
+    <dt>
+    <a name = "PANEL:SizeToContents"></a>
+    <strong><span class='state state-client'>PANEL:SizeToContents()</span></strong>
+    </dt>
+    <dd>
+    Sets the size of the panel to fit the content size with the current padding.  The content size is recalculated when this
+ method is called.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+</dl>
+</div>
+</div>
+</div> <!-- id="content" -->
+</div>
+</div> <!-- id="main" -->
+<br class="clearfix">
+</div> <!-- id="container" -->
+</body>
+</html>
