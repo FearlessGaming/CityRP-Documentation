@@ -23,9 +23,8 @@
 				<div class="ll-kind-header">
 					<h1>[FL] CityRP</h1>
 					<div class="header-module">
-        				<li>Copyright: 2008-2018 FearlessRP</li>
-        				<li>Release: CityRP 3 FL</li>
-        				<li>Author: Kudomiku</li>
+        				<li>Copyright: Fearless Gaming</li>
+        				<li>Author: Legacy Team</li>
 					</div>
 				</div>
 				<div class="ll-kind-body">
@@ -34,6 +33,10 @@
 					</ul>
 				</div>
 
+				<div class="ll-kind-header"><h2>Contents</h2></div>
+				<ul class="ll-kind-body">
+					<li><a href="#Functions">Functions</a></li>
+				</ul>
 
 
 
@@ -68,7 +71,7 @@
 					<li><a href="../modules/plugins.area.sv_init.html">plugins.area.sv_init</a></li>
 					<li><a href="../modules/plugins.autokick.cl_init.html">plugins.autokick.cl_init</a></li>
 					<li><a href="../modules/plugins.autokick.sh_plugin.html">plugins.autokick.sh_plugin</a></li>
-					<li><strong>plugins.autokick.sv_init</strong></li>
+					<li><a href="../modules/plugins.autokick.sv_init.html">plugins.autokick.sv_init</a></li>
 					<li><a href="../modules/plugins.bodymechanics.sh_plugin.html">plugins.bodymechanics.sh_plugin</a></li>
 					<li><a href="../modules/plugins.breakfree.sh_plugin.html">plugins.breakfree.sh_plugin</a></li>
 					<li><a href="../modules/plugins.breakfree.sv_init.html">plugins.breakfree.sv_init</a></li>
@@ -87,7 +90,7 @@
 					<li><a href="../modules/plugins.vehicledescription.cl_init.html">plugins.vehicledescription.cl_init</a></li>
 					<li><a href="../modules/plugins.vehicledescription.sv_init.html">plugins.vehicledescription.sv_init</a></li>
 					<li><a href="../modules/plugins.vehicles.cl_init.html">plugins.vehicles.cl_init</a></li>
-					<li><a href="../modules/plugins.vehicles.sv_init.html">plugins.vehicles.sv_init</a></li>
+					<li><strong>plugins.vehicles.sv_init</strong></li>
 				</ul>
 
 				<div class="ll-kind-header"><h2>Panels</h2></div>
@@ -128,9 +131,9 @@
 
 
 			<div id="content">
-				<div class="ll-module-header"><h1>Module <code>plugins.autokick.sv_init</code></h1></div>
+				<div class="ll-module-header"><h1>Module <code>plugins.vehicles.sv_init</code></h1></div>
 				<div class="ll-module-body">
-					AFK Timer
+					Vehicle Plugin
 
 
 
@@ -142,7 +145,51 @@
 
 
 
+<div class="ll-module-header"><h2>Module Overview</h2></div>
+<div class="ll-module-body">
 
+<h3><a href="#Functions">Functions</a></h3>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#SpawnVehicle"><span class='state state-server'>SpawnVehicle(player, item, boatspawn)</span></a></td>
+	<td class="summary">Called when a player attempts to spawn a vehicle.</td>
+	</tr>
+</table>
+</div>
+
+	<div class="ll-module-header"><h2 class="section-header "><a name="Functions"></a>Functions</h2></div>
+    <div class="ll-module-body">
+    <dl class="function">
+    <dt>
+    <a name = "SpawnVehicle"></a>
+    <strong><span class='state state-server'>SpawnVehicle(player, item, boatspawn)</span></strong>
+    </dt>
+    <dd>
+    Called when a player attempts to spawn a vehicle.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player</span>
+            <span class="types"><span class="type">Player</span></span>
+         Player attempting to spawn the vehicle.
+        </li>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">tab</span></span>
+         Item table being spawned.
+        </li>
+        <li><span class="parameter">boatspawn</span>
+            <span class="types"><span class="type">tab</span></span>
+         Boat Spawning Position
+        </li>
+    </ul>
+</dd>
+</dl>
+</div>
 </div>
 </div> <!-- id="content" -->
 </div>
