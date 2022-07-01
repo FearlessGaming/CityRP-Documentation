@@ -22,11 +22,6 @@
 			<div id="navigation">
 				<div class="ll-kind-header">
 					<h1>[FL] CityRP</h1>
-					<div class="header-module">
-        				<li>Copyright: 2015-2019 Limelight Gaming</li>
-        				<li>Release: CityRP 2</li>
-        				<li>Author: Doctor Internet</li>
-					</div>
 				</div>
 				<div class="ll-kind-body">
 					<ul>
@@ -34,6 +29,10 @@
 					</ul>
 				</div>
 
+				<div class="ll-kind-header"><h2>Contents</h2></div>
+				<ul class="ll-kind-body">
+					<li><a href="#Functions">Functions</a></li>
+				</ul>
 
 
 
@@ -43,7 +42,7 @@
 					<li><a href="../panels/dfillicon.html">dfillicon</a></li>
 					<li><a href="../panels/diconlabel.html">diconlabel</a></li>
 					<li><a href="../panels/dinfolabel.html">dinfolabel</a></li>
-					<li><strong>dinfopanel</strong></li>
+					<li><a href="../panels/dinfopanel.html">dinfopanel</a></li>
 					<li><a href="../panels/ditemtitle.html">ditemtitle</a></li>
 					<li><a href="../panels/dlimitedtextentry.html">dlimitedtextentry</a></li>
 					<li><a href="../panels/doptionpanel.html">doptionpanel</a></li>
@@ -57,8 +56,8 @@
 					<li><a href="../panels/hud_vehicle.html">hud_vehicle</a></li>
 					<li><a href="../panels/new_fl_derma_elements.html">new_fl_derma_elements</a></li>
 					<li><a href="../panels/AdminFrame.html">AdminFrame</a></li>
-					<li><a href="../panels/ReasonFrame.html">ReasonFrame</a></li>
-					<li><a href="../panels/ReasonFrame.html">ReasonFrame</a></li>
+					<li><strong>ReasonFrame</strong></li>
+					<li><strong>ReasonFrame</strong></li>
 				</ul>
 
 				<div class="ll-kind-header"><h2>Modules</h2></div>
@@ -167,9 +166,9 @@
 
 
 			<div id="content">
-				<div class="ll-module-header"><h1>Panel <code>dinfopanel</code></h1></div>
+				<div class="ll-module-header"><h1>Panel <code>ReasonFrame</code></h1></div>
 				<div class="ll-module-body">
-					Market Info Label Panel.
+					A quick and dirty panel for getting a string input, with a label, then calling a function.
 
 
 
@@ -181,7 +180,144 @@
 
 
 
+<div class="ll-module-header"><h2>Panel Overview</h2></div>
+<div class="ll-module-body">
 
+<h3><a href="#Functions">Functions</a></h3>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#PANEL:SetInput"><span class='state state-client'>PANEL:SetInput(text)</span></a></td>
+	<td class="summary">Set the input label.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#PANEL:SetWarrant"><span class='state state-client'>PANEL:SetWarrant(ply, warrant)</span></a></td>
+	<td class="summary">Set the input label, as a warrant, based on a player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#PANEL:SetAccept"><span class='state state-client'>PANEL:SetAccept(func)</span></a></td>
+	<td class="summary">Set the function called on accept.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#PANEL:SetCancel"><span class='state state-client'>PANEL:SetCancel(func)</span></a></td>
+	<td class="summary">Set the function called on cancel.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#PANEL:GetValue"><span class='state state-client'>PANEL:GetValue()</span></a></td>
+	<td class="summary">Get the value of the string.</td>
+	</tr>
+</table>
+</div>
+
+	<div class="ll-module-header"><h2 class="section-header "><a name="Functions"></a>Functions</h2></div>
+    <div class="ll-module-body">
+    <dl class="function">
+    <dt>
+    <a name = "PANEL:SetInput"></a>
+    <strong><span class='state state-client'>PANEL:SetInput(text)</span></strong>
+    </dt>
+    <dd>
+    Set the input label.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         New label string.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "PANEL:SetWarrant"></a>
+    <strong><span class='state state-client'>PANEL:SetWarrant(ply, warrant)</span></strong>
+    </dt>
+    <dd>
+    Set the input label, as a warrant, based on a player.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
+         Player to set.
+        </li>
+        <li><span class="parameter">warrant</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Warrant type to set.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "PANEL:SetAccept"></a>
+    <strong><span class='state state-client'>PANEL:SetAccept(func)</span></strong>
+    </dt>
+    <dd>
+    Set the function called on accept.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">func</span></span>
+         New callback.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "PANEL:SetCancel"></a>
+    <strong><span class='state state-client'>PANEL:SetCancel(func)</span></strong>
+    </dt>
+    <dd>
+    Set the function called on cancel.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">func</span></span>
+         New callback.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "PANEL:GetValue"></a>
+    <strong><span class='state state-client'>PANEL:GetValue()</span></strong>
+    </dt>
+    <dd>
+    Get the value of the string.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+
+    </ol>
+</dd>
+</dl>
+</div>
 </div>
 </div> <!-- id="content" -->
 </div>

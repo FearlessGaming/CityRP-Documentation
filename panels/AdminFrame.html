@@ -23,9 +23,8 @@
 				<div class="ll-kind-header">
 					<h1>[FL] CityRP</h1>
 					<div class="header-module">
-        				<li>Copyright: 2015-2019 Limelight Gaming</li>
-        				<li>Release: CityRP 2</li>
-        				<li>Author: Doctor Internet</li>
+        				<li>Copyright: Fearless Gaming</li>
+        				<li>Author: Legacy Team</li>
 					</div>
 				</div>
 				<div class="ll-kind-body">
@@ -34,6 +33,10 @@
 					</ul>
 				</div>
 
+				<div class="ll-kind-header"><h2>Contents</h2></div>
+				<ul class="ll-kind-body">
+					<li><a href="#Functions">Functions</a></li>
+				</ul>
 
 
 
@@ -43,7 +46,7 @@
 					<li><a href="../panels/dfillicon.html">dfillicon</a></li>
 					<li><a href="../panels/diconlabel.html">diconlabel</a></li>
 					<li><a href="../panels/dinfolabel.html">dinfolabel</a></li>
-					<li><strong>dinfopanel</strong></li>
+					<li><a href="../panels/dinfopanel.html">dinfopanel</a></li>
 					<li><a href="../panels/ditemtitle.html">ditemtitle</a></li>
 					<li><a href="../panels/dlimitedtextentry.html">dlimitedtextentry</a></li>
 					<li><a href="../panels/doptionpanel.html">doptionpanel</a></li>
@@ -56,7 +59,7 @@
 					<li><a href="../panels/hud_topleft.html">hud_topleft</a></li>
 					<li><a href="../panels/hud_vehicle.html">hud_vehicle</a></li>
 					<li><a href="../panels/new_fl_derma_elements.html">new_fl_derma_elements</a></li>
-					<li><a href="../panels/AdminFrame.html">AdminFrame</a></li>
+					<li><strong>AdminFrame</strong></li>
 					<li><a href="../panels/ReasonFrame.html">ReasonFrame</a></li>
 					<li><a href="../panels/ReasonFrame.html">ReasonFrame</a></li>
 				</ul>
@@ -167,9 +170,9 @@
 
 
 			<div id="content">
-				<div class="ll-module-header"><h1>Panel <code>dinfopanel</code></h1></div>
+				<div class="ll-module-header"><h1>Panel <code>AdminFrame</code></h1></div>
 				<div class="ll-module-body">
-					Market Info Label Panel.
+					Administrative Reason / Time panel.
 
 
 
@@ -181,7 +184,168 @@
 
 
 
+<div class="ll-module-header"><h2>Panel Overview</h2></div>
+<div class="ll-module-body">
 
+<h3><a href="#Functions">Functions</a></h3>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#SetFunc"><span class='state state-client'>SetFunc(value)</span></a></td>
+	<td class="summary">Set the action we're attempting to run.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#GetFunc"><span class='state state-client'>GetFunc()</span></a></td>
+	<td class="summary">Get the panel's attempted action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SetAction"><span class='state state-client'>SetAction(func)</span></a></td>
+	<td class="summary">Alias of SetFunc</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SetPlayer"><span class='state state-client'>SetPlayer(ply)</span></a></td>
+	<td class="summary">Set the player we're attempting to handle.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SetAccept"><span class='state state-client'>SetAccept(func)</span></a></td>
+	<td class="summary">Set the callback used on accept.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SetCancel"><span class='state state-client'>SetCancel(func)</span></a></td>
+	<td class="summary">Set the callback used on cancel.</td>
+	</tr>
+</table>
+</div>
+
+	<div class="ll-module-header"><h2 class="section-header "><a name="Functions"></a>Functions</h2></div>
+    <div class="ll-module-body">
+    <dl class="function">
+    <dt>
+    <a name = "SetFunc"></a>
+    <strong><span class='state state-client'>SetFunc(value)</span></strong>
+    </dt>
+    <dd>
+    Set the action we're attempting to run.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Action to run, one of access, ban, kick.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "GetFunc"></a>
+    <strong><span class='state state-client'>GetFunc()</span></strong>
+    </dt>
+    <dd>
+    Get the panel's attempted action.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+
+    </ol>
+</dd>
+    <dt>
+    <a name = "SetAction"></a>
+    <strong><span class='state state-client'>SetAction(func)</span></strong>
+    </dt>
+    <dd>
+    Alias of SetFunc
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Action
+        </li>
+    </ul>
+    <h3>See also:</h3>
+    <ul>
+         <a href="../panels/AdminFrame.html#SetFunc">SetFunc</a>
+    </ul>
+</dd>
+    <dt>
+    <a name = "SetPlayer"></a>
+    <strong><span class='state state-client'>SetPlayer(ply)</span></strong>
+    </dt>
+    <dd>
+    Set the player we're attempting to handle.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
+         Player we're handling.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "SetAccept"></a>
+    <strong><span class='state state-client'>SetAccept(func)</span></strong>
+    </dt>
+    <dd>
+    Set the callback used on accept.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">func</span></span>
+         New callback.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "SetCancel"></a>
+    <strong><span class='state state-client'>SetCancel(func)</span></strong>
+    </dt>
+    <dd>
+    Set the callback used on cancel.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">func</span>
+            <span class="types"><span class="type">func</span></span>
+         New callback.
+        </li>
+    </ul>
+</dd>
+</dl>
+</div>
 </div>
 </div> <!-- id="content" -->
 </div>
