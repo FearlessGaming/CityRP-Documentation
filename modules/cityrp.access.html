@@ -22,11 +22,6 @@
 			<div id="navigation">
 				<div class="ll-kind-header">
 					<h1>[FL] CityRP</h1>
-					<div class="header-module">
-        				<li>Copyright: 2020-2022 Limelight Gaming</li>
-        				<li>Release: CityRP 2 - Ported to CityRP FL</li>
-        				<li>Author: Bambo, Goigle, livkx</li>
-					</div>
 				</div>
 				<div class="ll-kind-body">
 					<ul>
@@ -34,38 +29,18 @@
 					</ul>
 				</div>
 
-
-
-
-				<div class="ll-kind-header"><h2>Panels</h2></div>
-				<ul class="ll-kind-body nowrap">
-					<li><a href="../panels/dcoloredicon.html">dcoloredicon</a></li>
-					<li><a href="../panels/dfillicon.html">dfillicon</a></li>
-					<li><a href="../panels/diconlabel.html">diconlabel</a></li>
-					<li><a href="../panels/dinfolabel.html">dinfolabel</a></li>
-					<li><a href="../panels/dinfopanel.html">dinfopanel</a></li>
-					<li><a href="../panels/ditemtitle.html">ditemtitle</a></li>
-					<li><a href="../panels/dlimitedtextentry.html">dlimitedtextentry</a></li>
-					<li><a href="../panels/doptionpanel.html">doptionpanel</a></li>
-					<li><a href="../panels/dpropamt.html">dpropamt</a></li>
-					<li><a href="../panels/dradio.html">dradio</a></li>
-					<li><a href="../panels/dtexturedprogress.html">dtexturedprogress</a></li>
-					<li><a href="../panels/dwepinfo.html">dwepinfo</a></li>
-					<li><a href="../panels/ixLabel.html">ixLabel</a></li>
-					<li><a href="../panels/hud_botleft.html">hud_botleft</a></li>
-					<li><strong>hud_topleft</strong></li>
-					<li><a href="../panels/hud_vehicle.html">hud_vehicle</a></li>
-					<li><a href="../panels/new_fl_derma_elements.html">new_fl_derma_elements</a></li>
-					<li><a href="../panels/AdminFrame.html">AdminFrame</a></li>
-					<li><a href="../panels/ReasonFrame.html">ReasonFrame</a></li>
-					<li><a href="../panels/ReasonFrame.html">ReasonFrame</a></li>
+				<div class="ll-kind-header"><h2>Contents</h2></div>
+				<ul class="ll-kind-body">
+					<li><a href="#Functions">Functions</a></li>
 				</ul>
+
+
 
 				<div class="ll-kind-header"><h2>Modules</h2></div>
 				<ul class="ll-kind-body nowrap">
 					<li><a href="../modules/GM.html">GM</a></li>
 					<li><a href="../modules/notification.html">notification</a></li>
-					<li><a href="../modules/cityrp.access.html">cityrp.access</a></li>
+					<li><strong>cityrp.access</strong></li>
 					<li><a href="../modules/cityrp.data.html">cityrp.data</a></li>
 					<li><a href="../modules/dumper.html">dumper</a></li>
 					<li><a href="../modules/internet.html">internet</a></li>
@@ -137,6 +112,30 @@
 					<li><a href="../classes/Vector.html">Vector</a></li>
 				</ul>
 
+				<div class="ll-kind-header"><h2>Panels</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../panels/dcoloredicon.html">dcoloredicon</a></li>
+					<li><a href="../panels/dfillicon.html">dfillicon</a></li>
+					<li><a href="../panels/diconlabel.html">diconlabel</a></li>
+					<li><a href="../panels/dinfolabel.html">dinfolabel</a></li>
+					<li><a href="../panels/dinfopanel.html">dinfopanel</a></li>
+					<li><a href="../panels/ditemtitle.html">ditemtitle</a></li>
+					<li><a href="../panels/dlimitedtextentry.html">dlimitedtextentry</a></li>
+					<li><a href="../panels/doptionpanel.html">doptionpanel</a></li>
+					<li><a href="../panels/dpropamt.html">dpropamt</a></li>
+					<li><a href="../panels/dradio.html">dradio</a></li>
+					<li><a href="../panels/dtexturedprogress.html">dtexturedprogress</a></li>
+					<li><a href="../panels/dwepinfo.html">dwepinfo</a></li>
+					<li><a href="../panels/ixLabel.html">ixLabel</a></li>
+					<li><a href="../panels/hud_botleft.html">hud_botleft</a></li>
+					<li><a href="../panels/hud_topleft.html">hud_topleft</a></li>
+					<li><a href="../panels/hud_vehicle.html">hud_vehicle</a></li>
+					<li><a href="../panels/new_fl_derma_elements.html">new_fl_derma_elements</a></li>
+					<li><a href="../panels/AdminFrame.html">AdminFrame</a></li>
+					<li><a href="../panels/ReasonFrame.html">ReasonFrame</a></li>
+					<li><a href="../panels/ReasonFrame.html">ReasonFrame</a></li>
+				</ul>
+
 				<div class="ll-kind-header"><h2>Weapons</h2></div>
 				<ul class="ll-kind-body nowrap">
 					<li><a href="../weapons/cityrp_blindfold.html">cityrp_blindfold</a></li>
@@ -171,10 +170,9 @@
 
 
 			<div id="content">
-				<div class="ll-module-header"><h1>Panel <code>hud_topleft</code></h1></div>
+				<div class="ll-module-header"><h1>Module <code>cityrp.access</code></h1></div>
 				<div class="ll-module-body">
-					HUD
-Derma panel for top left of the HUD (radio / pass / lockdown)
+					Access Library.
 
 
 
@@ -186,7 +184,198 @@ Derma panel for top left of the HUD (radio / pass / lockdown)
 
 
 
+<div class="ll-module-header"><h2>Module Overview</h2></div>
+<div class="ll-module-body">
 
+<h3><a href="#Functions">Functions</a></h3>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.access.getAccessString"><span class='state state-client state-server'>cityrp.access.getAccessString(ply)</span></a></td>
+	<td class="summary">Get the access string for a given player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.access.checkexpired"><span class='state state-server'>cityrp.access.checkexpired(player)</span></a></td>
+	<td class="summary">Check for expired blacklists, and expire them.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.access.giveAccess"><span class='state state-server'>cityrp.access.giveAccess(player, access)</span></a></td>
+	<td class="summary">Give access to a player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.access.takeAccess"><span class='state state-server'>cityrp.access.takeAccess(player, access)</span></a></td>
+	<td class="summary">Take access from a player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.access.BanTime"><span class='state state-server'>cityrp.access.BanTime(player, access)</span></a></td>
+	<td class="summary">Get how long a player is banned for.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.access.Load"><span class='state state-server'>cityrp.access.Load(ply)</span></a></td>
+	<td class="summary">Load access changes from the DB.</td>
+	</tr>
+</table>
+</div>
+
+	<div class="ll-module-header"><h2 class="section-header "><a name="Functions"></a>Functions</h2></div>
+    <div class="ll-module-body">
+    <dl class="function">
+    <dt>
+    <a name = "cityrp.access.getAccessString"></a>
+    <strong><span class='state state-client state-server'>cityrp.access.getAccessString(ply)</span></strong>
+    </dt>
+    <dd>
+    Get the access string for a given player.
+    </ul>
+    </ul>
+    <h3>Warnings:</h3>
+    <ul>
+         <span class='tag-warning'>On the client, this function only returns the correct string for the local player.</span>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
+         Player to check.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+
+    </ol>
+</dd>
+    <dt>
+    <a name = "cityrp.access.checkexpired"></a>
+    <strong><span class='state state-server'>cityrp.access.checkexpired(player)</span></strong>
+    </dt>
+    <dd>
+    Check for expired blacklists, and expire them.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player</span>
+            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
+         Player to expire.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        Updated access list.
+    </ol>
+</dd>
+    <dt>
+    <a name = "cityrp.access.giveAccess"></a>
+    <strong><span class='state state-server'>cityrp.access.giveAccess(player, access)</span></strong>
+    </dt>
+    <dd>
+    Give access to a player.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player</span>
+            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
+         Player to add.
+        </li>
+        <li><span class="parameter">access</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Access to grant.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "cityrp.access.takeAccess"></a>
+    <strong><span class='state state-server'>cityrp.access.takeAccess(player, access)</span></strong>
+    </dt>
+    <dd>
+    Take access from a player.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player</span>
+            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
+         Player to remove from.
+        </li>
+        <li><span class="parameter">access</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Access to deny.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "cityrp.access.BanTime"></a>
+    <strong><span class='state state-server'>cityrp.access.BanTime(player, access)</span></strong>
+    </dt>
+    <dd>
+    Get how long a player is banned for.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player</span>
+            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
+         Player to check.
+        </li>
+        <li><span class="parameter">access</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Access to check.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        Formatted time.
+    </ol>
+</dd>
+    <dt>
+    <a name = "cityrp.access.Load"></a>
+    <strong><span class='state state-server'>cityrp.access.Load(ply)</span></strong>
+    </dt>
+    <dd>
+    Load access changes from the DB.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
+         Player to load.
+        </li>
+    </ul>
+</dd>
+</dl>
+</div>
 </div>
 </div> <!-- id="content" -->
 </div>
