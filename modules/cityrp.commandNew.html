@@ -22,10 +22,6 @@
 			<div id="navigation">
 				<div class="ll-kind-header">
 					<h1>[FL] CityRP</h1>
-					<div class="header-module">
-        				<li>Copyright: Fearless Gaming</li>
-        				<li>Author: Fearless Team,Limelight Gaming</li>
-					</div>
 				</div>
 				<div class="ll-kind-body">
 					<ul>
@@ -36,6 +32,7 @@
 				<div class="ll-kind-header"><h2>Contents</h2></div>
 				<ul class="ll-kind-body">
 					<li><a href="#Functions">Functions</a></li>
+					<li><a href="#Tables">Tables</a></li>
 				</ul>
 
 
@@ -71,12 +68,12 @@
 					<li><a href="../modules/gamemode.core.libraries.meska.timers.html">gamemode.core.libraries.meska.timers</a></li>
 					<li><a href="../modules/cityrp.access.html">cityrp.access</a></li>
 					<li><a href="../modules/cityrp.chat.html">cityrp.chat</a></li>
-					<li><a href="../modules/cityrp.commandNew.html">cityrp.commandNew</a></li>
+					<li><strong>cityrp.commandNew</strong></li>
 					<li><a href="../modules/cityrp.data.html">cityrp.data</a></li>
 					<li><a href="../modules/dumper.html">dumper</a></li>
 					<li><a href="../modules/gamemode.core.libraries.sh_functions.html">gamemode.core.libraries.sh_functions</a></li>
 					<li><a href="../modules/internet.html">internet</a></li>
-					<li><strong>cityrp.item</strong></li>
+					<li><a href="../modules/cityrp.item.html">cityrp.item</a></li>
 					<li><a href="../modules/cityrp.lang.html">cityrp.lang</a></li>
 					<li><a href="../modules/cityrp.option.html">cityrp.option</a></li>
 					<li><a href="../modules/gamemode.core.libraries.sh_plugin.html">gamemode.core.libraries.sh_plugin</a></li>
@@ -218,12 +215,11 @@
 
 
 			<div id="content">
-				<div class="ll-module-header"><h1>Module <code>cityrp.item</code></h1></div>
+				<div class="ll-module-header"><h1>Module <code>cityrp.commandNew</code></h1></div>
 				<div class="ll-module-body">
-					Shared item and item category library.
-
-
-
+					Registration, parsing, and handling of commands.
+					Commands can be ran through the chat with slash commands or they can be executed through the console. Commands can be manually
+restricted to certain usergroups using a <a href="https://github.com/glua/CAMI">CAMI</a>-compliant admin mod.
 				</div>
 
 
@@ -238,40 +234,48 @@
 <h3><a href="#Functions">Functions</a></h3>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#cityrp.item.new"><span class='state state-client state-server'>cityrp.item.new([base])</span></a></td>
-	<td class="summary">Create a new item based on the given base uniqueID.</td>
+	<td class="name" nowrap><a href="#cityrp.commandNew.Add"><span class='state state-client state-server'>cityrp.commandNew.Add(command, data)</span></a></td>
+	<td class="summary">Creates a new command.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cityrp.item.register"><span class='state state-client state-server'>cityrp.item.register(item[, base])</span></a></td>
-	<td class="summary">Register a new item.</td>
+	<td class="name" nowrap><a href="#cityrp.commandNew.HasAccess"><span class='state state-client state-server'>cityrp.commandNew.HasAccess(command)</span></a></td>
+	<td class="summary">Returns true if a player is allowed to run a certain command.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cityrp.item.get"><span class='state state-client state-server'>cityrp.item.get(name)</span></a></td>
-	<td class="summary">Get an item by its name.</td>
+	<td class="name" nowrap><a href="#cityrp.commandNew.ExtractArgs"><span class='state state-client state-server'>cityrp.commandNew.ExtractArgs(text)</span></a></td>
+	<td class="summary">Returns a table of arguments from a given string.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cityrp.item.addCat"><span class='state state-client state-server'>cityrp.item.addCat(name, description, access)</span></a></td>
-	<td class="summary">Add a new category.</td>
+	<td class="name" nowrap><a href="#cityrp.commandNew.FindAll"><span class='state state-client state-server'>cityrp.commandNew.FindAll(identifier[, bSorted=false[, bReorganize=false[, bRemoveDupes=false]]])</span></a></td>
+	<td class="summary">Returns an array of potential commands by unique id.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cityrp.item.findCat"><span class='state state-client state-server'>cityrp.item.findCat(name)</span></a></td>
-	<td class="summary">Retrieve a category.</td>
+	<td class="name" nowrap><a href="#cityrp.commandNew.FindPlayer"><span class='state state-client state-server'>cityrp.commandNew.FindPlayer(name)</span></a></td>
+	<td class="summary">Attempts to find a player by an identifier.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cityrp.item.use"><span class='state state-server'>cityrp.item.use(ply, uid)</span></a></td>
-	<td class="summary">Make a player use an item.</td>
+	<td class="name" nowrap><a href="#cityrp.commandNew.Run"><span class='state state-client state-server'>cityrp.commandNew.Run(command, arguments)</span></a></td>
+	<td class="summary">Forces a player to execute a command by name.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cityrp.item.remove"><span class='state state-server'>cityrp.item.remove(ply, uid)</span></a></td>
-	<td class="summary">Remove an item from a player (like a hat).</td>
+	<td class="name" nowrap><a href="#cityrp.commandNew.Parse"><span class='state state-client state-server'>cityrp.commandNew.Parse(text[, realCommand[, arguments]])</span></a></td>
+	<td class="summary">Parses a chat string and runs the command if one is found.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cityrp.item.drop"><span class='state state-server'>cityrp.item.drop(ply, uid, amount)</span></a></td>
-	<td class="summary">Make a player drop an item.</td>
+	<td class="name" nowrap><a href="#cityrp.commandNew.Send"><span class='state state-client state-server'>cityrp.commandNew.Send(command, ...)</span></a></td>
+	<td class="summary">Request the server to run a command.</td>
+	</tr>
+</table>
+<h3><a href="#Tables">Tables</a></h3>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#CommandStructure">CommandStructure</a></td>
+	<td class="summary">When registering commands with <a href="../modules/cityrp.commandNew.html#cityrp.commandNew.Add">cityrp.commandNew.Add</a>, you'll need to pass in a valid command structure.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cityrp.item.give"><span class='state state-server'>cityrp.item.give(ply, uid, amount, target)</span></a></td>
-	<td class="summary">Transfer an item between players.</td>
+	<td class="name" nowrap><a href="#CommandArgumentsStructure">CommandArgumentsStructure</a></td>
+	<td class="summary">Rather than checking the validity for arguments in your command's <code>OnRun</code> function, you can have Helcityrp do it for you to
+ reduce the amount of boilerplate code that needs to be written.</td>
 	</tr>
 </table>
 </div>
@@ -280,11 +284,11 @@
     <div class="ll-module-body">
     <dl class="function">
     <dt>
-    <a name = "cityrp.item.new"></a>
-    <strong><span class='state state-client state-server'>cityrp.item.new([base])</span></strong>
+    <a name = "cityrp.commandNew.Add"></a>
+    <strong><span class='state state-client state-server'>cityrp.commandNew.Add(command, data)</span></strong>
     </dt>
     <dd>
-    Create a new item based on the given base uniqueID.
+    Creates a new command.
     </ul>
     </ul>
     </ul>
@@ -293,25 +297,55 @@
     </ul>
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">base</span>
+        <li><span class="parameter">command</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         Base Item UniqueID
-         (<em>optional</em>)
+         Name of the command (recommended in UpperCamelCase)
+        </li>
+        <li><span class="parameter">data</span>
+            <span class="types"><a class="type" href="../modules/cityrp.commandNew.html#CommandStructure">CommandStructure</a></span>
+         Data describing the command
+        </li>
+    </ul>
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../modules/cityrp.commandNew.html#CommandStructure">CommandStructure</a></li>
+         <li><a href="../modules/cityrp.commandNew.html#CommandArgumentsStructure">CommandArgumentsStructure</a></li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "cityrp.commandNew.HasAccess"></a>
+    <strong><span class='state state-client state-server'>cityrp.commandNew.HasAccess(command)</span></strong>
+    </dt>
+    <dd>
+    Returns true if a player is allowed to run a certain command.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">command</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Name of the command to check access for
         </li>
     </ul>
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><span class="type">ITEM</span></span>
-        Newly created item.
+           <span class="types"><span class="type">bool</span></span>
+        Whether or not the player is allowed to run the command
     </ol>
 </dd>
     <dt>
-    <a name = "cityrp.item.register"></a>
-    <strong><span class='state state-client state-server'>cityrp.item.register(item[, base])</span></strong>
+    <a name = "cityrp.commandNew.ExtractArgs"></a>
+    <strong><span class='state state-client state-server'>cityrp.commandNew.ExtractArgs(text)</span></strong>
     </dt>
     <dd>
-    Register a new item.
+    Returns a table of arguments from a given string.
+ Words separated by spaces will be considered one argument. To have an argument containing multiple words, they must be
+ contained within quotation marks.
     </ul>
     </ul>
     </ul>
@@ -320,49 +354,75 @@
     </ul>
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">item</span>
-            <span class="types"><span class="type">tab</span></span>
-         The item table to register.
-        </li>
-        <li><span class="parameter">base</span>
+        <li><span class="parameter">text</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The uniqueID of the base item to take properties from.
-         (<em>optional</em>)
-        </li>
-    </ul>
-</dd>
-    <dt>
-    <a name = "cityrp.item.get"></a>
-    <strong><span class='state state-client state-server'>cityrp.item.get(name)</span></strong>
-    </dt>
-    <dd>
-    Get an item by its name.
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The name or unique ID of the item to get.
+         String to extract arguments from
         </li>
     </ul>
     <h3>Returns:</h3>
     <ol>
 
            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-        The item table, or nil if not found.
+        Arguments extracted from string
+    </ol>
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">PrintTable(cityrp.commandNew.ExtractArgs(<span class="string">"these are \"some arguments\""</span>))
+&gt; <span class="number">1</span> = these
+&gt; <span class="number">2</span> = are
+&gt; <span class="number">3</span> = some arguments</pre>
+    </ul>
+</dd>
+    <dt>
+    <a name = "cityrp.commandNew.FindAll"></a>
+    <strong><span class='state state-client state-server'>cityrp.commandNew.FindAll(identifier[, bSorted=false[, bReorganize=false[, bRemoveDupes=false]]])</span></strong>
+    </dt>
+    <dd>
+    Returns an array of potential commands by unique id.
+ When bSorted is true, the commands will be sorted by name. When bReorganize is true, it will move any exact match to the top
+ of the array. When bRemoveDupes is true, it will remove any commands that have the same NAME.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">identifier</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Search query
+        </li>
+        <li><span class="parameter">bSorted</span>
+            <span class="types"><span class="type">bool</span></span>
+         Whether or not to sort the commands by name
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">bReorganize</span>
+            <span class="types"><span class="type">bool</span></span>
+         Whether or not any exact match will be moved to the top of the array
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">bRemoveDupes</span>
+            <span class="types"><span class="type">bool</span></span>
+         Whether or not to remove any commands that have the same name
+         (<em>default</em> false)
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        Array of command tables whose name partially or completely matches the search query
     </ol>
 </dd>
     <dt>
-    <a name = "cityrp.item.addCat"></a>
-    <strong><span class='state state-client state-server'>cityrp.item.addCat(name, description, access)</span></strong>
+    <a name = "cityrp.commandNew.FindPlayer"></a>
+    <strong><span class='state state-client state-server'>cityrp.commandNew.FindPlayer(name)</span></strong>
     </dt>
     <dd>
-    Add a new category.
+    Attempts to find a player by an identifier.  If unsuccessful, a notice will be displayed to the specified player. The
+ search criteria is derived from <code>cityrp.util.FindPlayer</code>.
     </ul>
     </ul>
     </ul>
@@ -373,181 +433,249 @@
     <ul>
         <li><span class="parameter">name</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The name of the category to add.
+         Search query
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">player</span></span>
+        Player that matches the given search query
+    </ol>
+     <h3>Or</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span></span>
+        If a player could not be found
+    </ol>
+    <h3>See also:</h3>
+    <ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "cityrp.commandNew.Run"></a>
+    <strong><span class='state state-client state-server'>cityrp.commandNew.Run(command, arguments)</span></strong>
+    </dt>
+    <dd>
+    Forces a player to execute a command by name.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">command</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Full name of the command to be executed. This string gets lowered, but it's good practice to stick with
+ the exact name of the command
+        </li>
+        <li><span class="parameter">arguments</span>
+            <span class="types"><span class="type">tab</span></span>
+         Array of arguments to be passed to the command
+        </li>
+    </ul>
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">cityrp.commandNew.Run(player.GetByID(<span class="number">1</span>), <span class="string">"Roll"</span>, {<span class="number">10</span>})</pre>
+    </ul>
+</dd>
+    <dt>
+    <a name = "cityrp.commandNew.Parse"></a>
+    <strong><span class='state state-client state-server'>cityrp.commandNew.Parse(text[, realCommand[, arguments]])</span></strong>
+    </dt>
+    <dd>
+    Parses a chat string and runs the command if one is found.  Specifically, it checks for commands in a string with the
+ format <code>/CommandName some arguments</code>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Input string to search for the command format
+        </li>
+        <li><span class="parameter">realCommand</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Specific command to check for. If this is specified, it will not try to run any command that's
+ found at the beginning - only if it matches <code>realCommand</code>
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">arguments</span>
+            <span class="types"><span class="type">tab</span></span>
+         Array of arguments to pass to the command. If not specified, it will try to extract it from the
+ string specified in <code>text</code> using <a href="../modules/cityrp.commandNew.html#cityrp.commandNew.ExtractArgs">cityrp.commandNew.ExtractArgs</a>
+         (<em>optional</em>)
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        Whether or not a command has been found
+    </ol>
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">cityrp.commandNew.Parse(player.GetByID(<span class="number">1</span>), <span class="string">"/roll 10"</span>)</pre>
+    </ul>
+</dd>
+    <dt>
+    <a name = "cityrp.commandNew.Send"></a>
+    <strong><span class='state state-client state-server'>cityrp.commandNew.Send(command, ...)</span></strong>
+    </dt>
+    <dd>
+    Request the server to run a command.  This mimics similar functionality to the client typing <code>/CommandName</code> in the chatbox.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">command</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Unique ID of the command
+        </li>
+        <li><span class="parameter">...</span>
+         Arguments to pass to the command
+        </li>
+    </ul>
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">cityrp.commandNew.Send(<span class="string">"roll"</span>, <span class="number">10</span>)</pre>
+    </ul>
+</dd>
+</dl>
+</div>
+	<div class="ll-module-header"><h2 class="section-header "><a name="Tables"></a>Tables</h2></div>
+    <div class="ll-module-body">
+    <dl class="function">
+    <dt>
+    <a name = "CommandStructure"></a>
+    <strong>CommandStructure</strong>
+    </dt>
+    <dd>
+    When registering commands with <a href="../modules/cityrp.commandNew.html#cityrp.commandNew.Add">cityrp.commandNew.Add</a>, you'll need to pass in a valid command structure.  This is simply a table
+ with various fields defined to describe the functionality of the command.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">OnRun</span>
+            <span class="types"><span class="type">function</span></span>
+         This function is called when the command has passed all the checks and can execute. The first two
+ arguments will be the running command table and the calling player. If the arguments field has been specified, the arguments
+ will be passed as regular function parameters rather than in a table.</p>
+
+<p> When the arguments field is defined: <code>OnRun(self, client, target, length, message)</code></p>
+
+<p> When the arguments field is NOT defined: <code>OnRun(self, client, arguments)</code>
         </li>
         <li><span class="parameter">description</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The description of the category. Defaults to an empty string.
+         The help text that appears when the user types in the command. If the string is
+ prefixed with <code>&quot;@&quot;</code>, it will use a language phrase.
+         (<em>default</em> "@noDesc")
         </li>
-        <li><span class="parameter">access</span>
+        <li><span class="parameter">argumentNames</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+<p> An array of strings corresponding to each argument of the command. This ignores the
+ name that's specified in the <code>OnRun</code> function arguments and allows you to use any string to change the text that displays
+ in the command's syntax help. When using this field, make sure that the amount is equal to the amount of arguments, as such:</p>
+<pre><code>COMMAND.arguments = {cityrp.type.character, cityrp.type.number}
+COMMAND.argumentNames = {"target char", "cash (1-1000)"}
+</code></pre>
+
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">arguments</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         If this field is defined, then additional checks will be performed to ensure that the
+ arguments given to the command are valid. This removes extra boilerplate code since all the passed arguments are guaranteed
+ to be valid. See <a href="../modules/cityrp.commandNew.html#CommandArgumentsStructure">CommandArgumentsStructure</a> for more information.
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">adminOnly</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Provides an additional check to see if the user is an admin before running.
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">superAdminOnly</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Provides an additional check to see if the user is a superadmin before running.
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">privilege</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The access for the category, defaults to 'b'.
+         Manually specify a privilege name for this command. It will always be prefixed with
+ <code>&quot;Helcityrp - &quot;</code>. This is used in the case that you want to group commands under the same privilege, or use a privilege that
+ you've already defined (i.e grouping <code>/CharBan</code> and <code>/CharUnban</code> into the <code>Helcityrp - Ban Character</code> privilege).
+         (<em>default</em> nil)
+        </li>
+        <li><span class="parameter">OnCheckAccess</span>
+            <span class="types"><span class="type">function</span></span>
+         This callback checks whether or not the player is allowed to run the command.
+ This callback should <strong>NOT</strong> be used in conjunction with <code>adminOnly</code> or <code>superAdminOnly</code>, as populating those
+ fields create a custom a <code>OnCheckAccess</code> callback for you internally. This is used in cases where you want more fine-grained
+ access control for your command.</p>
+
+<p> Keep in mind that this is a <strong>SHARED</strong> callback the command will not show up the client if the callback returns <code>false</code>.
+         (<em>default</em> nil)
         </li>
     </ul>
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><span class="type">number</span></span>
-        The category index.
-    </ol>
 </dd>
     <dt>
-    <a name = "cityrp.item.findCat"></a>
-    <strong><span class='state state-client state-server'>cityrp.item.findCat(name)</span></strong>
+    <a name = "CommandArgumentsStructure"></a>
+    <strong>CommandArgumentsStructure</strong>
     </dt>
     <dd>
-    Retrieve a category.
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         Name of the category to find.
-        </li>
-    </ul>
-    <h3>Returns:</h3>
-    <ol>
+    Rather than checking the validity for arguments in your command's <code>OnRun</code> function, you can have Helcityrp do it for you to
+ reduce the amount of boilerplate code that needs to be written.  This can be done by populating the <code>arguments</code> field.</p>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-        Category data.
-    </ol>
-</dd>
-    <dt>
-    <a name = "cityrp.item.use"></a>
-    <strong><span class='state state-server'>cityrp.item.use(ply, uid)</span></strong>
-    </dt>
-    <dd>
-    Make a player use an item.
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">ply</span>
-            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
-         Player using the item.
-        </li>
-        <li><span class="parameter">uid</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         Unique ID of the item being used.
-        </li>
-    </ul>
-    <h3>Returns:</h3>
-    <ol>
+<p> When using the <code>arguments</code> field in your command, you are specifying specific types that you expect to receive when the
+ command is ran successfully. This means that before <code>OnRun</code> is called, the arguments passed to the command from a user will
+ be verified to be valid. Each argument is an <code>cityrp.type</code> entry that specifies the expected type for that argument. Optional
+ arguments can be specified by using a bitwise OR with the special <code>cityrp.type.optional</code> type. When specified as optional, the
+ argument can be <code>nil</code> if the user has not entered anything for that argument - otherwise it will be valid.</p>
 
-           <span class="types"><span class="type">bool</span></span>
-        If the use was allowed.
-    </ol>
-</dd>
-    <dt>
-    <a name = "cityrp.item.remove"></a>
-    <strong><span class='state state-server'>cityrp.item.remove(ply, uid)</span></strong>
-    </dt>
-    <dd>
-    Remove an item from a player (like a hat).
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">ply</span>
-            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
-         The player to remove the item from.
-        </li>
-        <li><span class="parameter">uid</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         The item index.
-        </li>
-    </ul>
-    <h3>Returns:</h3>
-    <ol>
+<p> Note that optional arguments must always be at the end of a list of arguments - or rather, they must not follow a required
+ argument. The <code>syntax</code> field will be automatically populated when using strict arguments, which means you shouldn't fill out
+ the <code>syntax</code> field yourself. The arguments you specify will have the same names as the arguments in your OnRun function.</p>
 
-           <span class="types"><span class="type">bool</span></span>
-        Success.
-    </ol>
-</dd>
-    <dt>
-    <a name = "cityrp.item.drop"></a>
-    <strong><span class='state state-server'>cityrp.item.drop(ply, uid, amount)</span></strong>
-    </dt>
-    <dd>
-    Make a player drop an item.
+<p> Consider this example command:</p>
+<pre><code>cityrp.commandNew.Add("CharSlap", {
+    description = "Slaps a character with a large trout.",
+    adminOnly = true,
+    arguments = {
+        cityrp.type.character,
+        bit.bor(cityrp.type.number, cityrp.type.optional)
+    },
+    OnRun = function(self, client, target, damage)
+        -- WHAM!
+    end
+})
+</code></pre>
+<p> Here, we've specified the first argument called <code>target</code> to be of type <code>character</code>, and the second argument called <code>damage</code>
+ to be of type <code>number</code>. The <code>damage</code> argument is optional, meaning that the command will still run if the user has not
+ specified any value for the damage. In this case, we'll need to check if it was specified by doing a simple
+ <code>if (damage) then</code>. The syntax field will be automatically populated with the value <code>&quot;&lt;target: character&gt; [damage: number]&quot;</code>.
     </ul>
     </ul>
     </ul>
     </ul>
     </ul>
     </ul>
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">ply</span>
-            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
-         Player using the item.
-        </li>
-        <li><span class="parameter">uid</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         Unique ID of the item being dropped.
-        </li>
-        <li><span class="parameter">amount</span>
-            <span class="types"><span class="type">int</span></span>
-         The number of items being dropped.
-        </li>
-    </ul>
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><span class="type">bool</span></span>
-        If the drop was allowed.
-    </ol>
-</dd>
-    <dt>
-    <a name = "cityrp.item.give"></a>
-    <strong><span class='state state-server'>cityrp.item.give(ply, uid, amount, target)</span></strong>
-    </dt>
-    <dd>
-    Transfer an item between players.
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">ply</span>
-            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
-         Player giving the item.
-        </li>
-        <li><span class="parameter">uid</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         Unique ID of the item being given.
-        </li>
-        <li><span class="parameter">amount</span>
-            <span class="types"><span class="type">int</span></span>
-         The number of items being given.
-        </li>
-        <li><span class="parameter">target</span>
-            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
-         Receiver
-        </li>
-    </ul>
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><span class="type">bool</span></span>
-        If the give was allowed.
-    </ol>
 </dd>
 </dl>
 </div>
