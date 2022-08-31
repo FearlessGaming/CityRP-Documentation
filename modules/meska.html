@@ -1,0 +1,2237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<title>CityRP Documentation</title>
+    	<link rel="stylesheet" href="../ldoc.css" type="text/css">
+
+		<link rel="stylesheet" href="../style.css" type="text/css">
+	</head>
+	<body>
+	<div id="container">
+		<div id="product">
+			<div id="product_logo"></div>
+			<div id="product_name"><big><b></b></big></div>
+			<div id="product_description"></div>
+		</div>
+		<!-- id="product" -->
+
+		<div id="main">
+
+			<!-- Menu -->
+			<div id="navigation">
+				<div class="ll-kind-header">
+					<h1>[FL] CityRP</h1>
+					<div class="header-module">
+        				<li>Copyright: © Limelight Gaming LTD.</li>
+        				<li>Release: CityRP 2</li>
+        				<li>Author: Steven A. (Burnett) <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;s&#45;&#x38;&#64;&#x70;&#111;&#x73;&#116;&#x65;o&#46;&#x6d;&#120;">&#x73;&#45;&#x38;&#64;&#x70;&#111;&#x73;t&#101;&#x6f;&#46;&#x6d;&#120;</a></li>
+					</div>
+				</div>
+				<div class="ll-kind-body">
+					<ul>
+						<li><a href="../index.html">Index</a></li>
+					</ul>
+				</div>
+
+				<div class="ll-kind-header"><h2>Contents</h2></div>
+				<ul class="ll-kind-body">
+					<li><a href="#Functions">Functions</a></li>
+					<li><a href="#Tables">Tables</a></li>
+					<li><a href="#Fields">Fields</a></li>
+				</ul>
+
+
+
+				<div class="ll-kind-header"><h2>Modules</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../modules/GM.html">GM</a></li>
+					<li><a href="../modules/notification.html">notification</a></li>
+					<li><strong>meska</strong></li>
+					<li><a href="../modules/cityrp.access.html">cityrp.access</a></li>
+					<li><a href="../modules/cityrp.chat.html">cityrp.chat</a></li>
+					<li><a href="../modules/cityrp.commandNew.html">cityrp.commandNew</a></li>
+					<li><a href="../modules/cityrp.data.html">cityrp.data</a></li>
+					<li><a href="../modules/dumper.html">dumper</a></li>
+					<li><a href="../modules/gamemode.core.libraries.sh_functions.html">gamemode.core.libraries.sh_functions</a></li>
+					<li><a href="../modules/internet.html">internet</a></li>
+					<li><a href="../modules/cityrp.item.html">cityrp.item</a></li>
+					<li><a href="../modules/cityrp.lang.html">cityrp.lang</a></li>
+					<li><a href="../modules/cityrp.option.html">cityrp.option</a></li>
+					<li><a href="../modules/gamemode.core.libraries.sh_plugin.html">gamemode.core.libraries.sh_plugin</a></li>
+					<li><a href="../modules/gamemode.core.libraries.sh_util.html">gamemode.core.libraries.sh_util</a></li>
+					<li><a href="../modules/gamemode.core.libraries.sv_discordrelay.html">gamemode.core.libraries.sv_discordrelay</a></li>
+					<li><a href="../modules/cityrp.migrations.html">cityrp.migrations</a></li>
+					<li><a href="../modules/gamemode.core.libraries.sv_player.html">gamemode.core.libraries.sv_player</a></li>
+					<li><a href="../modules/undo.html">undo</a></li>
+					<li><a href="../modules/gamemode.core.libraries.thirdparty.sh_date.html">gamemode.core.libraries.thirdparty.sh_date</a></li>
+					<li><a href="../modules/fn.html">fn</a></li>
+					<li><a href="../modules/gamemode.core.metatables.cl_player.html">gamemode.core.metatables.cl_player</a></li>
+					<li><a href="../modules/gamemode.core.sv_commands.html">gamemode.core.sv_commands</a></li>
+					<li><a href="../modules/gamemode.sh_animationoverrides.html">gamemode.sh_animationoverrides</a></li>
+					<li><a href="../modules/gamemode.sh_init.html">gamemode.sh_init</a></li>
+					<li><a href="../modules/properties.html">properties</a></li>
+					<li><a href="../modules/plugins._gprotect.sh_gprotect_baseconfig.html">plugins._gprotect.sh_gprotect_baseconfig</a></li>
+					<li><a href="../modules/plugins._simplepropprotect.cl_spp.html">plugins._simplepropprotect.cl_spp</a></li>
+					<li><a href="../modules/plugins._simplepropprotect.sh_cppi.html">plugins._simplepropprotect.sh_cppi</a></li>
+					<li><a href="../modules/plugins._simplepropprotect.sv_spp.html">plugins._simplepropprotect.sv_spp</a></li>
+					<li><a href="../modules/plugins.animations.cl_init.html">plugins.animations.cl_init</a></li>
+					<li><a href="../modules/plugins.animations.library.sh_boneanimlib.html">plugins.animations.library.sh_boneanimlib</a></li>
+					<li><a href="../modules/plugins.animations.sh_plugin.html">plugins.animations.sh_plugin</a></li>
+					<li><a href="../modules/plugins.animations.sv_init.html">plugins.animations.sv_init</a></li>
+					<li><a href="../modules/plugins.anonymous.cl_init.html">plugins.anonymous.cl_init</a></li>
+					<li><a href="../modules/plugins.anonymous.sh_plugin.html">plugins.anonymous.sh_plugin</a></li>
+					<li><a href="../modules/plugins.anonymous.sv_init.html">plugins.anonymous.sv_init</a></li>
+					<li><a href="../modules/plugins.area.cl_init.html">plugins.area.cl_init</a></li>
+					<li><a href="../modules/plugins.area.player_commands.html">plugins.area.player_commands</a></li>
+					<li><a href="../modules/plugins.area.sh_plugin.html">plugins.area.sh_plugin</a></li>
+					<li><a href="../modules/plugins.area.sv_init.html">plugins.area.sv_init</a></li>
+					<li><a href="../modules/plugins.autokick.cl_init.html">plugins.autokick.cl_init</a></li>
+					<li><a href="../modules/plugins.autokick.sh_plugin.html">plugins.autokick.sh_plugin</a></li>
+					<li><a href="../modules/plugins.autokick.sv_init.html">plugins.autokick.sv_init</a></li>
+					<li><a href="../modules/plugins.bodymechanics.sh_plugin.html">plugins.bodymechanics.sh_plugin</a></li>
+					<li><a href="../modules/plugins.breakfree.sh_plugin.html">plugins.breakfree.sh_plugin</a></li>
+					<li><a href="../modules/plugins.breakfree.sv_init.html">plugins.breakfree.sv_init</a></li>
+					<li><a href="../modules/plugins.car_freeze.sv_init.html">plugins.car_freeze.sv_init</a></li>
+					<li><a href="../modules/PLUGIN.contextmenu.html">PLUGIN.contextmenu</a></li>
+					<li><a href="../modules/plugins.crashragdoll.sh_plugin.html">plugins.crashragdoll.sh_plugin</a></li>
+					<li><a href="../modules/plugins.customhorns.sh_plugin.html">plugins.customhorns.sh_plugin</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.cl_deliveryhud.html">plugins.deliveryjobs.cl_deliveryhud</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.cl_init.html">plugins.deliveryjobs.cl_init</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.cl_npcgui.html">plugins.deliveryjobs.cl_npcgui</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.sv_config.html">plugins.deliveryjobs.sv_config</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.sv_init.html">plugins.deliveryjobs.sv_init</a></li>
+					<li><a href="../modules/plugins.deliveryjobs.sv_main.html">plugins.deliveryjobs.sv_main</a></li>
+					<li><a href="../modules/plugins.extramenu.cl_init.html">plugins.extramenu.cl_init</a></li>
+					<li><a href="../modules/plugins.hud.cl_init.html">plugins.hud.cl_init</a></li>
+					<li><a href="../modules/plugins.images.library.lib_tdui.html">plugins.images.library.lib_tdui</a></li>
+					<li><a href="../modules/plugins.images.library.ui_nstable.html">plugins.images.library.ui_nstable</a></li>
+					<li><a href="../modules/plugins.propertysystem.cl_init.html">plugins.propertysystem.cl_init</a></li>
+					<li><a href="../modules/PLUGIN.html">PLUGIN</a></li>
+					<li><a href="../modules/plugins.vehicledescription.cl_init.html">plugins.vehicledescription.cl_init</a></li>
+					<li><a href="../modules/plugins.vehicledescription.sv_init.html">plugins.vehicledescription.sv_init</a></li>
+					<li><a href="../modules/plugins.vehicles.cl_init.html">plugins.vehicles.cl_init</a></li>
+					<li><a href="../modules/plugins.vehicles.data.sh_pompier.html">plugins.vehicles.data.sh_pompier</a></li>
+					<li><a href="../modules/plugins.vehicles.data.sh_redwine_props.html">plugins.vehicles.data.sh_redwine_props</a></li>
+					<li><a href="../modules/plugins.vehicles.sv_init.html">plugins.vehicles.sv_init</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Items</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../items/ITEM.html">ITEM</a></li>
+					<li><a href="../items/base_vehicle.html">base_vehicle</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Classes</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../classes/DScaleItemPanel.html">DScaleItemPanel</a></li>
+					<li><a href="../classes/Entity.html">Entity</a></li>
+					<li><a href="../classes/Player.html">Player</a></li>
+					<li><a href="../classes/Vector.html">Vector</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Panels</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../panels/cityrp_about.html">cityrp_about</a></li>
+					<li><a href="../panels/cityrp_admin_notes.html">cityrp_admin_notes</a></li>
+					<li><a href="../panels/cityrp_binds.html">cityrp_binds</a></li>
+					<li><a href="../panels/cityrp_Binds_Header.html">cityrp_Binds_Header</a></li>
+					<li><a href="../panels/cityrp_Binds_Text.html">cityrp_Binds_Text</a></li>
+					<li><a href="../panels/cityrp_changelog.html">cityrp_changelog</a></li>
+					<li><a href="../panels/dcoloredicon.html">dcoloredicon</a></li>
+					<li><a href="../panels/dfillicon.html">dfillicon</a></li>
+					<li><a href="../panels/diconlabel.html">diconlabel</a></li>
+					<li><a href="../panels/dinfolabel.html">dinfolabel</a></li>
+					<li><a href="../panels/dinfopanel.html">dinfopanel</a></li>
+					<li><a href="../panels/ditemtitle.html">ditemtitle</a></li>
+					<li><a href="../panels/dlimitedtextentry.html">dlimitedtextentry</a></li>
+					<li><a href="../panels/doptionpanel.html">doptionpanel</a></li>
+					<li><a href="../panels/dpropamt.html">dpropamt</a></li>
+					<li><a href="../panels/dradio.html">dradio</a></li>
+					<li><a href="../panels/dtexturedprogress.html">dtexturedprogress</a></li>
+					<li><a href="../panels/dwepinfo.html">dwepinfo</a></li>
+					<li><a href="../panels/cityrpLabel.html">cityrpLabel</a></li>
+					<li><a href="../panels/hud_botleft.html">hud_botleft</a></li>
+					<li><a href="../panels/hud_topleft.html">hud_topleft</a></li>
+					<li><a href="../panels/hud_vehicle.html">hud_vehicle</a></li>
+					<li><a href="../panels/new_fl_derma_elements.html">new_fl_derma_elements</a></li>
+					<li><a href="../panels/AdminFrame.html">AdminFrame</a></li>
+					<li><a href="../panels/ReasonFrame.html">ReasonFrame</a></li>
+					<li><a href="../panels/ReasonFrame.html">ReasonFrame</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Weapons</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../weapons/cityrp_blindfold.html">cityrp_blindfold</a></li>
+					<li><a href="../weapons/cityrp_carry.html">cityrp_carry</a></li>
+					<li><a href="../weapons/rod_carbon.html">rod_carbon</a></li>
+					<li><a href="../weapons/rod_steel.html">rod_steel</a></li>
+					<li><a href="../weapons/rod_wooden.html">rod_wooden</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Tools</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../tools/oillamp.html">oillamp</a></li>
+					<li><a href="../tools/shadowremover.html">shadowremover</a></li>
+					<li><a href="../tools/smartwelder.html">smartwelder</a></li>
+					<li><a href="../tools/stackerv2.html">stackerv2</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Topics</h2></div>
+				<ul class="ll-kind-body ">
+					<li><a href="../topics/cloning.md.html">cloning</a></li>
+					<li><a href="../topics/documentation.md.html">documentation</a></li>
+					<li><a href="../topics/meska.md.html">meska</a></li>
+					<li><a href="../topics/migrations.md.html">migrations</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Credits</h2></div>
+				<ul class="ll-kind-body">
+					<li><p>Generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a>.</p></li>
+					<li><p>Generated using the <a href="https://limelightgaming.info">Limelight Theme</a>.</p></li>
+					<li><p>Last Updated at 2022-08-31 18:04:42.</p></li>
+				</div>
+</div>
+
+
+</div>
+
+
+			<div id="content">
+				<div class="ll-module-header"><h1>Module <code>meska</code></h1></div>
+				<div class="ll-module-body">
+					Metrics-Skill-Achievement Framework (MESKA)
+The achievements-system booting.
+
+
+
+				</div>
+
+
+
+
+
+
+
+<div class="ll-module-header"><h2>Module Overview</h2></div>
+<div class="ll-module-body">
+
+<h3><a href="#Functions">Functions</a></h3>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#meska.achievements.tpl"><span class='state state-server'>meska.achievements.tpl(config)</span></a></td>
+	<td class="summary">The template for achievements</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.achievements.load"><span class='state state-server'>meska.achievements.load([cb])</span></a></td>
+	<td class="summary">Loads all achievements from DB.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.achievements.loadFor"><span class='state state-server'>meska.achievements.loadFor(Player[, cb])</span></a></td>
+	<td class="summary">Loads the achievements of a player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.achievements.get"><span class='state state-server'>meska.achievements.get(alias)</span></a></td>
+	<td class="summary">Either gets all or filtered achievements.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.achievements.getBy"><span class='state state-server'>meska.achievements.getBy(key, value)</span></a></td>
+	<td class="summary">Get achievements by key and value.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.achievements.add"><span class='state state-server'>meska.achievements.add(config, tmp[, cb])</span></a></td>
+	<td class="summary">Adds an achievement to the storage.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.achievements.producer"><span class='state state-server'>meska.achievements.producer(achievements, curIdx)</span></a></td>
+	<td class="summary">A generator that creates the achievements while
+ respecting the underlaying asynchronous DB code-flow.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.achievements.iterator"><span class='state state-server'>meska.achievements.iterator(achievements)</span></a></td>
+	<td class="summary">An interator that returns the results of its producer back to the consumer.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.achievements.meetsRequirements"><span class='state state-server'>meska.achievements.meetsRequirements(Player, achievement)</span></a></td>
+	<td class="summary">Calls the requirements hook.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.achievements.giveRewards"><span class='state state-server'>meska.achievements.giveRewards(Player, achievement)</span></a></td>
+	<td class="summary">Calls the rewards hook.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.achievements.award"><span class='state state-server'>meska.achievements.award(Player)</span></a></td>
+	<td class="summary">Awards a player with achievements.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.achievements.runAnnounceQueue"><span class='state state-server'>meska.achievements.runAnnounceQueue(Player)</span></a></td>
+	<td class="summary">Display delayed announcements.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#pMeta:Achievement"><span class='state state-server'>pMeta:Achievement(alias)</span></a></td>
+	<td class="summary">Checks whether player has an achievement.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.custombonus.loadFor"><span class='state state-server'>meska.custombonus.loadFor(ply[, cb])</span></a></td>
+	<td class="summary">Loads all custombonuses for a player from DB.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.custombonus.get"><span class='state state-server'>meska.custombonus.get(ply, skill)</span></a></td>
+	<td class="summary">Gets total buffs of active custombonuses
+ for player and skill/globally.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.custombonus.add"><span class='state state-server'>meska.custombonus.add(ply, skill, buff, tit, src, tmp[, cb])</span></a></td>
+	<td class="summary">Adds custombonus for a player to their storage.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.custombonus.update"><span class='state state-server'>meska.custombonus.update(ply, id, buff[, cb])</span></a></td>
+	<td class="summary">Updates custombonus for a player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.custombonus.remove"><span class='state state-server'>meska.custombonus.remove(ply, id[, cb])</span></a></td>
+	<td class="summary">Removes a custombonus.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.custombonus.syncToClient"><span class='state state-server'>meska.custombonus.syncToClient(ply[, cb])</span></a></td>
+	<td class="summary">Syncs custombonus to player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.dailybonus.load"><span class='state state-server'>meska.dailybonus.load([cb])</span></a></td>
+	<td class="summary">Loads all dailybonuses from DB or storage.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.dailybonus.get"><span class='state state-server'>meska.dailybonus.get(skill)</span></a></td>
+	<td class="summary">Gets total buffs of active dailybonuses
+ for a skill.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.dailybonus.getAllActive"><span class='state state-server'>meska.dailybonus.getAllActive(skill)</span></a></td>
+	<td class="summary">Gets all active dailybonuses for a skill.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.dailybonus.add"><span class='state state-server'>meska.dailybonus.add(skill, buff, tmp[, cb])</span></a></td>
+	<td class="summary">Adds dailybonus for a skill to the storage.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.dailybonus.update"><span class='state state-server'>meska.dailybonus.update(skill, id, buff[, cb])</span></a></td>
+	<td class="summary">Updates dailybonus.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.dailybonus.remove"><span class='state state-server'>meska.dailybonus.remove(skill, id[, cb])</span></a></td>
+	<td class="summary">Removes a dailybonus.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.dailybonus.syncToClient"><span class='state state-server'>meska.dailybonus.syncToClient(ply[, cb])</span></a></td>
+	<td class="summary">Syncs dailybonus to a player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.dailybonus.syncToClients"><span class='state state-server'>meska.dailybonus.syncToClients([cb])</span></a></td>
+	<td class="summary">Syncs dailybonus to all players.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isPlayer"><span class='state state-client state-server'>isPlayer(ply)</span></a></td>
+	<td class="summary">Checks for a valid player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#hasSkillsProp"><span class='state state-client'>hasSkillsProp(ply)</span></a></td>
+	<td class="summary">Checks if player has skill prop.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#hasSkillsProp"><span class='state state-server'>hasSkillsProp(ply)</span></a></td>
+	<td class="summary">Checks if player has skill prop.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#hasAchievementsProp"><span class='state state-server'>hasAchievementsProp(ply)</span></a></td>
+	<td class="summary">Checks if player has achievement prop.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#hasCustombonusProp"><span class='state state-server'>hasCustombonusProp(ply)</span></a></td>
+	<td class="summary">Checks if player has custombonus prop.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#validResult"><span class='state state-server'>validResult(result)</span></a></td>
+	<td class="summary">Checks if player has achievement prop.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#dateFromTime"><span class='state state-server'>dateFromTime(time)</span></a></td>
+	<td class="summary">Converts time to human-readable date.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.metrics.initFor"><span class='state state-server'>meska.metrics.initFor(ply[, cb])</span></a></td>
+	<td class="summary">Provisions all metrics/stats for a player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.metrics.track"><span class='state state-server'>meska.metrics.track(ply, skill, metric, equ, tmp[, cb])</span></a></td>
+	<td class="summary">Tracks metrics and stats for a prop
+ and calculates skill exp and level.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.metrics.syncToDB"><span class='state state-server'>meska.metrics.syncToDB([cb])</span></a></td>
+	<td class="summary">Syncs metrics config to database.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.providers.load"><span class='state state-server'>meska.providers.load(gmfolder)</span></a></td>
+	<td class="summary">Loads all MESKA providers.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#memory.alloc"><span class='state state-server'>memory.alloc()</span></a></td>
+	<td class="summary">Allocates the memory provider.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tpl.put"><span class='state state-server'>tpl.put(key, value)</span></a></td>
+	<td class="summary">The insertion wrapper.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tpl.putQuery"><span class='state state-server'>tpl.putQuery(key, query)</span></a></td>
+	<td class="summary">The insertion wrapper for queries.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tpl.pull"><span class='state state-server'>tpl.pull(key)</span></a></td>
+	<td class="summary">The query wrapper.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tpl.delete"><span class='state state-server'>tpl.delete(key)</span></a></td>
+	<td class="summary">The deletion wrapper.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tpl.append"><span class='state state-server'>tpl.append(key, value)</span></a></td>
+	<td class="summary">The append wrapper.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tpl.prepend"><span class='state state-server'>tpl.prepend(key, value)</span></a></td>
+	<td class="summary">The prepend wrapper.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tpl.lastIndex"><span class='state state-server'>tpl.lastIndex()</span></a></td>
+	<td class="summary">Gets the last index.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#memory.free"><span class='state state-server'>memory.free(idx)</span></a></td>
+	<td class="summary">Frees the memory provider.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#mysql.load"><span class='state state-server'>mysql.load()</span></a></td>
+	<td class="summary">Loads the mysql provider.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tpl:Exec"><span class='state state-server'>tpl:Exec(q, cb)</span></a></td>
+	<td class="summary">The execution wrapper.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tpl:Escape"><span class='state state-server'>tpl:Escape(str)</span></a></td>
+	<td class="summary">The escaping wrapper.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#mysql.unload"><span class='state state-server'>mysql.unload(idx)</span></a></td>
+	<td class="summary">Unloads the mysql provider.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.skills.loadFor"><span class='state state-server'>meska.skills.loadFor(ply[, cb])</span></a></td>
+	<td class="summary">Fetches player skills from db.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.skills.capLevels"><span class='state state-server'>meska.skills.capLevels(ply, min, max)</span></a></td>
+	<td class="summary">Caps all levels by meska.conf.defaults[skill].</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.skills.announceLevel"><span class='state state-server'>meska.skills.announceLevel(ply, skill, level)</span></a></td>
+	<td class="summary">Announces a level-up to player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.skills.getProductsBySkillLevel"><span class='state state-server'>meska.skills.getProductsBySkillLevel(ply, skill)</span></a></td>
+	<td class="summary">Gets eligable products by skill and level.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.skills.getProductsBySkillFilter"><span class='state state-server'>meska.skills.getProductsBySkillFilter(ply, skill, filter)</span></a></td>
+	<td class="summary">Gets eligable products by skill and filter.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.skills.setup"><span class='state state-server'>meska.skills.setup(skill, config)</span></a></td>
+	<td class="summary">Setup a new meska skill.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#pMeta:Level"><span class='state state-client state-server'>pMeta:Level(skill)</span></a></td>
+	<td class="summary">Gets player skill level.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#pMeta:Exp"><span class='state state-client state-server'>pMeta:Exp(skill)</span></a></td>
+	<td class="summary">Gets player skill exp.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#saveAll"><span class='state state-server'>saveAll()</span></a></td>
+	<td class="summary">Executes cached database-queries.</td>
+	</tr>
+</table>
+<h3><a href="#Tables">Tables</a></h3>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#meska.conf.rods">meska.conf.rods</a></td>
+	<td class="summary">Skill specific configuration for:</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.conf.defaults">meska.conf.defaults</a></td>
+	<td class="summary">Default levels and exp at which the player starts.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.conf.perks">meska.conf.perks</a></td>
+	<td class="summary">Default perks.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.conf.guides">meska.conf.guides</a></td>
+	<td class="summary">Default guides.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#meska.conf.skills">meska.conf.skills</a></td>
+	<td class="summary">[skill] = { [type] = { lvl, exp, ...</td>
+	</tr>
+</table>
+<h3><a href="#Fields">Fields</a></h3>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#memory.load">memory.load</a></td>
+	<td class="summary">Loads the memory provider.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#memory.unload">memory.unload</a></td>
+	<td class="summary">Unloads the memory provider.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tpl.queryGateway">tpl.queryGateway</a></td>
+	<td class="summary">The query gateway.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tpl.escapeGateway">tpl.escapeGateway</a></td>
+	<td class="summary">The escape gateway.</td>
+	</tr>
+</table>
+</div>
+
+	<div class="ll-module-header"><h2 class="section-header "><a name="Functions"></a>Functions</h2></div>
+    <div class="ll-module-body">
+    <dl class="function">
+    <dt>
+    <a name = "meska.achievements.tpl"></a>
+    <strong><span class='state state-server'>meska.achievements.tpl(config)</span></strong>
+    </dt>
+    <dd>
+    The template for achievements
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">config</span>
+         Achievement configuration.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        table The template.
+    </ol>
+</dd>
+    <dt>
+    <a name = "meska.achievements.load"></a>
+    <strong><span class='state state-server'>meska.achievements.load([cb])</span></strong>
+    </dt>
+    <dd>
+    Loads all achievements from DB.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.achievements.loadFor"></a>
+    <strong><span class='state state-server'>meska.achievements.loadFor(Player[, cb])</span></strong>
+    </dt>
+    <dd>
+    Loads the achievements of a player.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Player</span>
+            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
+         entity.
+        </li>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.achievements.get"></a>
+    <strong><span class='state state-server'>meska.achievements.get(alias)</span></strong>
+    </dt>
+    <dd>
+    Either gets all or filtered achievements.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">alias</span>
+         Achievement alias.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        table The achievements.
+    </ol>
+</dd>
+    <dt>
+    <a name = "meska.achievements.getBy"></a>
+    <strong><span class='state state-server'>meska.achievements.getBy(key, value)</span></strong>
+    </dt>
+    <dd>
+    Get achievements by key and value.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+         The key.
+        </li>
+        <li><span class="parameter">value</span>
+         The value.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        table The achievements.
+    </ol>
+</dd>
+    <dt>
+    <a name = "meska.achievements.add"></a>
+    <strong><span class='state state-server'>meska.achievements.add(config, tmp[, cb])</span></strong>
+    </dt>
+    <dd>
+    Adds an achievement to the storage.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">config</span>
+         Achievement configuration.
+        </li>
+        <li><span class="parameter">tmp</span>
+         If false, store in db. Default: false.
+        </li>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function with id as return value.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.achievements.producer"></a>
+    <strong><span class='state state-server'>meska.achievements.producer(achievements, curIdx)</span></strong>
+    </dt>
+    <dd>
+    A generator that creates the achievements while
+ respecting the underlaying asynchronous DB code-flow.
+ It returns back to the consumer once all given achievements
+ were created in the database. This prevents against race-conditions.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Deprecated:</h3>
+    <ul>
+         <span class='tag-deprecated'>This function is deprecated and may be removed in a future version.<br>Co-Routines no longer needed.</span>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">achievements</span>
+         Achievements table.
+        </li>
+        <li><span class="parameter">curIdx</span>
+         The current table index.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        table The achievements.
+    </ol>
+</dd>
+    <dt>
+    <a name = "meska.achievements.iterator"></a>
+    <strong><span class='state state-server'>meska.achievements.iterator(achievements)</span></strong>
+    </dt>
+    <dd>
+    An interator that returns the results of its producer back to the consumer.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Deprecated:</h3>
+    <ul>
+         <span class='tag-deprecated'>This function is deprecated and may be removed in a future version.<br>Co-Routines no longer needed.</span>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">achievements</span>
+         Initial achievements table.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        iterator The iterator containing the results of the producter.
+    </ol>
+</dd>
+    <dt>
+    <a name = "meska.achievements.meetsRequirements"></a>
+    <strong><span class='state state-server'>meska.achievements.meetsRequirements(Player, achievement)</span></strong>
+    </dt>
+    <dd>
+    Calls the requirements hook.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Player</span>
+            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
+         entity.
+        </li>
+        <li><span class="parameter">achievement</span>
+         Achievement.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.achievements.giveRewards"></a>
+    <strong><span class='state state-server'>meska.achievements.giveRewards(Player, achievement)</span></strong>
+    </dt>
+    <dd>
+    Calls the rewards hook.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Player</span>
+            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
+         entity.
+        </li>
+        <li><span class="parameter">achievement</span>
+         Achievement.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.achievements.award"></a>
+    <strong><span class='state state-server'>meska.achievements.award(Player)</span></strong>
+    </dt>
+    <dd>
+    Awards a player with achievements.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Player</span>
+            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
+         entity.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.achievements.runAnnounceQueue"></a>
+    <strong><span class='state state-server'>meska.achievements.runAnnounceQueue(Player)</span></strong>
+    </dt>
+    <dd>
+    Display delayed announcements.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">Player</span>
+            <span class="types"><a class="type" href="../classes/Player.html#">Player</a></span>
+         entity.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "pMeta:Achievement"></a>
+    <strong><span class='state state-server'>pMeta:Achievement(alias)</span></strong>
+    </dt>
+    <dd>
+    Checks whether player has an achievement.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">alias</span>
+         Achievement alias.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        bool If player has the achievement.
+    </ol>
+</dd>
+    <dt>
+    <a name = "meska.custombonus.loadFor"></a>
+    <strong><span class='state state-server'>meska.custombonus.loadFor(ply[, cb])</span></strong>
+    </dt>
+    <dd>
+    Loads all custombonuses for a player from DB.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         Player Entity.
+        </li>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.custombonus.get"></a>
+    <strong><span class='state state-server'>meska.custombonus.get(ply, skill)</span></strong>
+    </dt>
+    <dd>
+    Gets total buffs of active custombonuses
+ for player and skill/globally.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         Player Entity.
+        </li>
+        <li><span class="parameter">skill</span>
+         The skill.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        number Total buffs.
+    </ol>
+</dd>
+    <dt>
+    <a name = "meska.custombonus.add"></a>
+    <strong><span class='state state-server'>meska.custombonus.add(ply, skill, buff, tit, src, tmp[, cb])</span></strong>
+    </dt>
+    <dd>
+    Adds custombonus for a player to their storage.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         The player.
+        </li>
+        <li><span class="parameter">skill</span>
+         The skill.
+        </li>
+        <li><span class="parameter">buff</span>
+         The buff.
+        </li>
+        <li><span class="parameter">tit</span>
+         The title.
+        </li>
+        <li><span class="parameter">src</span>
+         The source.
+        </li>
+        <li><span class="parameter">tmp</span>
+         If false, store in db. Default: false.
+        </li>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function with id as return value.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.custombonus.update"></a>
+    <strong><span class='state state-server'>meska.custombonus.update(ply, id, buff[, cb])</span></strong>
+    </dt>
+    <dd>
+    Updates custombonus for a player.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         The player.
+        </li>
+        <li><span class="parameter">id</span>
+         The id.
+        </li>
+        <li><span class="parameter">buff</span>
+         The buff.
+        </li>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.custombonus.remove"></a>
+    <strong><span class='state state-server'>meska.custombonus.remove(ply, id[, cb])</span></strong>
+    </dt>
+    <dd>
+    Removes a custombonus.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         The player.
+        </li>
+        <li><span class="parameter">id</span>
+         The id.
+        </li>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.custombonus.syncToClient"></a>
+    <strong><span class='state state-server'>meska.custombonus.syncToClient(ply[, cb])</span></strong>
+    </dt>
+    <dd>
+    Syncs custombonus to player.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         Player Entity.
+        </li>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.dailybonus.load"></a>
+    <strong><span class='state state-server'>meska.dailybonus.load([cb])</span></strong>
+    </dt>
+    <dd>
+    Loads all dailybonuses from DB or storage.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.dailybonus.get"></a>
+    <strong><span class='state state-server'>meska.dailybonus.get(skill)</span></strong>
+    </dt>
+    <dd>
+    Gets total buffs of active dailybonuses
+ for a skill.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">skill</span>
+         The skill.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        number Total buffs.
+    </ol>
+</dd>
+    <dt>
+    <a name = "meska.dailybonus.getAllActive"></a>
+    <strong><span class='state state-server'>meska.dailybonus.getAllActive(skill)</span></strong>
+    </dt>
+    <dd>
+    Gets all active dailybonuses for a skill.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">skill</span>
+         The skill.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        table Active dailybonuses.
+    </ol>
+</dd>
+    <dt>
+    <a name = "meska.dailybonus.add"></a>
+    <strong><span class='state state-server'>meska.dailybonus.add(skill, buff, tmp[, cb])</span></strong>
+    </dt>
+    <dd>
+    Adds dailybonus for a skill to the storage.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">skill</span>
+         The skill.
+        </li>
+        <li><span class="parameter">buff</span>
+         The buff.
+        </li>
+        <li><span class="parameter">tmp</span>
+         If false, store in db. Default: false.
+        </li>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function with id as return value.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.dailybonus.update"></a>
+    <strong><span class='state state-server'>meska.dailybonus.update(skill, id, buff[, cb])</span></strong>
+    </dt>
+    <dd>
+    Updates dailybonus.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">skill</span>
+         The skill.
+        </li>
+        <li><span class="parameter">id</span>
+         The id.
+        </li>
+        <li><span class="parameter">buff</span>
+         The buff.
+        </li>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.dailybonus.remove"></a>
+    <strong><span class='state state-server'>meska.dailybonus.remove(skill, id[, cb])</span></strong>
+    </dt>
+    <dd>
+    Removes a dailybonus.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">skill</span>
+         The skill.
+        </li>
+        <li><span class="parameter">id</span>
+         The id.
+        </li>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.dailybonus.syncToClient"></a>
+    <strong><span class='state state-server'>meska.dailybonus.syncToClient(ply[, cb])</span></strong>
+    </dt>
+    <dd>
+    Syncs dailybonus to a player.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         Player Entity or nil.
+        </li>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.dailybonus.syncToClients"></a>
+    <strong><span class='state state-server'>meska.dailybonus.syncToClients([cb])</span></strong>
+    </dt>
+    <dd>
+    Syncs dailybonus to all players.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "isPlayer"></a>
+    <strong><span class='state state-client state-server'>isPlayer(ply)</span></strong>
+    </dt>
+    <dd>
+    Checks for a valid player.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         Player entity.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        bool If the entity is a Player.
+    </ol>
+</dd>
+    <dt>
+    <a name = "hasSkillsProp"></a>
+    <strong><span class='state state-client'>hasSkillsProp(ply)</span></strong>
+    </dt>
+    <dd>
+    Checks if player has skill prop.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         Player entity.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        [table|false] Skills table or false.
+    </ol>
+</dd>
+    <dt>
+    <a name = "hasSkillsProp"></a>
+    <strong><span class='state state-server'>hasSkillsProp(ply)</span></strong>
+    </dt>
+    <dd>
+    Checks if player has skill prop.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         Player entity.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        [table|false] Skills table or false.
+    </ol>
+</dd>
+    <dt>
+    <a name = "hasAchievementsProp"></a>
+    <strong><span class='state state-server'>hasAchievementsProp(ply)</span></strong>
+    </dt>
+    <dd>
+    Checks if player has achievement prop.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         Player entity.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        [table|false] Achievements table or false.
+    </ol>
+</dd>
+    <dt>
+    <a name = "hasCustombonusProp"></a>
+    <strong><span class='state state-server'>hasCustombonusProp(ply)</span></strong>
+    </dt>
+    <dd>
+    Checks if player has custombonus prop.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         Player entity.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        [table|false] Custombonus table or false.
+    </ol>
+</dd>
+    <dt>
+    <a name = "validResult"></a>
+    <strong><span class='state state-server'>validResult(result)</span></strong>
+    </dt>
+    <dd>
+    Checks if player has achievement prop.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">result</span>
+         The result.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        bool Whether the result is valid.
+    </ol>
+</dd>
+    <dt>
+    <a name = "dateFromTime"></a>
+    <strong><span class='state state-server'>dateFromTime(time)</span></strong>
+    </dt>
+    <dd>
+    Converts time to human-readable date.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+         The timestamp.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        bool Whether result is valid.
+    </ol>
+</dd>
+    <dt>
+    <a name = "meska.metrics.initFor"></a>
+    <strong><span class='state state-server'>meska.metrics.initFor(ply[, cb])</span></strong>
+    </dt>
+    <dd>
+    Provisions all metrics/stats for a player.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         Player Entity.
+        </li>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.metrics.track"></a>
+    <strong><span class='state state-server'>meska.metrics.track(ply, skill, metric, equ, tmp[, cb])</span></strong>
+    </dt>
+    <dd>
+    Tracks metrics and stats for a prop
+ and calculates skill exp and level.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         Player Entity.
+        </li>
+        <li><span class="parameter">skill</span>
+         The skill.
+        </li>
+        <li><span class="parameter">metric</span>
+         The property.
+        </li>
+        <li><span class="parameter">equ</span>
+         Equotation.
+        </li>
+        <li><span class="parameter">tmp</span>
+         If false, update in db. Default: false.
+        </li>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function with earned exp as return value.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.metrics.syncToDB"></a>
+    <strong><span class='state state-server'>meska.metrics.syncToDB([cb])</span></strong>
+    </dt>
+    <dd>
+    Syncs metrics config to database.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.providers.load"></a>
+    <strong><span class='state state-server'>meska.providers.load(gmfolder)</span></strong>
+    </dt>
+    <dd>
+    Loads all MESKA providers.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">gmfolder</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The gamemode (base) folder.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "memory.alloc"></a>
+    <strong><span class='state state-server'>memory.alloc()</span></strong>
+    </dt>
+    <dd>
+    Allocates the memory provider.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        number provider index.
+    </ol>
+</dd>
+    <dt>
+    <a name = "tpl.put"></a>
+    <strong><span class='state state-server'>tpl.put(key, value)</span></strong>
+    </dt>
+    <dd>
+    The insertion wrapper.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The key.
+        </li>
+        <li><span class="parameter">value</span>
+         The value.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "tpl.putQuery"></a>
+    <strong><span class='state state-server'>tpl.putQuery(key, query)</span></strong>
+    </dt>
+    <dd>
+    The insertion wrapper for queries.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The query key.
+        </li>
+        <li><span class="parameter">query</span>
+         The query.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "tpl.pull"></a>
+    <strong><span class='state state-server'>tpl.pull(key)</span></strong>
+    </dt>
+    <dd>
+    The query wrapper.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The key.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        any The value.
+    </ol>
+</dd>
+    <dt>
+    <a name = "tpl.delete"></a>
+    <strong><span class='state state-server'>tpl.delete(key)</span></strong>
+    </dt>
+    <dd>
+    The deletion wrapper.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The key.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "tpl.append"></a>
+    <strong><span class='state state-server'>tpl.append(key, value)</span></strong>
+    </dt>
+    <dd>
+    The append wrapper.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The key.
+        </li>
+        <li><span class="parameter">value</span>
+         The value.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "tpl.prepend"></a>
+    <strong><span class='state state-server'>tpl.prepend(key, value)</span></strong>
+    </dt>
+    <dd>
+    The prepend wrapper.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The key.
+        </li>
+        <li><span class="parameter">value</span>
+         The value.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "tpl.lastIndex"></a>
+    <strong><span class='state state-server'>tpl.lastIndex()</span></strong>
+    </dt>
+    <dd>
+    Gets the last index.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        number The index.
+    </ol>
+</dd>
+    <dt>
+    <a name = "memory.free"></a>
+    <strong><span class='state state-server'>memory.free(idx)</span></strong>
+    </dt>
+    <dd>
+    Frees the memory provider.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">idx</span>
+            <span class="types"><span class="type">number</span></span>
+         The provider index.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "mysql.load"></a>
+    <strong><span class='state state-server'>mysql.load()</span></strong>
+    </dt>
+    <dd>
+    Loads the mysql provider.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        number provider index.
+    </ol>
+</dd>
+    <dt>
+    <a name = "tpl:Exec"></a>
+    <strong><span class='state state-server'>tpl:Exec(q, cb)</span></strong>
+    </dt>
+    <dd>
+    The execution wrapper.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">q</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The query.
+        </li>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        function The query gateway.
+    </ol>
+</dd>
+    <dt>
+    <a name = "tpl:Escape"></a>
+    <strong><span class='state state-server'>tpl:Escape(str)</span></strong>
+    </dt>
+    <dd>
+    The escaping wrapper.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">str</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The string.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        function The escape gateway.
+    </ol>
+</dd>
+    <dt>
+    <a name = "mysql.unload"></a>
+    <strong><span class='state state-server'>mysql.unload(idx)</span></strong>
+    </dt>
+    <dd>
+    Unloads the mysql provider.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">idx</span>
+            <span class="types"><span class="type">number</span></span>
+         The provider index.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.skills.loadFor"></a>
+    <strong><span class='state state-server'>meska.skills.loadFor(ply[, cb])</span></strong>
+    </dt>
+    <dd>
+    Fetches player skills from db.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         Player Entity.
+        </li>
+        <li><span class="parameter">cb</span>
+            <span class="types"><span class="type">func</span></span>
+         Callback Function.
+         (<em>optional</em>)
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.skills.capLevels"></a>
+    <strong><span class='state state-server'>meska.skills.capLevels(ply, min, max)</span></strong>
+    </dt>
+    <dd>
+    Caps all levels by meska.conf.defaults[skill].
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         Player Entity.
+        </li>
+        <li><span class="parameter">min</span>
+         Minimum level.
+        </li>
+        <li><span class="parameter">max</span>
+         Maximum level.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.skills.announceLevel"></a>
+    <strong><span class='state state-server'>meska.skills.announceLevel(ply, skill, level)</span></strong>
+    </dt>
+    <dd>
+    Announces a level-up to player.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         Player Entity.
+        </li>
+        <li><span class="parameter">skill</span>
+         The skill.
+        </li>
+        <li><span class="parameter">level</span>
+         The level.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.skills.getProductsBySkillLevel"></a>
+    <strong><span class='state state-server'>meska.skills.getProductsBySkillLevel(ply, skill)</span></strong>
+    </dt>
+    <dd>
+    Gets eligable products by skill and level.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         Player Entity.
+        </li>
+        <li><span class="parameter">skill</span>
+         The skill.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        [table|nil] Products table or nil.
+    </ol>
+</dd>
+    <dt>
+    <a name = "meska.skills.getProductsBySkillFilter"></a>
+    <strong><span class='state state-server'>meska.skills.getProductsBySkillFilter(ply, skill, filter)</span></strong>
+    </dt>
+    <dd>
+    Gets eligable products by skill and filter.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ply</span>
+         Player Entity.
+        </li>
+        <li><span class="parameter">skill</span>
+         The skill.
+        </li>
+        <li><span class="parameter">filter</span>
+         The filter.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        [table|nil] Products table or nil.
+    </ol>
+</dd>
+    <dt>
+    <a name = "meska.skills.setup"></a>
+    <strong><span class='state state-server'>meska.skills.setup(skill, config)</span></strong>
+    </dt>
+    <dd>
+    Setup a new meska skill.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">skill</span>
+         The skill name.
+        </li>
+        <li><span class="parameter">config</span>
+         Skill configuration.
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "pMeta:Level"></a>
+    <strong><span class='state state-client state-server'>pMeta:Level(skill)</span></strong>
+    </dt>
+    <dd>
+    Gets player skill level.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">skill</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The skill.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        number The level.
+    </ol>
+</dd>
+    <dt>
+    <a name = "pMeta:Exp"></a>
+    <strong><span class='state state-client state-server'>pMeta:Exp(skill)</span></strong>
+    </dt>
+    <dd>
+    Gets player skill exp.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">skill</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The skill.
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+        number The exp.
+    </ol>
+</dd>
+    <dt>
+    <a name = "saveAll"></a>
+    <strong><span class='state state-server'>saveAll()</span></strong>
+    </dt>
+    <dd>
+    Executes cached database-queries.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+</dl>
+</div>
+	<div class="ll-module-header"><h2 class="section-header "><a name="Tables"></a>Tables</h2></div>
+    <div class="ll-module-body">
+    <dl class="function">
+    <dt>
+    <a name = "meska.conf.rods"></a>
+    <strong>meska.conf.rods</strong>
+    </dt>
+    <dd>
+    Skill specific configuration for:
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Deprecated:</h3>
+    <ul>
+         <span class='tag-deprecated'>This function is deprecated and may be removed in a future version.<br>This will be moved to a separate skill-file.
+ Fishing Skill config</span>
+    </ul>
+    </ul>
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">[cityrp_rod]</span>
+
+
+
+        </li>
+        <li><span class="parameter">[rod_steel]</span>
+
+
+
+        </li>
+        <li><span class="parameter">[rod_carbon]</span>
+
+
+
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.conf.defaults"></a>
+    <strong>meska.conf.defaults</strong>
+    </dt>
+    <dd>
+    Default levels and exp at which the player starts.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Deprecated:</h3>
+    <ul>
+         <span class='tag-deprecated'>This function is deprecated and may be removed in a future version.<br>This will be moved to a separate skill-file.</span>
+    </ul>
+    </ul>
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">[general]</span>
+
+
+
+        </li>
+        <li><span class="parameter">maxLvl</span>
+
+
+
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.conf.perks"></a>
+    <strong>meska.conf.perks</strong>
+    </dt>
+    <dd>
+    Default perks.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Deprecated:</h3>
+    <ul>
+         <span class='tag-deprecated'>This function is deprecated and may be removed in a future version.<br>This will be moved to a separate skill-file.</span>
+    </ul>
+    </ul>
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">[fishing]</span>
+
+
+
+        </li>
+        <li><span class="parameter">text</span>
+
+
+
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.conf.guides"></a>
+    <strong>meska.conf.guides</strong>
+    </dt>
+    <dd>
+    Default guides.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Deprecated:</h3>
+    <ul>
+         <span class='tag-deprecated'>This function is deprecated and may be removed in a future version.<br>This will be moved to a separate skill-file.</span>
+    </ul>
+    </ul>
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">[fishing]</span>
+
+
+
+        </li>
+        <li><span class="parameter">title</span>
+
+
+
+        </li>
+        <li><span class="parameter">version</span>
+
+
+
+        </li>
+        <li><span class="parameter">template</span>
+
+
+
+        </li>
+        <li><span class="parameter">sectionA</span>
+
+
+
+        </li>
+        <li><span class="parameter">text</span>
+
+
+
+        </li>
+        <li><span class="parameter">icon</span>
+
+
+
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "meska.conf.skills"></a>
+    <strong>meska.conf.skills</strong>
+    </dt>
+    <dd>
+    [skill] = { [type] = { lvl, exp, ...  } }
+ The exp is being used to calculate players skill exp,
+ and level based on dailybonus and percentage of skill level
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Deprecated:</h3>
+    <ul>
+         <span class='tag-deprecated'>This function is deprecated and may be removed in a future version.<br>This will be moved to a separate skill-file.</span>
+    </ul>
+    </ul>
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">[general]</span>
+
+
+
+        </li>
+        <li><span class="parameter">exp</span>
+
+
+
+        </li>
+        <li><span class="parameter">highlight</span>
+
+
+
+        </li>
+        <li><span class="parameter">requirements</span>
+
+
+
+        </li>
+    </ul>
+</dd>
+</dl>
+</div>
+	<div class="ll-module-header"><h2 class="section-header "><a name="Fields"></a>Fields</h2></div>
+    <div class="ll-module-body">
+    <dl class="function">
+    <dt>
+    <a name = "memory.load"></a>
+    <strong>memory.load</strong>
+    </dt>
+    <dd>
+    Loads the memory provider.
+ Wrapper function for memory.alloc.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "memory.unload"></a>
+    <strong>memory.unload</strong>
+    </dt>
+    <dd>
+    Unloads the memory provider.
+ Wrapper function for memory.free.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "tpl.queryGateway"></a>
+    <strong>tpl.queryGateway</strong>
+    </dt>
+    <dd>
+    The query gateway.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+    <dt>
+    <a name = "tpl.escapeGateway"></a>
+    <strong>tpl.escapeGateway</strong>
+    </dt>
+    <dd>
+    The escape gateway.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+</dl>
+</div>
+</div>
+</div> <!-- id="content" -->
+</div>
+</div> <!-- id="main" -->
+<br class="clearfix">
+</div> <!-- id="container" -->
+</body>
+</html>
