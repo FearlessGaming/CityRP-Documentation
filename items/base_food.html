@@ -23,8 +23,7 @@
 				<div class="ll-kind-header">
 					<h1>[FL] CityRP</h1>
 					<div class="header-module">
-        				<li>Copyright: 2015-2022 Limelight Gaming</li>
-        				<li>Release: CityRP 2</li>
+        				<li>Copyright: Fearless Gaming</li>
         				<li>Author: John Internet</li>
 					</div>
 				</div>
@@ -44,8 +43,8 @@
 
 				<div class="ll-kind-header"><h2>Items</h2></div>
 				<ul class="ll-kind-body nowrap">
-					<li><strong>ITEM</strong></li>
-					<li><a href="../items/base_food.html">base_food</a></li>
+					<li><a href="../items/ITEM.html">ITEM</a></li>
+					<li><strong>base_food</strong></li>
 					<li><a href="../items/base_vehicle.html">base_vehicle</a></li>
 				</ul>
 
@@ -199,12 +198,10 @@
 
 
 			<div id="content">
-				<div class="ll-module-header"><h1>Item <code>ITEM</code></h1></div>
+				<div class="ll-module-header"><h1>Item <code>base_food</code></h1></div>
 				<div class="ll-module-body">
-					Item Metatable
-The ITEM metatable is a bit weird, having some quirks.
-					Typically, functions which relate to generating the items / setting data (New, SetDescription) are in UpperCamelCase.
-However, functions which relate to the operation of the item (canUse, onDrop), are in lowerCamelCase.
+					Food Base Item.
+					 The food base is an item which a bunch of helpers for handling edible items.
 				</div>
 
 
@@ -218,6 +215,18 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 <h3><a href="#Functions">Functions</a></h3>
 <table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#SetHungerRestoration"><span class='state state-client state-server'>SetHungerRestoration(value)</span></a></td>
+	<td class="summary">Sets the amount of hunger this food restores.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#GetHungerRestoration"><span class='state state-client state-server'>GetHungerRestoration()</span></a></td>
+	<td class="summary">Gets the amount of hunger this food restores.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Food"><span class='state state-client state-server'>Food(hunger)</span></a></td>
+	<td class="summary">Mark this item as a food item, restoring a given amount of hunger.</td>
+	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#New"><span class='state state-client state-server'>New(base, data)</span></a></td>
 	<td class="summary">Create a new item.</td>
@@ -297,10 +306,6 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 	<tr>
 	<td class="name" nowrap><a href="#SetCat"><span class='state state-client state-server'>SetCat(data)</span></a></td>
 	<td class="summary">Alias of ITEM:SetCategory</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#GetCategory"><span class='state state-client state-server'>GetCategory()</span></a></td>
-	<td class="summary">Gets an item's category</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#SetTeam"><span class='state state-client state-server'>SetTeam(data)</span></a></td>
@@ -383,10 +388,6 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 	<td class="summary">Sets the skin of the item.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#GetModel"><span class='state state-client state-server'>GetModel()</span></a></td>
-	<td class="summary">Get an item's skin.</td>
-	</tr>
-	<tr>
 	<td class="name" nowrap><a href="#SetStoreSkin"><span class='state state-client state-server'>SetStoreSkin(skin[, autoStore])</span></a></td>
 	<td class="summary">Sets the store skin of the item.</td>
 	</tr>
@@ -460,6 +461,72 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
     <div class="ll-module-body">
     <dl class="function">
     <dt>
+    <a name = "SetHungerRestoration"></a>
+    <strong><span class='state state-client state-server'>SetHungerRestoration(value)</span></strong>
+    </dt>
+    <dd>
+    Sets the amount of hunger this food restores.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Internal:</h3>
+    <ul>
+         <span class='tag-internal'>This function is internal. Whilst you can call it, you probably shouldn't.</span>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">value</span>
+            <span class="types"><span class="type">int</span></span>
+         The new hunger value for this item.
+        </li>
+    </ul>
+    <h3>See also:</h3>
+    <ul>
+         <a href="../items/base_food.html#Food">Food</a>
+    </ul>
+</dd>
+    <dt>
+    <a name = "GetHungerRestoration"></a>
+    <strong><span class='state state-client state-server'>GetHungerRestoration()</span></strong>
+    </dt>
+    <dd>
+    Gets the amount of hunger this food restores.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+        The amount of hunger restored.
+    </ol>
+</dd>
+    <dt>
+    <a name = "Food"></a>
+    <strong><span class='state state-client state-server'>Food(hunger)</span></strong>
+    </dt>
+    <dd>
+    Mark this item as a food item, restoring a given amount of hunger.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">hunger</span>
+            <span class="types"><span class="type">int</span></span>
+         The amount of hunger to restore.
+        </li>
+    </ul>
+</dd>
+    <dt>
     <a name = "New"></a>
     <strong><span class='state state-client state-server'>New(base, data)</span></strong>
     </dt>
@@ -490,6 +557,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "Clone"></a>
@@ -512,6 +583,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "Merge"></a>
@@ -540,6 +615,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "SetData"></a>
@@ -574,6 +653,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
     <h3>See also:</h3>
     <ul>
          <a href="../items/ITEM.html#Set">Set</a>
@@ -609,6 +692,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "Register"></a>
@@ -631,6 +718,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
          (<em>optional</em>)
         </li>
     </ul>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "AutoRegister"></a>
@@ -644,6 +735,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
     </ul>
     </ul>
     </ul>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
     <h3>See also:</h3>
     <ul>
          <a href="../items/ITEM.html#Register">Register</a>
@@ -680,6 +775,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "AutoFunction"></a>
@@ -713,6 +812,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
     <h3>See also:</h3>
     <ul>
          <a href="https://wiki.facepunch.com/gmod/AccessorFunc">AccessorFunc</a>
@@ -753,6 +856,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "GetCost"></a>
@@ -772,6 +879,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><span class="type">int</span></span>
         Item's Cost
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "SetPrice"></a>
@@ -800,6 +911,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
     <h3>See also:</h3>
     <ul>
          <a href="../items/ITEM.html#SetCost">SetCost</a>
@@ -823,6 +938,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><span class="type">int</span></span>
         Item's Cost
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
     <h3>See also:</h3>
     <ul>
          <a href="../items/ITEM.html#GetCost">GetCost</a>
@@ -855,6 +974,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "GetDescription"></a>
@@ -874,6 +997,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         Item's Description
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "SetDesc"></a>
@@ -902,6 +1029,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
     <h3>See also:</h3>
     <ul>
          <a href="../items/ITEM.html#SetDescription">ITEM:SetDescription</a>
@@ -925,6 +1056,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         Item's Description
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
     <h3>See also:</h3>
     <ul>
          <a href="../items/ITEM.html#GetDescription">GetDescription</a>
@@ -957,6 +1092,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "GetCategory"></a>
@@ -976,6 +1115,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         Item's Category
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "SetCat"></a>
@@ -1004,32 +1147,13 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
     <h3>See also:</h3>
     <ul>
          <a href="../items/ITEM.html#SetCategory">ITEM:SetCategory</a>
-    </ul>
-</dd>
-    <dt>
-    <a name = "GetCategory"></a>
-    <strong><span class='state state-client state-server'>GetCategory()</span></strong>
-    </dt>
-    <dd>
-    Gets an item's category
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-        Item's Category
-    </ol>
-    <h3>See also:</h3>
-    <ul>
-         <a href="../items/ITEM.html#GetCategory">ITEM:GetCategory</a>
     </ul>
 </dd>
     <dt>
@@ -1059,6 +1183,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "GetTeam"></a>
@@ -1078,6 +1206,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><span class="type">int</span></span>
         Item's Team.
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "SetBatch"></a>
@@ -1106,6 +1238,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "GetBatch"></a>
@@ -1125,6 +1261,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><span class="type">int</span></span>
         Batch Size
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "SetSize"></a>
@@ -1153,6 +1293,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "GetSize"></a>
@@ -1172,6 +1316,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><span class="type">int</span></span>
         Size
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "SetInitialStock"></a>
@@ -1200,6 +1348,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "GetInitialStock"></a>
@@ -1219,6 +1371,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><span class="type">int</span></span>
         Stock
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "SetSupporter"></a>
@@ -1247,6 +1403,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "GetSupporter"></a>
@@ -1266,6 +1426,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><span class="type">bool</span></span>
         If supporter is required.
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "SetSupporterPlus"></a>
@@ -1294,6 +1458,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "GetSupporterPlus"></a>
@@ -1313,6 +1481,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><span class="type">bool</span></span>
         If supporter plus is required.
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "AutoLocalise"></a>
@@ -1334,6 +1506,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "SetName"></a>
@@ -1369,6 +1545,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "GetName"></a>
@@ -1388,6 +1568,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         Name
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "SetModel"></a>
@@ -1427,6 +1611,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "GetModel"></a>
@@ -1446,6 +1634,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         Model path.
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "SetStoreModel"></a>
@@ -1479,6 +1671,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "GetStoreModel"></a>
@@ -1498,6 +1694,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         Model path.
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "SetSkin"></a>
@@ -1524,25 +1724,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
          (<em>optional</em>)
         </li>
     </ul>
-</dd>
-    <dt>
-    <a name = "GetModel"></a>
-    <strong><span class='state state-client state-server'>GetModel()</span></strong>
-    </dt>
-    <dd>
-    Get an item's skin.
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    </ul>
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><span class="type">int</span></span>
-        Model skin index.
-    </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "SetStoreSkin"></a>
@@ -1569,6 +1754,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
          (<em>optional</em>)
         </li>
     </ul>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "GetStoreSkin"></a>
@@ -1588,6 +1777,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><span class="type">int</span></span>
         Model skin index.
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "SetPlural"></a>
@@ -1622,6 +1815,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "GetPlural"></a>
@@ -1641,6 +1838,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         Pluralised name.
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "SetStore"></a>
@@ -1672,6 +1873,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "GetStore"></a>
@@ -1691,6 +1896,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
            <span class="types"><span class="type">bool</span></span>
         Buyable status.
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "Untradable"></a>
@@ -1713,6 +1922,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
 
     </ol>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
 </dl>
 </div>
@@ -1737,6 +1950,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
          The localised name, as shown in the F1 menu.
         </li>
     </ul>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "description"></a>
@@ -1758,6 +1975,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
         </li>
     </ul>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "size"></a>
@@ -1777,6 +1998,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
          The inventory space used per item.
         </li>
     </ul>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "cost"></a>
@@ -1797,6 +2022,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
  Also used for inventory valuations and refund sales.
         </li>
     </ul>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "model"></a>
@@ -1816,6 +2045,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
          Path of the model used in the F1 menu / dropped states.
         </li>
     </ul>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "store"></a>
@@ -1837,6 +2070,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
         </li>
     </ul>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "category"></a>
@@ -1858,6 +2095,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
         </li>
     </ul>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "skin"></a>
@@ -1879,6 +2120,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
         </li>
     </ul>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
     <dt>
     <a name = "__index"></a>
@@ -1900,6 +2145,10 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 
         </li>
     </ul>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../items/ITEM.html#">ITEM</a>
+	</ul>
 </dd>
 </dl>
 </div>
