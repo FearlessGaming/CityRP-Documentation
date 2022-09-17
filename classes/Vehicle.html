@@ -23,9 +23,8 @@
 				<div class="ll-kind-header">
 					<h1>[FL] CityRP</h1>
 					<div class="header-module">
-        				<li>Copyright: 2008-2018 FearlessRP</li>
-        				<li>Release: CityRP 3 FL</li>
-        				<li>Author: Kudomiku</li>
+        				<li>Copyright: Fearless Gaming</li>
+        				<li>Author: Joshua Piper</li>
 					</div>
 				</div>
 				<div class="ll-kind-body">
@@ -34,8 +33,29 @@
 					</ul>
 				</div>
 
+				<div class="ll-kind-header"><h2>Contents</h2></div>
+				<ul class="ll-kind-body">
+					<li><a href="#Methods">Methods</a></li>
+				</ul>
 
 
+
+				<div class="ll-kind-header"><h2>Classes</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../classes/DScaleItemPanel.html">DScaleItemPanel</a></li>
+					<li><a href="../classes/Player.html">Player</a></li>
+					<li><a href="../classes/Entity.html">Entity</a></li>
+					<li><a href="../classes/Tool.html">Tool</a></li>
+					<li><a href="../classes/Vector.html">Vector</a></li>
+					<li><strong>Vehicle</strong></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Items</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../items/ITEM.html">ITEM</a></li>
+					<li><a href="../items/base_food.html">base_food</a></li>
+					<li><a href="../items/base_vehicle.html">base_vehicle</a></li>
+				</ul>
 
 				<div class="ll-kind-header"><h2>Modules</h2></div>
 				<ul class="ll-kind-body nowrap">
@@ -81,7 +101,7 @@
 					<li><a href="../modules/plugins.area.sv_init.html">plugins.area.sv_init</a></li>
 					<li><a href="../modules/plugins.autokick.cl_init.html">plugins.autokick.cl_init</a></li>
 					<li><a href="../modules/plugins.autokick.sh_plugin.html">plugins.autokick.sh_plugin</a></li>
-					<li><strong>plugins.autokick.sv_init</strong></li>
+					<li><a href="../modules/plugins.autokick.sv_init.html">plugins.autokick.sv_init</a></li>
 					<li><a href="../modules/plugins.bodymechanics.sh_plugin.html">plugins.bodymechanics.sh_plugin</a></li>
 					<li><a href="../modules/plugins.breakfree.sh_plugin.html">plugins.breakfree.sh_plugin</a></li>
 					<li><a href="../modules/plugins.breakfree.sv_init.html">plugins.breakfree.sv_init</a></li>
@@ -108,23 +128,6 @@
 					<li><a href="../modules/plugins.vehicles.data.sh_redwine_props.html">plugins.vehicles.data.sh_redwine_props</a></li>
 					<li><a href="../modules/plugins.vehicles.sv_init.html">plugins.vehicles.sv_init</a></li>
 					<li><a href="../modules/plugins.zz_datasync.sh_plugin.html">plugins.zz_datasync.sh_plugin</a></li>
-				</ul>
-
-				<div class="ll-kind-header"><h2>Items</h2></div>
-				<ul class="ll-kind-body nowrap">
-					<li><a href="../items/ITEM.html">ITEM</a></li>
-					<li><a href="../items/base_food.html">base_food</a></li>
-					<li><a href="../items/base_vehicle.html">base_vehicle</a></li>
-				</ul>
-
-				<div class="ll-kind-header"><h2>Classes</h2></div>
-				<ul class="ll-kind-body nowrap">
-					<li><a href="../classes/DScaleItemPanel.html">DScaleItemPanel</a></li>
-					<li><a href="../classes/Player.html">Player</a></li>
-					<li><a href="../classes/Entity.html">Entity</a></li>
-					<li><a href="../classes/Tool.html">Tool</a></li>
-					<li><a href="../classes/Vector.html">Vector</a></li>
-					<li><a href="../classes/Vehicle.html">Vehicle</a></li>
 				</ul>
 
 				<div class="ll-kind-header"><h2>Panels</h2></div>
@@ -195,9 +198,9 @@
 
 
 			<div id="content">
-				<div class="ll-module-header"><h1>Module <code>plugins.autokick.sv_init</code></h1></div>
+				<div class="ll-module-header"><h1>Class <code>Vehicle</code></h1></div>
 				<div class="ll-module-body">
-					AFK Timer
+					Entity Metatable Extensions
 
 
 
@@ -209,7 +212,104 @@
 
 
 
+<div class="ll-module-header"><h2>Class Overview</h2></div>
+<div class="ll-module-body">
 
+<h3><a href="#Methods">Methods</a></h3>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Vehicle:Locked"><span class='state state-client state-server'>Vehicle:Locked()</span></a></td>
+	<td class="summary">Get if a vehicle is locked.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vehicle:Distance"><span class='state state-client state-server'>Vehicle:Distance(other)</span></a></td>
+	<td class="summary">Get the distance between this entity, and another vector or entity.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Vehicle:DistToSqr"><span class='state state-client state-server'>Vehicle:DistToSqr(other)</span></a></td>
+	<td class="summary">Get the squared distance between this entity, and another vector or entity.</td>
+	</tr>
+</table>
+</div>
+
+	<div class="ll-module-header"><h2 class="section-header "><a name="Methods"></a>Methods</h2></div>
+    <div class="ll-module-body">
+    <dl class="function">
+    <dt>
+    <a name = "Vehicle:Locked"></a>
+    <strong><span class='state state-client state-server'>Vehicle:Locked()</span></strong>
+    </dt>
+    <dd>
+    Get if a vehicle is locked.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+
+
+
+    </ol>
+</dd>
+    <dt>
+    <a name = "Vehicle:Distance"></a>
+    <strong><span class='state state-client state-server'>Vehicle:Distance(other)</span></strong>
+    </dt>
+    <dd>
+    Get the distance between this entity, and another vector or entity.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">other</span>
+            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a> or <a class="type" href="../classes/Entity.html#">Entity</a></span>
+
+
+
+        </li>
+    </ul>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../classes/Entity.html#">Entity</a>
+	</ul>
+</dd>
+    <dt>
+    <a name = "Vehicle:DistToSqr"></a>
+    <strong><span class='state state-client state-server'>Vehicle:DistToSqr(other)</span></strong>
+    </dt>
+    <dd>
+    Get the squared distance between this entity, and another vector or entity.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">other</span>
+            <span class="types"><a class="type" href="../classes/Vector.html#">Vector</a> or <a class="type" href="../classes/Entity.html#">Entity</a></span>
+
+
+
+        </li>
+    </ul>
+	<h3>Inhereted from:</h3>
+	<ul>
+		<a href="../classes/Entity.html#">Entity</a>
+	</ul>
+</dd>
+</dl>
+</div>
 </div>
 </div> <!-- id="content" -->
 </div>
