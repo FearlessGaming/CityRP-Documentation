@@ -22,11 +22,6 @@
 			<div id="navigation">
 				<div class="ll-kind-header">
 					<h1>[FL] CityRP</h1>
-					<div class="header-module">
-        				<li>Copyright: 2008-2018 FearlessRP</li>
-        				<li>Release: CityRP 3 FL</li>
-        				<li>Author: Avgar (I believe)</li>
-					</div>
 				</div>
 				<div class="ll-kind-body">
 					<ul>
@@ -34,8 +29,30 @@
 					</ul>
 				</div>
 
+				<div class="ll-kind-header"><h2>Contents</h2></div>
+				<ul class="ll-kind-body">
+					<li><a href="#Methods">Methods</a></li>
+				</ul>
 
 
+
+				<div class="ll-kind-header"><h2>Classes</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../classes/DScaleItemPanel.html">DScaleItemPanel</a></li>
+					<li><strong>cityrp.weighted_random</strong></li>
+					<li><a href="../classes/Player.html">Player</a></li>
+					<li><a href="../classes/Entity.html">Entity</a></li>
+					<li><a href="../classes/Tool.html">Tool</a></li>
+					<li><a href="../classes/Vector.html">Vector</a></li>
+					<li><a href="../classes/Vehicle.html">Vehicle</a></li>
+				</ul>
+
+				<div class="ll-kind-header"><h2>Items</h2></div>
+				<ul class="ll-kind-body nowrap">
+					<li><a href="../items/ITEM.html">ITEM</a></li>
+					<li><a href="../items/base_food.html">base_food</a></li>
+					<li><a href="../items/base_vehicle.html">base_vehicle</a></li>
+				</ul>
 
 				<div class="ll-kind-header"><h2>Modules</h2></div>
 				<ul class="ll-kind-body nowrap">
@@ -70,7 +87,7 @@
 					<li><a href="../modules/plugins._simplepropprotect.sv_spp.html">plugins._simplepropprotect.sv_spp</a></li>
 					<li><a href="../modules/plugins.animations.cl_init.html">plugins.animations.cl_init</a></li>
 					<li><a href="../modules/plugins.animations.library.sh_boneanimlib.html">plugins.animations.library.sh_boneanimlib</a></li>
-					<li><strong>plugins.animations.sh_plugin</strong></li>
+					<li><a href="../modules/plugins.animations.sh_plugin.html">plugins.animations.sh_plugin</a></li>
 					<li><a href="../modules/plugins.animations.sv_init.html">plugins.animations.sv_init</a></li>
 					<li><a href="../modules/plugins.anonymous.cl_init.html">plugins.anonymous.cl_init</a></li>
 					<li><a href="../modules/plugins.anonymous.sh_plugin.html">plugins.anonymous.sh_plugin</a></li>
@@ -108,24 +125,6 @@
 					<li><a href="../modules/plugins.vehicles.data.sh_redwine_props.html">plugins.vehicles.data.sh_redwine_props</a></li>
 					<li><a href="../modules/plugins.vehicles.sv_init.html">plugins.vehicles.sv_init</a></li>
 					<li><a href="../modules/plugins.zz_datasync.sh_plugin.html">plugins.zz_datasync.sh_plugin</a></li>
-				</ul>
-
-				<div class="ll-kind-header"><h2>Items</h2></div>
-				<ul class="ll-kind-body nowrap">
-					<li><a href="../items/ITEM.html">ITEM</a></li>
-					<li><a href="../items/base_food.html">base_food</a></li>
-					<li><a href="../items/base_vehicle.html">base_vehicle</a></li>
-				</ul>
-
-				<div class="ll-kind-header"><h2>Classes</h2></div>
-				<ul class="ll-kind-body nowrap">
-					<li><a href="../classes/DScaleItemPanel.html">DScaleItemPanel</a></li>
-					<li><a href="../classes/cityrp.weighted_random.html">cityrp.weighted_random</a></li>
-					<li><a href="../classes/Player.html">Player</a></li>
-					<li><a href="../classes/Entity.html">Entity</a></li>
-					<li><a href="../classes/Tool.html">Tool</a></li>
-					<li><a href="../classes/Vector.html">Vector</a></li>
-					<li><a href="../classes/Vehicle.html">Vehicle</a></li>
 				</ul>
 
 				<div class="ll-kind-header"><h2>Panels</h2></div>
@@ -196,9 +195,9 @@
 
 
 			<div id="content">
-				<div class="ll-module-header"><h1>Module <code>plugins.animations.sh_plugin</code></h1></div>
+				<div class="ll-module-header"><h1>Class <code>cityrp.weighted_random</code></h1></div>
 				<div class="ll-module-body">
-					Handles the animations within CityRP
+					Weighted random table calculators.
 
 
 
@@ -210,7 +209,104 @@
 
 
 
+<div class="ll-module-header"><h2>Class Overview</h2></div>
+<div class="ll-module-body">
 
+<h3><a href="#Methods">Methods</a></h3>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.weighted_random:New"><span class='state state-client state-server'>cityrp.weighted_random:New()</span></a></td>
+	<td class="summary">Create a new weighted random table instance.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.weighted_random:Add"><span class='state state-client state-server'>cityrp.weighted_random:Add(data[, weight])</span></a></td>
+	<td class="summary">Add a new set of data, optionally with weight.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.weighted_random:Random"><span class='state state-client state-server'>cityrp.weighted_random:Random()</span></a></td>
+	<td class="summary">Pull out a random value from the table, respecting the weights of the table.</td>
+	</tr>
+</table>
+</div>
+
+	<div class="ll-module-header"><h2 class="section-header "><a name="Methods"></a>Methods</h2></div>
+    <div class="ll-module-body">
+    <dl class="function">
+    <dt>
+    <a name = "cityrp.weighted_random:New"></a>
+    <strong><span class='state state-client state-server'>cityrp.weighted_random:New()</span></strong>
+    </dt>
+    <dd>
+    Create a new weighted random table instance.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">WEIGHTED_RANDOM</span></span>
+
+
+
+    </ol>
+</dd>
+    <dt>
+    <a name = "cityrp.weighted_random:Add"></a>
+    <strong><span class='state state-client state-server'>cityrp.weighted_random:Add(data[, weight])</span></strong>
+    </dt>
+    <dd>
+    Add a new set of data, optionally with weight.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">data</span>
+         Any data. If a table, the .weight field is taken as the weight.
+        </li>
+        <li><span class="parameter">weight</span>
+            <span class="types"><span class="type">int</span></span>
+         A manual override weight value.
+         (<em>optional</em>)
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">cityrp.weighted_random</span></span>
+
+
+
+    </ol>
+</dd>
+    <dt>
+    <a name = "cityrp.weighted_random:Random"></a>
+    <strong><span class='state state-client state-server'>cityrp.weighted_random:Random()</span></strong>
+    </dt>
+    <dd>
+    Pull out a random value from the table, respecting the weights of the table.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+
+
+
+    </ol>
+</dd>
+</dl>
+</div>
 </div>
 </div> <!-- id="content" -->
 </div>
