@@ -29,6 +29,11 @@
 					</ul>
 				</div>
 
+				<div class="ll-kind-header"><h2>Contents</h2></div>
+				<ul class="ll-kind-body">
+					<li><a href="#Functions">Functions</a></li>
+					<li><a href="#Fields">Fields</a></li>
+				</ul>
 
 
 
@@ -50,7 +55,7 @@
 					<li><a href="../modules/gamemode.core.libraries.sh_plugin.html">gamemode.core.libraries.sh_plugin</a></li>
 					<li><a href="../modules/gamemode.core.libraries.sh_util.html">gamemode.core.libraries.sh_util</a></li>
 					<li><a href="../modules/gamemode.core.libraries.sv_discordrelay.html">gamemode.core.libraries.sv_discordrelay</a></li>
-					<li><a href="../modules/cityrp.interaction.html">cityrp.interaction</a></li>
+					<li><strong>cityrp.interaction</strong></li>
 					<li><a href="../modules/cityrp.migrations.html">cityrp.migrations</a></li>
 					<li><a href="../modules/gamemode.core.libraries.sv_player.html">gamemode.core.libraries.sv_player</a></li>
 					<li><a href="../modules/undo.html">undo</a></li>
@@ -61,7 +66,7 @@
 					<li><a href="../modules/gamemode.sh_init.html">gamemode.sh_init</a></li>
 					<li><a href="../modules/properties.html">properties</a></li>
 					<li><a href="../modules/plugins._gprotect.sh_gprotect_baseconfig.html">plugins._gprotect.sh_gprotect_baseconfig</a></li>
-					<li><strong>plugins._simplepropprotect.cl_spp</strong></li>
+					<li><a href="../modules/plugins._simplepropprotect.cl_spp.html">plugins._simplepropprotect.cl_spp</a></li>
 					<li><a href="../modules/plugins._simplepropprotect.sh_cppi.html">plugins._simplepropprotect.sh_cppi</a></li>
 					<li><a href="../modules/plugins._simplepropprotect.sv_spp.html">plugins._simplepropprotect.sv_spp</a></li>
 					<li><a href="../modules/plugins.animations.cl_init.html">plugins.animations.cl_init</a></li>
@@ -192,20 +197,29 @@
 
 
 			<div id="content">
-				<div class="ll-module-header"><h1>Module <code>plugins._simplepropprotect.cl_spp</code></h1></div>
+				<div class="ll-module-header"><h1>Module <code>cityrp.interaction</code></h1></div>
 				<div class="ll-module-body">
-
-<p>Simple Prop Protection</p>
+					Interactions are a configurable menu that can appear on any entity when a user holds use on it.
+					 If an entity has normal use functionality, behaviour will be modified to the following:
+ Hold E: Show interaction menu
+ Tap E: Regular entity use functionality
+ Don't register interactions in this file, do it in some plugin or something.
+ Data structure for an interaction looks like the following, everything is required unless otherwise stated:
+  data = {</p>
 
 <pre>
-By Spacetech
- http://code.google.com/p/simplepropprotection
+id = <span class="string">"Interaction ID"</span>, <span class="comment">-- The id of the interaction, must be unique for the given class
+</span>name = <span class="string">"Interaction Name"</span>, <span class="comment">-- The name of the interaction
+</span>description = <span class="string">"Interaction Description"</span>, <span class="comment">-- The description of the interaction
+</span>condition = <span class="keyword">function</span>(client, ent) <span class="comment">-- The condition to check if the interaction should be shown, do context dependent checks here
+</span>    <span class="keyword">return</span> <span class="keyword">true</span> <span class="comment">-- True if the interaction should be shown, false if not
+</span><span class="keyword">end</span>,
+action = <span class="keyword">function</span>(client, ent) <span class="comment">-- The action to perform when the interaction is clicked
+</span>    <span class="global">print</span>(<span class="string">"Clicked!"</span>)
+<span class="keyword">end</span>
 </pre>
 
-
-
-
-
+<p> }
 				</div>
 
 
@@ -214,7 +228,222 @@ By Spacetech
 
 
 
+<div class="ll-module-header"><h2>Module Overview</h2></div>
+<div class="ll-module-body">
 
+<h3><a href="#Functions">Functions</a></h3>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.interaction.Register"><span class='state state-server'>cityrp.interaction.Register(string, id, data)</span></a></td>
+	<td class="summary">Register an interaction</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.interaction.Get"><span class='state state-server'>cityrp.interaction.Get(string, id)</span></a></td>
+	<td class="summary">Gets an interaction by entity and id</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.interaction.Has"><span class='state state-server'>cityrp.interaction.Has(entity)</span></a></td>
+	<td class="summary">Checks if an entity has any interactions</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.interaction.GetAllByClass"><span class='state state-server'>cityrp.interaction.GetAllByClass(string)</span></a></td>
+	<td class="summary">Gets all interactions by entity</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.interaction.Start"><span class='state state-server'>cityrp.interaction.Start(client, entity)</span></a></td>
+	<td class="summary">Start the interaction menu on an entity, this will also start the menu on the client.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.interaction.Use"><span class='state state-server'>cityrp.interaction.Use(client, id, entity)</span></a></td>
+	<td class="summary">Use an interaction on an entity</td>
+	</tr>
+</table>
+<h3><a href="#Fields">Fields</a></h3>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#cityrp.interaction">cityrp.interaction</a></td>
+	<td class="summary">Create the initial table for interactions</td>
+	</tr>
+</table>
+</div>
+
+	<div class="ll-module-header"><h2 class="section-header "><a name="Functions"></a>Functions</h2></div>
+    <div class="ll-module-body">
+    <dl class="function">
+    <dt>
+    <a name = "cityrp.interaction.Register"></a>
+    <strong><span class='state state-server'>cityrp.interaction.Register(string, id, data)</span></strong>
+    </dt>
+    <dd>
+    Register an interaction
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+         The entity class to register the interaction on
+        </li>
+        <li><span class="parameter">id</span>
+         The id of the interaction
+        </li>
+        <li><span class="parameter">data</span>
+         The data of the interaction
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "cityrp.interaction.Get"></a>
+    <strong><span class='state state-server'>cityrp.interaction.Get(string, id)</span></strong>
+    </dt>
+    <dd>
+    Gets an interaction by entity and id
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+         The entity class to get the interaction from
+        </li>
+        <li><span class="parameter">id</span>
+         The id of the interaction
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The interaction
+    </ol>
+</dd>
+    <dt>
+    <a name = "cityrp.interaction.Has"></a>
+    <strong><span class='state state-server'>cityrp.interaction.Has(entity)</span></strong>
+    </dt>
+    <dd>
+    Checks if an entity has any interactions
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entity</span>
+         The entity to check for interactions
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        If there is an interacton or not
+    </ol>
+</dd>
+    <dt>
+    <a name = "cityrp.interaction.GetAllByClass"></a>
+    <strong><span class='state state-server'>cityrp.interaction.GetAllByClass(string)</span></strong>
+    </dt>
+    <dd>
+    Gets all interactions by entity
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">string</span>
+         The entity class to get the interactions fromn
+        </li>
+    </ul>
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        All interactions for this entity
+    </ol>
+</dd>
+    <dt>
+    <a name = "cityrp.interaction.Start"></a>
+    <strong><span class='state state-server'>cityrp.interaction.Start(client, entity)</span></strong>
+    </dt>
+    <dd>
+    Start the interaction menu on an entity, this will also start the menu on the client.
+ This is intended to be used after a player succesfully indicates they wish to see the interaction menu on an entity.
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">client</span>
+         Player who is calling the interaction menu
+        </li>
+        <li><span class="parameter">entity</span>
+         Entity call the interaction menu on
+        </li>
+    </ul>
+</dd>
+    <dt>
+    <a name = "cityrp.interaction.Use"></a>
+    <strong><span class='state state-server'>cityrp.interaction.Use(client, id, entity)</span></strong>
+    </dt>
+    <dd>
+    Use an interaction on an entity
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Internal:</h3>
+    <ul>
+         <span class='tag-internal'>This function is internal. Whilst you can call it, you probably shouldn't.</span>
+    </ul>
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">client</span>
+         Player who is using the interaction
+        </li>
+        <li><span class="parameter">id</span>
+         The id of the interaction
+        </li>
+        <li><span class="parameter">entity</span>
+         Entity to use the interaction on
+        </li>
+    </ul>
+</dd>
+</dl>
+</div>
+	<div class="ll-module-header"><h2 class="section-header "><a name="Fields"></a>Fields</h2></div>
+    <div class="ll-module-body">
+    <dl class="function">
+    <dt>
+    <a name = "cityrp.interaction"></a>
+    <strong>cityrp.interaction</strong>
+    </dt>
+    <dd>
+    Create the initial table for interactions
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+</dd>
+</dl>
+</div>
 </div>
 </div> <!-- id="content" -->
 </div>
