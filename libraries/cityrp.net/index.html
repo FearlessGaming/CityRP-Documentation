@@ -2,13 +2,13 @@
 
 <html>
 	<head>
-		<title>cityrp.player - CityRP Documentation</title>
+		<title>cityrp.net - CityRP Documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="cityrp.player - CityRP Documentation" />
+		<meta property="og:title" content="cityrp.net - CityRP Documentation" />
 		<meta property="og:site_name" content="CityRP Documentation" />
 
-			<meta property="og:description" content="Player Functions" />
+			<meta property="og:description" content="" />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -1721,7 +1721,7 @@ up											</a>
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../libraries/cityrp.net/">cityrp.net</a></summary>
 
 									<ul>
@@ -1798,7 +1798,7 @@ Sync											</a>
 									</details>
 							</li>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../libraries/cityrp.player/">cityrp.player</a></summary>
 
 									<ul>
@@ -3097,8 +3097,10 @@ Random											</a>
 					<div class="wrapper">
 
 <header class="module">
-	<h1>cityrp.player</h1>
-	<h2>Player Functions</h2>
+	<h1>cityrp.net</h1>
+	<h2>
+
+</h2>
 </header>
 
 <p>
@@ -3109,15 +3111,14 @@ Random											</a>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="cityrp.player.get">
-					<h1><span class="realm server"></span></span>cityrp.player.get(name)</h1>
+				<a class="anchor" id="cityrp.net.GetGlobalVar">
+					<h1><span class="realm shared"></span></span>cityrp.net.GetGlobalVar(string, any)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sv_player.lua#L89">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_net.lua#L61">View source &raquo;</a>
 
-					<p>Get a player by a part of their name.
- Also detects on Steam ID, User ID and Hex Key.</p>
+					<p>Get a global variable</p>
 			</header>
 
 
@@ -3127,12 +3128,74 @@ Random											</a>
 					<ul>
 
 							<li>
-								<span class="tag parameter">name</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+								<span class="tag parameter">string</span>
 
 
-								<p> Name component, SteamID, etc.</p>
+
+								<p> key The key of the variable</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">any</span>
+
+
+
+								<p> default The default value of the variable</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="tag type">any</span>
+
+								<p>any The value of the variable</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="cityrp.net.SetGlobalVar">
+					<h1><span class="realm server"></span></span>cityrp.net.SetGlobalVar(string, any)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_net.lua#L39">View source &raquo;</a>
+
+					<p>Set a global variable, which will be networked to everyone</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">string</span>
+
+
+
+								<p> key The key of the variable</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">any</span>
+
+
+
+								<p> value The value of the variable</p>
 							</li>
 					</ul>
 

@@ -1722,6 +1722,27 @@ up											</a>
 							</li>
 							<li>
 									<details >
+									<summary><a href="../../libraries/cityrp.net/">cityrp.net</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/cityrp.net/#cityrp.net.GetGlobalVar">
+GetGlobalVar											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/cityrp.net/#cityrp.net.SetGlobalVar">
+SetGlobalVar											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
 									<summary><a href="../../libraries/cityrp.option/">cityrp.option</a></summary>
 
 									<ul>
@@ -2076,12 +2097,12 @@ hasAchievementsProp											</a>
 hasCustombonusProp											</a>
 										</li>
 										<li>
-											<span class="realm server"></span>
+											<span class="realm client"></span>
 											<a href="../../libraries/meska/#hasSkillsProp">
 hasSkillsProp											</a>
 										</li>
 										<li>
-											<span class="realm client"></span>
+											<span class="realm server"></span>
 											<a href="../../libraries/meska/#hasSkillsProp">
 hasSkillsProp											</a>
 										</li>
@@ -2256,6 +2277,16 @@ DistToSqr											</a>
 											<a href="../../classes/entity/#Distance">
 Distance											</a>
 										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#GetNetVar">
+GetNetVar											</a>
+										</li>
+										<li>
+											<span class="realm server0"></span>
+											<a href="../../classes/entity/#SetNetVar">
+SetNetVar											</a>
+										</li>
 
 									</ul>
 									</details>
@@ -2353,9 +2384,19 @@ GetLastDeathLoc											</a>
 GetLastDeathPos											</a>
 										</li>
 										<li>
-											<span class="realm server"></span>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetLocalNetVar">
+GetLocalNetVar											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/player/#GetNSVar">
 GetNSVar											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetNetVar">
+GetNetVar											</a>
 										</li>
 										<li>
 											<span class="realm shared"></span>
@@ -2571,6 +2612,11 @@ IsEventCoordinator											</a>
 											<span class="realm shared"></span>
 											<a href="../../classes/player/#IsEventManager">
 IsEventManager											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsFemale">
+IsFemale											</a>
 										</li>
 										<li>
 											<span class="realm shared"></span>
@@ -2804,8 +2850,18 @@ SetLastDeathPos											</a>
 										</li>
 										<li>
 											<span class="realm server"></span>
+											<a href="../../classes/player/#SetLocalNetVar">
+SetLocalNetVar											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/player/#SetNSVar">
 SetNSVar											</a>
+										</li>
+										<li>
+											<span class="realm server0"></span>
+											<a href="../../classes/player/#SetNetVar">
+SetNetVar											</a>
 										</li>
 										<li>
 											<span class="realm server"></span>
@@ -2856,6 +2912,11 @@ SetQuizEntered											</a>
 											<span class="realm server"></span>
 											<a href="../../classes/player/#SetScanTime">
 SetScanTime											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SyncNetworkVars">
+SyncNetworkVars											</a>
 										</li>
 										<li>
 											<span class="realm server"></span>
@@ -2951,8 +3012,18 @@ Distance											</a>
 										</li>
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vehicle/#GetNetVar">
+GetNetVar											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vehicle/#Locked">
 Locked											</a>
+										</li>
+										<li>
+											<span class="realm server0"></span>
+											<a href="../../classes/vehicle/#SetNetVar">
+SetNetVar											</a>
 										</li>
 
 									</ul>
@@ -3180,7 +3251,7 @@ Random											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/cl_init.lua#L985">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/cl_init.lua#L901">View source &raquo;</a>
 
 					<p>Draw a Target HUD for the given entity.</p>
 			</header>
@@ -3879,7 +3950,7 @@ Random											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2465">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2530">View source &raquo;</a>
 
 					<p>Called when a player has attempted to drop an item, but is blocked by onDrop.</p>
 			</header>
@@ -3958,7 +4029,7 @@ Random											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2499">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2564">View source &raquo;</a>
 
 					<p>Called when a player has attempted to drop an item, but is blocked by onDrop.</p>
 			</header>
@@ -4049,7 +4120,7 @@ Random											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2416">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2481">View source &raquo;</a>
 
 					<p>Called when a player has attempted to use an item, but is blocked by onUse.</p>
 			</header>
@@ -4104,7 +4175,7 @@ Random											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2453">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2518">View source &raquo;</a>
 
 					<p>Called when a player attempts to drop an item.</p>
 			</header>
@@ -4183,7 +4254,7 @@ Random											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2475">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2540">View source &raquo;</a>
 
 					<p>Called when a player has dropped an item and is having it removed from their inventory.</p>
 			</header>
@@ -4262,7 +4333,7 @@ Random											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2509">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2574">View source &raquo;</a>
 
 					<p>Called when a player has given an item.</p>
 			</header>
@@ -4353,7 +4424,7 @@ Random											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2487">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2552">View source &raquo;</a>
 
 					<p>Called when a player attempts to give an item.</p>
 			</header>
@@ -4444,7 +4515,7 @@ Random											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2432">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2497">View source &raquo;</a>
 
 					<p>Called when a player attempts to remove an item.</p>
 			</header>
@@ -4499,7 +4570,7 @@ Random											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2441">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2506">View source &raquo;</a>
 
 					<p>Called when a player has removed an item.</p>
 			</header>
@@ -4554,7 +4625,7 @@ Random											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2407">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2472">View source &raquo;</a>
 
 					<p>Called when a player attempts to use an item.</p>
 			</header>
@@ -4609,7 +4680,7 @@ Random											</a>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2423">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/init.lua#L2488">View source &raquo;</a>
 
 					<p>Called when a player has used an item and is having it removed from their inventory.</p>
 			</header>
@@ -4694,6 +4765,48 @@ Random											</a>
 
 
 								<p> Knockout target.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="PlayerLocalVarUpdated">
+					<h1><span class="realm client"></span></span>PlayerLocalVarUpdated(key, any)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/cl_init.lua#L907">View source &raquo;</a>
+
+					<p>Called when a local player variable is updated</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">key</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Key</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">any</span>
+
+
+
+								<p> Value</p>
 							</li>
 					</ul>
 
