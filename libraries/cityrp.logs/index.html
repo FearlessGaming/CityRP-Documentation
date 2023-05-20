@@ -2,14 +2,13 @@
 
 <html>
 	<head>
-		<title>ITEM - CityRP Documentation</title>
+		<title>cityrp.logs - CityRP Documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="ITEM - CityRP Documentation" />
+		<meta property="og:title" content="cityrp.logs - CityRP Documentation" />
 		<meta property="og:site_name" content="CityRP Documentation" />
 
-			<meta property="og:description" content="Item Metatable
-The ITEM metatable is a bit weird, having some quirks." />
+			<meta property="og:description" content="CityRP Logging Library" />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -409,7 +408,7 @@ PostInit											</a>
 
 					<ul>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../items/item/">ITEM</a></summary>
 
 									<ul>
@@ -1686,7 +1685,7 @@ LoadFromDir											</a>
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../libraries/cityrp.logs/">cityrp.logs</a></summary>
 
 									<ul>
@@ -3124,27 +3123,26 @@ Random											</a>
 					<div class="wrapper">
 
 <header class="module">
-	<h1>ITEM</h1>
-	<h2>Item Metatable
-The ITEM metatable is a bit weird, having some quirks.</h2>
+	<h1>cityrp.logs</h1>
+	<h2>CityRP Logging Library</h2>
 </header>
 
-<p>Typically, functions which relate to generating the items / setting data (New, SetDescription) are in UpperCamelCase.
-However, functions which relate to the operation of the item (canUse, onDrop), are in lowerCamelCase.</p>
+<p>
+
+</p>
 
 	<h1 class="title">Functions</h1>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="AddLocalisationValue">
-					<h1><span class="realm shared"></span></span>AddLocalisationValue(field, value)</h1>
+				<a class="anchor" id="cityrp.logs.add">
+					<h1><span class="realm server"></span></span>cityrp.logs.add(player1, steamid1, player2, steamid2, logtype, value1, value2, value3, value4)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L148">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sv_logs.lua#L44">View source &raquo;</a>
 
-					<p>Add a localisation variable to a given field.
- This is fed into L.</p>
+					<p>Add a legacy log.</p>
 			</header>
 
 
@@ -3154,12 +3152,176 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 					<ul>
 
 							<li>
-								<span class="tag parameter">field</span>
+								<span class="tag parameter">player1</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Name of the first player to log.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">steamid1</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> SteamID of the first player to log.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">player2</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Name of the second player to log.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">steamid2</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> SteamID of the second player to log.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">logtype</span>
 
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
 
 
-								<p> The name of the field to add the localisation value for.</p>
+								<p> Arbitary string representing the type of log being added.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">value1</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Arbitary value</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">value2</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Arbitary value</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">value3</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Arbitary value</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">value4</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Arbitary value</p>
+							</li>
+					</ul>
+
+
+
+				<h3>See Also</h3>
+				<ul>
+				</ul>
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="cityrp.logs.log">
+					<h1><span class="realm server"></span></span>cityrp.logs.log(ply1, ply2, logtype, value, data)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sv_logs.lua#L116">View source &raquo;</a>
+
+					<p>Add a new log for storage.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply1</span>
+
+									<span class="tag"><a class="type" href="../../classes/player/#">Player</a>, <a class="type" href="../../libraries/cityrp.logs/#PlayerLogger">PlayerLogger</a> or <a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Player to log for.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ply2</span>
+
+									<span class="tag"><a class="type" href="../../classes/player/#">Player</a>, <a class="type" href="../../libraries/cityrp.logs/#PlayerLogger">PlayerLogger</a> or <a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Player to log for.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">logtype</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Arbitary string, representing the type of log being stored.</p>
 							</li>
 					</ul>
 
@@ -3168,769 +3330,11 @@ However, functions which relate to the operation of the item (canUse, onDrop), a
 							<li>
 								<span class="tag parameter">value</span>
 
-
-
-								<p> Value to pass to L.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="AutoFunction">
-					<h1><span class="realm shared"></span></span>AutoFunction(name, key)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L175">View source &raquo;</a>
-
-					<p>Creates an automatically named accessor function pair.
- It also returns a single param function, which sets a default value and returns the item.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">name</span>
-
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
 
+									<span class="tag default">optional</span>
 
-								<p> Function Key (Resolves to [GS]et<Name>).</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">key</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> Internal key to set.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">function</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-				<h3>Example Usage</h3>
-					<pre><code>local setDefault = ITEM:AutoFunction("SpecialValue", "internal_flag")
--- This creates ITEM:SetSpecialValue() and ITEM:GetSpecialValue().
--- Calling this function sets a value on ITEM.internal_flag.
--- Calling setDefault, sets the value now, returning the item. This is useful for chaining.
-ITEM:AutoFunction("SomeValue", "this_defaults_to_false")(false)
-</code></pre>
-
-				<h3>See Also</h3>
-				<ul>
-						<li><a href="https://wiki.facepunch.com/gmod/AccessorFunc">AccessorFunc</a></li>
-				</ul>
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="AutoLocalise">
-					<h1><span class="realm shared"></span></span>AutoLocalise()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L316">View source &raquo;</a>
-
-					<p>Fill in as many fields as possible with localisation.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="AutoRegister">
-					<h1><span class="realm shared"></span></span>AutoRegister()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L139">View source &raquo;</a>
-
-					<p>Register an item, attempting to pull the item's UID from the file name.</p>
-			</header>
-
-
-
-
-				<h3>See Also</h3>
-				<ul>
-						<li><a href="../../items/item/#Register">Register</a></li>
-				</ul>
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="Clone">
-					<h1><span class="realm shared"></span></span>Clone()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L92">View source &raquo;</a>
-
-					<p>Clone an item.
- Returns a new ITEM, with base set to the first item.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetBatch">
-					<h1><span class="realm shared"></span></span>GetBatch()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L269">View source &raquo;</a>
-
-					<p>Gets an item's batch</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">int</span>
-
-								<p>Batch Size</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetCategory">
-					<h1><span class="realm shared"></span></span>GetCategory()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L250">View source &raquo;</a>
-
-					<p>Gets an item's category</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
-
-								<p>Item's Category</p>
-							</li>
-
-				</ul>
-
-
-				<h3>See Also</h3>
-				<ul>
-						<li><a href="../../items/item/#GetCategory">ITEM:GetCategory</a></li>
-				</ul>
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetCategory">
-					<h1><span class="realm shared"></span></span>GetCategory()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L239">View source &raquo;</a>
-
-					<p>Gets an item's category</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
-
-								<p>Item's Category</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetCost">
-					<h1><span class="realm shared"></span></span>GetCost()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L199">View source &raquo;</a>
-
-					<p>Gets the Market Cost.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">int</span>
-
-								<p>Item's Cost</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetDesc">
-					<h1><span class="realm shared"></span></span>GetDesc()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L230">View source &raquo;</a>
-
-					<p>Alias of ITEM:GetDescription</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
-
-								<p>Item's Description</p>
-							</li>
-
-				</ul>
-
-
-				<h3>See Also</h3>
-				<ul>
-						<li><a href="../../items/item/#GetDescription">GetDescription</a></li>
-				</ul>
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetDescription">
-					<h1><span class="realm shared"></span></span>GetDescription()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L219">View source &raquo;</a>
-
-					<p>Gets an item's description</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
-
-								<p>Item's Description</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetInitialStock">
-					<h1><span class="realm shared"></span></span>GetInitialStock()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L288">View source &raquo;</a>
-
-					<p>Gets the initial dynamic economy stock for this item.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">int</span>
-
-								<p>Stock</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetModel">
-					<h1><span class="realm shared"></span></span>GetModel()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L409">View source &raquo;</a>
-
-					<p>Get an item's skin.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">int</span>
-
-								<p>Model skin index.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetModel">
-					<h1><span class="realm shared"></span></span>GetModel()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L363">View source &raquo;</a>
-
-					<p>Get an item's model.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
-
-								<p>Model path.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetName">
-					<h1><span class="realm shared"></span></span>GetName()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L335">View source &raquo;</a>
-
-					<p>Gets an item's name.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
-
-								<p>Name</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetPlural">
-					<h1><span class="realm shared"></span></span>GetPlural()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L457">View source &raquo;</a>
-
-					<p>Gets an item plural.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
-
-								<p>Pluralised name.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetPrice">
-					<h1><span class="realm shared"></span></span>GetPrice()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L210">View source &raquo;</a>
-
-					<p>Alias of ITEM:GetCost</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">int</span>
-
-								<p>Item's Cost</p>
-							</li>
-
-				</ul>
-
-
-				<h3>See Also</h3>
-				<ul>
-						<li><a href="../../items/item/#GetCost">GetCost</a></li>
-				</ul>
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetSize">
-					<h1><span class="realm shared"></span></span>GetSize()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L278">View source &raquo;</a>
-
-					<p>Gets an item's inventory size.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">int</span>
-
-								<p>Size</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetStore">
-					<h1><span class="realm shared"></span></span>GetStore()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L481">View source &raquo;</a>
-
-					<p>Get the item can be bought in the store.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">bool</span>
-
-								<p>Buyable status.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetStoreModel">
-					<h1><span class="realm shared"></span></span>GetStoreModel()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L386">View source &raquo;</a>
-
-					<p>Get an item's model in the market / inventory.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
-
-								<p>Model path.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetStoreSkin">
-					<h1><span class="realm shared"></span></span>GetStoreSkin()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L432">View source &raquo;</a>
-
-					<p>Get an item's skin in the store page.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">int</span>
-
-								<p>Model skin index.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetSupporter">
-					<h1><span class="realm shared"></span></span>GetSupporter()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L298">View source &raquo;</a>
-
-					<p>Gets if the item is for supporters.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">bool</span>
-
-								<p>If supporter is required.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetSupporterPlus">
-					<h1><span class="realm shared"></span></span>GetSupporterPlus()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L308">View source &raquo;</a>
-
-					<p>Gets if the item is for supporter plus.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">bool</span>
-
-								<p>If supporter plus is required.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetTeam">
-					<h1><span class="realm shared"></span></span>GetTeam()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L259">View source &raquo;</a>
-
-					<p>Gets an item's team</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">int</span>
-
-								<p>Item's Team.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="Merge">
-					<h1><span class="realm shared"></span></span>Merge(data)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L99">View source &raquo;</a>
-
-					<p>Merge a table of data into the item.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">data</span>
-
-									<span class="tag"><span class="type">tab</span></span>
-
-
-								<p> Key/Value pairs of data.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="New">
-					<h1><span class="realm shared"></span></span>New(base, data)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L66">View source &raquo;</a>
-
-					<p>Create a new item.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">base</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> UniqueID of the baseclass.</p>
+								<p> Arbiatary data value.</p>
 							</li>
 					</ul>
 
@@ -3941,38 +3345,25 @@ ITEM:AutoFunction("SomeValue", "this_defaults_to_false")(false)
 
 									<span class="tag"><span class="type">tab</span></span>
 
+									<span class="tag default">optional</span>
 
-								<p> Optional data to fill into the item.</p>
+								<p> Table to JSON serializable data.</p>
 							</li>
 					</ul>
 
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
 
 
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="Register">
-					<h1><span class="realm shared"></span></span>Register(id)</h1>
+				<a class="anchor" id="cityrp.logs.normalizePlayer">
+					<h1><span class="realm server"></span></span>cityrp.logs.normalizePlayer(p)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L129">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sv_logs.lua#L95">View source &raquo;</a>
 
-					<p>Register an item.
- <strong style='color:red'>This must be the last call in an item chain, as it does processing on the item.</strong></p>
+					<p>Normalise a playerable object into a pair of string for entry into the database.</p>
 			</header>
 
 
@@ -3982,1074 +3373,81 @@ ITEM:AutoFunction("SomeValue", "this_defaults_to_false")(false)
 					<ul>
 
 							<li>
-								<span class="tag parameter">id</span>
+								<span class="tag parameter">p</span>
 
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+									<span class="tag"><a class="type" href="../../classes/player/#">Player</a>, <a class="type" href="../../libraries/cityrp.logs/#PlayerLogger">PlayerLogger</a> or <a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
 
 									<span class="tag default">optional</span>
 
-								<p> UniqueID to set, not required if set prior.</p>
+								<p> Player to normalize.</p>
 							</li>
 					</ul>
 
 
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									optional <a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>SteamID to enter.</p>
+							</li>
+
+							<li>
+									optional <a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>Name to enter.</p>
+							</li>
+
+				</ul>
+
 
 		</section>
+	<h1 class="title">Tables</h1>
+
 		<section class="method">
 			<header>
-				<a class="anchor" id="Set">
-					<h1><span class="realm shared"></span></span>Set(name, value)</h1>
+				<a class="anchor" id="PlayerLogger">
+					<h1><span class="realm server"></span></span>PlayerLogger</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L121">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sv_logs.lua#L16">View source &raquo;</a>
 
-					<p>Set a single key on the item.</p>
+					<div class="notice warning">
+						<div class="title">Incomplete</div>
+						<p>Documentation for this section is incomplete and needs expanding.</p>
+					</div>
 			</header>
 
 
-					<h3>Parameters</h3>
+					<h3>Fields</h3>
 
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">name</span>
+								<span class="tag parameter">1</span>
 
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
 
 
-								<p> Key to set.</p>
+								<p> SteamID64 of the given player.</p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">value</span>
-
-
-
-								<p> Value to set.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetBatch">
-					<h1><span class="realm shared"></span></span>SetBatch(data)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L266">View source &raquo;</a>
-
-					<p>Sets the number of items created in a press of the manufacture button.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">data</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> Batch</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetCat">
-					<h1><span class="realm shared"></span></span>SetCat(data)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L246">View source &raquo;</a>
-
-					<p>Alias of ITEM:SetCategory</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">data</span>
+								<span class="tag parameter">2</span>
 
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
 
 
-								<p> New category</p>
+								<p> Name of the player.</p>
 							</li>
 					</ul>
 
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-				<h3>See Also</h3>
-				<ul>
-						<li><a href="../../items/item/#SetCategory">ITEM:SetCategory</a></li>
-				</ul>
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetCategory">
-					<h1><span class="realm shared"></span></span>SetCategory(data)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L236">View source &raquo;</a>
-
-					<p>Sets the category of an item.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">data</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> New category</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetCost">
-					<h1><span class="realm shared"></span></span>SetCost(cost)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L196">View source &raquo;</a>
-
-					<p>Sets the Market Cost.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">cost</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> Cost.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetData">
-					<h1><span class="realm shared"></span></span>SetData(name, value)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L112">View source &raquo;</a>
-
-					<p>Set a single key on the item.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">name</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> Key to set.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">value</span>
-
-
-
-								<p> Value to set.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-				<h3>See Also</h3>
-				<ul>
-						<li><a href="../../items/item/#Set">Set</a></li>
-				</ul>
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetDesc">
-					<h1><span class="realm shared"></span></span>SetDesc(data)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L226">View source &raquo;</a>
-
-					<p>Alias of ITEM:SetDescription</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">data</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> New Description</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-				<h3>See Also</h3>
-				<ul>
-						<li><a href="../../items/item/#SetDescription">ITEM:SetDescription</a></li>
-				</ul>
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetDescription">
-					<h1><span class="realm shared"></span></span>SetDescription(data)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L216">View source &raquo;</a>
-
-					<p>Sets the Description of an item.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">data</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> New Description</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetInitialStock">
-					<h1><span class="realm shared"></span></span>SetInitialStock(data)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L285">View source &raquo;</a>
-
-					<p>Sets the initial dynamic economy stock for this item.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">data</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> Initial Stock Count</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetModel">
-					<h1><span class="realm shared"></span></span>SetModel(model, skin, autoStore)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L346">View source &raquo;</a>
-
-					<p>Sets the model of the item.
- If model is true, the model and skin will be pulled from the store model.
- If autostore is true, model and skin will be pushed to the store model.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">model</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">true</span></span>
-
-
-								<p> Model path.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">skin</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> Skin index.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">autoStore</span>
-
-									<span class="tag"><span class="type">bool</span></span>
-
-									<span class="tag default">optional</span>
-
-								<p> Should this call also automatically set the store models.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetName">
-					<h1><span class="realm shared"></span></span>SetName(name, plural)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L328">View source &raquo;</a>
-
-					<p>Sets the name of an item.
- If plural is undefined, defaults to "<name>s"
- If plural is true, it's set to "<name>"</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">name</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> New name.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">plural</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">false</span></span>
-
-									<span class="tag default">default: &lt;name&gt;s</span>
-
-								<p> Optional plural to set.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetPlural">
-					<h1><span class="realm shared"></span></span>SetPlural(name)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L442">View source &raquo;</a>
-
-					<p>Sets the item's plural.
- If nil/false, item's name + s is used.
- If true, item's name is used.
- Otherwise passed name is used.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">name</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">true</span></span>
-
-									<span class="tag default">optional</span>
-
-								<p>
-
-</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetPrice">
-					<h1><span class="realm shared"></span></span>SetPrice(data)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L206">View source &raquo;</a>
-
-					<p>Alias of ITEM:SetCost</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">data</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> Cost.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-				<h3>See Also</h3>
-				<ul>
-						<li><a href="../../items/item/#SetCost">SetCost</a></li>
-				</ul>
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetSize">
-					<h1><span class="realm shared"></span></span>SetSize(data)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L275">View source &raquo;</a>
-
-					<p>Sets the inventory size of this item.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">data</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> Size</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetSkin">
-					<h1><span class="realm shared"></span></span>SetSkin(skin, autoStore)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L394">View source &raquo;</a>
-
-					<p>Sets the skin of the item.
- If skin is true, it is pulled from the store skin.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">skin</span>
-
-									<span class="tag"><span class="type">int</span> or <span class="type">true</span></span>
-
-
-								<p> skin</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">autoStore</span>
-
-									<span class="tag"><span class="type">bool</span></span>
-
-									<span class="tag default">optional</span>
-
-								<p> If skin should be pushed to store skin.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetStore">
-					<h1><span class="realm shared"></span></span>SetStore(val)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L467">View source &raquo;</a>
-
-					<p>Set if the item is in store, and its batch amount.
- If boolean, store is directly set.
- If 0, store is set to false.
- Otherwise store is set true and the value</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">val</span>
-
-									<span class="tag"><span class="type">bool</span> or <span class="type">int</span></span>
-
-
-								<p> Store Setting / Batch Amount</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetStoreModel">
-					<h1><span class="realm shared"></span></span>SetStoreModel(model, skin)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L372">View source &raquo;</a>
-
-					<p>Sets the store model of the item.
- If model is true, the model and skin will be pulled from the regular model.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">model</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">true</span></span>
-
-
-								<p> Model path.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">skin</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> Skin index.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetStoreSkin">
-					<h1><span class="realm shared"></span></span>SetStoreSkin(skin, autoStore)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L417">View source &raquo;</a>
-
-					<p>Sets the store skin of the item.
- If skin is true, it is pulled from the item skin.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">skin</span>
-
-									<span class="tag"><span class="type">int</span> or <span class="type">true</span></span>
-
-
-								<p> skin</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">autoStore</span>
-
-									<span class="tag"><span class="type">bool</span></span>
-
-									<span class="tag default">optional</span>
-
-								<p> If skin should be pushed to item skin.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetSupporter">
-					<h1><span class="realm shared"></span></span>SetSupporter(data)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L295">View source &raquo;</a>
-
-					<p>Sets if the item is for supporters.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">data</span>
-
-									<span class="tag"><span class="type">bool</span></span>
-
-
-								<p> Supporter Required.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetSupporterPlus">
-					<h1><span class="realm shared"></span></span>SetSupporterPlus(data)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L305">View source &raquo;</a>
-
-					<p>Sets if the item is for supporter plus.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">data</span>
-
-									<span class="tag"><span class="type">bool</span></span>
-
-
-								<p> Supporter Required.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetTeam">
-					<h1><span class="realm shared"></span></span>SetTeam(data)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L256">View source &raquo;</a>
-
-					<p>Sets the team of an item.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">data</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> Team Index</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="Untradable">
-					<h1><span class="realm shared"></span></span>Untradable()</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L488">View source &raquo;</a>
-
-					<p>Marks an item as untradable.
- This disables dropping and giving, but can be overwritten later.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">ITEM</span>
-
-								<p>
-
-</p>
-							</li>
-
-				</ul>
 
 
 		</section>
@@ -5057,281 +3455,16 @@ ITEM:AutoFunction("SomeValue", "this_defaults_to_false")(false)
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="__index">
-					<h1><span class="realm shared"></span></span>__index</h1>
+				<a class="anchor" id="cityrp.logs.logs">
+					<h1><span class="realm server"></span></span>cityrp.logs.logs</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L591">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sv_logs.lua#L8">View source &raquo;</a>
 
-					<p>The lookup index for the item metatable.</p>
+					<p>Temporary in-memory store for logs.</p>
 			</header>
 
-
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">__index</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
-
-
-								<p>
-
-</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="category">
-					<h1><span class="realm shared"></span></span>category</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L59">View source &raquo;</a>
-
-					<p>Inventory / Market Category</p>
-			</header>
-
-
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">category</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p>
-
-</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="cost">
-					<h1><span class="realm shared"></span></span>cost</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L50">View source &raquo;</a>
-
-					<p>Item Cost</p>
-			</header>
-
-
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">cost</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p> The cost of the item as bought in the market.
- Also used for inventory valuations and refund sales.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="description">
-					<h1><span class="realm shared"></span></span>description</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L43">View source &raquo;</a>
-
-					<p>Description of the item.</p>
-			</header>
-
-
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">description</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p>
-
-</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="model">
-					<h1><span class="realm shared"></span></span>model</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L53">View source &raquo;</a>
-
-					<p>Model Path</p>
-			</header>
-
-
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">model</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> Path of the model used in the F1 menu / dropped states.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="name">
-					<h1><span class="realm shared"></span></span>name</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L40">View source &raquo;</a>
-
-					<p>Item Name.</p>
-			</header>
-
-
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">name</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> The localised name, as shown in the F1 menu.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="size">
-					<h1><span class="realm shared"></span></span>size</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L46">View source &raquo;</a>
-
-					<p>Item Size</p>
-			</header>
-
-
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">size</span>
-
-									<span class="tag"><span class="type">number</span></span>
-
-
-								<p> The inventory space used per item.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="skin">
-					<h1><span class="realm shared"></span></span>skin</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L62">View source &raquo;</a>
-
-					<p>Skin used in the F1 menu.</p>
-			</header>
-
-
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">skin</span>
-
-									<span class="tag"><span class="type">int</span></span>
-
-
-								<p>
-
-</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="store">
-					<h1><span class="realm shared"></span></span>store</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blobtree/master/gamemode/core/libraries/sh_itemcore.lua#L56">View source &raquo;</a>
-
-					<p>Market Availability</p>
-			</header>
-
-
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">store</span>
-
-									<span class="tag"><span class="type">bool</span></span>
-
-
-								<p>
-
-</p>
-							</li>
-					</ul>
 
 
 
