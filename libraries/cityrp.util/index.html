@@ -1982,6 +1982,16 @@ StripRealmPrefix											</a>
 											<a href="../../libraries/cityrp.util/#cityrp.util.WrapText">
 WrapText											</a>
 										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/cityrp.util/#table.FullCopy">
+table.FullCopy											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/cityrp.util/#table.QuickCopy">
+table.QuickCopy											</a>
+										</li>
 
 									</ul>
 									</details>
@@ -4439,6 +4449,92 @@ print(cityrp.util.SanitizeType(cityrp.type.bool, 1))
 							</li>
 					</ul>
 
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="table.FullCopy">
+					<h1><span class="realm shared"></span></span>table.FullCopy(tab)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_util.lua#L1204">View source &raquo;</a>
+
+					<p>Returns a copy of the table.
+ I don't know the benefits of this, it's just been used in many different sweps so I'm moving it here and deleting those</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">tab</span>
+
+									<span class="tag"><span class="type">tab</span></span>
+
+
+								<p> Table to copy</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a>
+
+								<p>Copy of the table</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="table.QuickCopy">
+					<h1><span class="realm shared"></span></span>table.QuickCopy(tab)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_util.lua#L1228">View source &raquo;</a>
+
+					<p>Returns a quick copy of the table.
+ This won't do stuff like vectors or angles, it's just quick for basic tables</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">tab</span>
+
+									<span class="tag"><span class="type">tab</span></span>
+
+
+								<p> Table to copy</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a>
+
+								<p>Copy of the table</p>
+							</li>
+
+				</ul>
 
 
 		</section>
