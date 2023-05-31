@@ -360,6 +360,10 @@ a.reference {
 	border: 2px solid var(--color-notice-background);
 }
 
+.notice p:not(:first-of-type) {
+	border-top: 1px solid var(--color-notice-background);
+}
+
 .notice.error {
 	--color-notice-background: rgb(194, 52, 130);
 }

@@ -2,18 +2,13 @@
 
 <html>
 	<head>
-		<title>Migrations Library - CityRP Documentation</title>
+		<title>Weapon - CityRP Documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Migrations Library - CityRP Documentation" />
+		<meta property="og:title" content="Weapon - CityRP Documentation" />
 		<meta property="og:site_name" content="CityRP Documentation" />
 
-			<meta property="og:description" content="
-
-The migrations library is a simple helper for running functions once per database schema.
-
-The entire system is based around a single table, `migrations`, which has 2 fields, `migration_id` and `created_at`.
-The migrations table itself is the only one w..." />
+			<meta property="og:description" content="Weapon" />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -2495,12 +2490,12 @@ hasAchievementsProp											</a>
 hasCustombonusProp											</a>
 										</li>
 										<li>
-											<span class="realm client"></span>
+											<span class="realm server"></span>
 											<a href="../../libraries/meska/#hasSkillsProp">
 hasSkillsProp											</a>
 										</li>
 										<li>
-											<span class="realm server"></span>
+											<span class="realm client"></span>
 											<a href="../../libraries/meska/#hasSkillsProp">
 hasSkillsProp											</a>
 										</li>
@@ -3458,7 +3453,7 @@ SetNetVar											</a>
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../classes/weapon/">Weapon</a></summary>
 
 									<ul>
@@ -3572,54 +3567,224 @@ Random											</a>
 			<article>
 					<div class="wrapper">
 
-<h2>Migrations Library</h2>
+<header class="module">
+	<h1>Weapon</h1>
+	<h2>Weapon</h2>
+</header>
 
-<p>The migrations library is a simple helper for running functions once per database schema.</p>
+<p>
 
-<p>The entire system is based around a single table, <a href="../../manual/migrations/#">migrations</a>, which has 2 fields, <code>migration_id</code> and <code>created_at</code>.
-The migrations table itself is the only one which is created with an if-not-exists check, all other migrations can be created as if they will be only ran once.</p>
+</p>
 
-<p>Migrations files are lua files, with the name of <code>sv_&lt;file creation unix timestamp&gt;_&lt;name&gt;.lua</code>, in the <code>&lt;GMFOLDER&gt;/gamemode/core/migrations</code> folder, or an individual plugin's <code>&lt;PLUGIN&gt;/migrations</code> folder.
-So, for example, a full timestamp might be <code>&lt;GMFOLDER&gt;/gamemode/core/migrations/sv_12359324_create-users-table.lua</code>. This will resolve to a migration ID of <code>12359324_create-users-table</code>.</p>
+	<h1 class="title">Functions</h1>
 
-<p>Migrations are ran from oldest to newest (as defined by the migraiton timestamp), only if they have not been ran before.</p>
-
-<p>The migrations file themselves are simple, with only a call to migrations.register, with one argument, a table with members <code>up</code> and <code>down</code>, both functions which take one argument, the function <code>done</code>.
-As an example, here.</p>
-
-
-<pre>
-cityrp.migrations.register({
-    up = <span class="keyword">function</span>(done)
-        <span class="global">print</span>(<span class="string">"making changes to the schema"</span>)
-        <span class="keyword">return</span> done()
-    <span class="keyword">end</span>,
-    down = <span class="keyword">function</span>(done)
-        <span class="global">print</span>(<span class="string">"reverting changes, if possible."</span>)
-        <span class="keyword">return</span> done()
-    <span class="keyword">end</span>
-})
-</pre>
+		<section class="method">
+			<header>
+				<a class="anchor" id="DistToSqr">
+					<h1><span class="realm shared"></span></span>Entity:DistToSqr(other)</h1>
+				</a>
 
 
-<p>Or, as a more complicated example, we have a function which takes callbacks.</p>
 
-<pre>
-cityrp.migrations.register({
-    up = <span class="keyword">function</span>(done)
-        <span class="global">print</span>(<span class="string">"starting the migration"</span>)
-        functionWhichTakesACallback(<span class="keyword">function</span>()
-            <span class="global">print</span>(<span class="string">"we've done the thing, now let's mark ourselves as done!"</span>)
-            done()
-        <span class="keyword">end</span>)
-    <span class="keyword">end</span>,
-    down = <span class="keyword">function</span>(done)
-        <span class="global">print</span>(<span class="string">"reverting changes, if possible."</span>)
-        <span class="keyword">return</span> done()
-    <span class="keyword">end</span>
-})
-</pre>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_entity.lua#L29">View source &raquo;</a>
 
+					<p>Get the squared distance between this entity, and another vector or entity.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">other</span>
+
+									<span class="tag"><a class="type" href="../../classes/vector/#">Vector</a> or <a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Distance">
+					<h1><span class="realm shared"></span></span>Entity:Distance(other)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_entity.lua#L13">View source &raquo;</a>
+
+					<p>Get the distance between this entity, and another vector or entity.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">other</span>
+
+									<span class="tag"><a class="type" href="../../classes/vector/#">Vector</a> or <a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetNetVar">
+					<h1><span class="realm shared"></span></span>Entity:GetNetVar(string, any)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_net.lua#L207">View source &raquo;</a>
+
+					<p>Get a variable on this entity</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">string</span>
+
+
+
+								<p> key The key of the variable</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">any</span>
+
+
+
+								<p> default The default value of the variable</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="tag type">any</span>
+
+								<p>any The value of the variable</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="IsValid">
+					<h1><span class="realm shared"></span></span>Weapon:IsValid()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/weapon.lua#L8">View source &raquo;</a>
+
+					<div class="notice warning">
+						<div class="title">Incomplete</div>
+						<p>Documentation for this section is incomplete and needs expanding.</p>
+					</div>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetNetVar">
+					<h1><span class="realm server"></span></span>Entity:SetNetVar(Entity, string, any)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_net.lua#L178">View source &raquo;</a>
+
+					<p>Set a variable on this entity, which will be networked to all players</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">Entity</span>
+
+
+
+								<p> ent The entity to network the variable to</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">string</span>
+
+
+
+								<p> key The key of the variable</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">any</span>
+
+
+
+								<p> value The value of the variable</p>
+							</li>
+					</ul>
+
+
+
+		</section>
 
 					</div>
 			</article>
