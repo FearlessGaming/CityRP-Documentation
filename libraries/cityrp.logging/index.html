@@ -2,13 +2,13 @@
 
 <html>
 	<head>
-		<title>cityrp.lang - CityRP Documentation</title>
+		<title>cityrp.logging - CityRP Documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="cityrp.lang - CityRP Documentation" />
+		<meta property="og:title" content="cityrp.logging - CityRP Documentation" />
 		<meta property="og:site_name" content="CityRP Documentation" />
 
-			<meta property="og:description" content="Multi-language phrase support." />
+			<meta property="og:description" content="Logging Library." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -1991,7 +1991,7 @@ use											</a>
 									</details>
 							</li>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../libraries/cityrp.lang/">cityrp.lang</a></summary>
 
 									<ul>
@@ -2014,7 +2014,7 @@ LoadFromDir											</a>
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../libraries/cityrp.logging/">cityrp.logging</a></summary>
 
 									<ul>
@@ -2578,12 +2578,12 @@ hasAchievementsProp											</a>
 hasCustombonusProp											</a>
 										</li>
 										<li>
-											<span class="realm client"></span>
+											<span class="realm server"></span>
 											<a href="../../libraries/meska/#hasSkillsProp">
 hasSkillsProp											</a>
 										</li>
 										<li>
-											<span class="realm server"></span>
+											<span class="realm client"></span>
 											<a href="../../libraries/meska/#hasSkillsProp">
 hasSkillsProp											</a>
 										</li>
@@ -3754,57 +3754,27 @@ Random											</a>
 					<div class="wrapper">
 
 <header class="module">
-	<h1>cityrp.lang</h1>
-	<h2>Multi-language phrase support.</h2>
+	<h1>cityrp.logging</h1>
+	<h2>Logging Library.</h2>
 </header>
 
 <p>
 
-
-<p>Helix has support for multiple languages, and you can easily leverage this system for use in your own schema, plugins, etc.
-Languages will be loaded from the schema and any plugins in <code>languages/sh_languagename.lua</code>, where <code>languagename</code> is the id of a
-language (<code>english</code> for English, <code>french</code> for French, etc). The structure of a language file is a table of phrases with the key
-as its phrase ID and the value as its translation for that language. For example, in <code>plugins/area/sh_english.lua</code>:</p>
-<pre><code>LANGUAGE = {
-    area = "Area",
-    areas = "Areas",
-    areaEditMode = "Area Edit Mode",
-    -- etc.
-}
-</code></pre>
-
-<p>The phrases defined in these language files can be used with the <code>L</code> global function:</p>
-<pre><code>print(L("areaEditMode"))
-&gt; Area Edit Mode
-</code></pre>
-
-<p>All phrases are formatted with <a href="https://www.lua.org/manual/5.2/manual.html#pdf-string.format">string.format</a>, so if you wish to add some info in a phrase you can use standard Lua string
-formatting arguments:</p>
-<pre><code>print(L("areaDeleteConfirm", "Test"))
-&gt; Are you sure you want to delete the area "Test"?
-</code></pre>
-
-<p>Phrases are also usable on the server, but only when trying to localize a phrase based on a client's preferences. The server
-does not have a set language. An example:</p>
-<pre><code>Entity(1):ChatPrint(L("areaEditMode"))
-&gt; -- "Area Edit Mode" will print in the player's chatbox
-</code></pre>
 </p>
 
 	<h1 class="title">Functions</h1>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="cityrp.lang.AddTable">
-					<h1><span class="realm shared"></span></span>cityrp.lang.AddTable(language, data)</h1>
+				<a class="anchor" id="Brand">
+					<h1><span class="realm shared"></span></span>Brand(wrapped, event)</h1>
 				</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_language.lua#L67">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_logging.lua#L274">View source &raquo;</a>
 
-					<p>Adds phrases to a language.  This is used when you aren't adding entries through the files in the <code>languages/</code> folder. A
- common use case is adding language phrases in a single-file plugin.</p>
+					<p>Create a table with the brand name.</p>
 			</header>
 
 
@@ -3814,50 +3784,54 @@ does not have a set language. An example:</p>
 					<ul>
 
 							<li>
-								<span class="tag parameter">language</span>
+								<span class="tag parameter">wrapped</span>
 
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+									<span class="tag"><span class="type">bool</span></span>
 
 
-								<p> The ID of the language</p>
+								<p> Should the Brand be wrapped in [].</p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">data</span>
+								<span class="tag parameter">event</span>
 
-									<span class="tag"><span class="type">tab</span></span>
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
 
 
-								<p> Language data to add to the given language</p>
+								<p> It's a secret tool that'll help us later.</p>
 							</li>
 					</ul>
 
 
-				<h3>Example Usage</h3>
-					<pre><code>cityrp.lang.AddTable("english", {
-	myPhrase = "My Phrase"
-})
-</code></pre>
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
 
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="cityrp.lang.LoadFromDir">
-					<h1><span class="realm shared"></span></span>cityrp.lang.LoadFromDir(directory)</h1>
+				<a class="anchor" id="Build">
+					<h1><span class="realm shared"></span></span>Build(logger, component, level)</h1>
 				</a>
 
-					<div class="notice error">
-						<div class="title">Internal</div>
-						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
-					</div>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_language.lua#L41">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_logging.lua#L101">View source &raquo;</a>
 
-					<p>Loads language files from a directory.</p>
+					<p>Build the logging method for a given level.</p>
 			</header>
 
 
@@ -3867,12 +3841,468 @@ does not have a set language. An example:</p>
 					<ul>
 
 							<li>
-								<span class="tag parameter">directory</span>
+								<span class="tag parameter">logger</span>
+
+									<span class="tag"><a class="type" href="../../classes/logger/#">Logger</a></span>
+
+
+								<p> Logger to build the method for.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">component</span>
 
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
 
 
-								<p> Directory to load language files from</p>
+								<p> The component name to build for.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">level</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> Required logging level.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Critical">
+					<h1><span class="realm shared"></span></span>Critical(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_logging.lua#L304">View source &raquo;</a>
+
+					<p>Emit a log with a Critical log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Debug">
+					<h1><span class="realm shared"></span></span>Debug(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_logging.lua#L333">View source &raquo;</a>
+
+					<p>Emit a log with a Debug log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Error">
+					<h1><span class="realm shared"></span></span>Error(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_logging.lua#L311">View source &raquo;</a>
+
+					<p>Emit a log with a Error log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Fatal">
+					<h1><span class="realm shared"></span></span>Fatal(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_logging.lua#L297">View source &raquo;</a>
+
+					<p>Emit a log with a Fatal log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetLogger">
+					<h1><span class="realm shared"></span></span>GetLogger(name)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_logging.lua#L236">View source &raquo;</a>
+
+					<p>Get or create a cached logging instance.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Name of the logger to fetch.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="../../classes/logger/#">Logger</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Info">
+					<h1><span class="realm shared"></span></span>Info(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_logging.lua#L326">View source &raquo;</a>
+
+					<p>Emit a log with a Info log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Parse">
+					<h1><span class="realm shared"></span></span>Parse(level)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_logging.lua#L77">View source &raquo;</a>
+
+					<p>Parse a logging name to a level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">level</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">number</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									optional <span class="type">number</span>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Root">
+					<h1><span class="realm shared"></span></span>Root()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_logging.lua#L247">View source &raquo;</a>
+
+					<p>Fetch the root logging instance.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="../../classes/logger/#">Logger</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Trace1">
+					<h1><span class="realm shared"></span></span>Trace1(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_logging.lua#L340">View source &raquo;</a>
+
+					<p>Emit a log with a level 1 trace log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Trace2">
+					<h1><span class="realm shared"></span></span>Trace2(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_logging.lua#L347">View source &raquo;</a>
+
+					<p>Emit a log with a level 2 trace log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Trace3">
+					<h1><span class="realm shared"></span></span>Trace3(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_logging.lua#L354">View source &raquo;</a>
+
+					<p>Emit a log with a level 3 trace log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Warning">
+					<h1><span class="realm shared"></span></span>Warning(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_logging.lua#L318">View source &raquo;</a>
+
+					<p>Emit a log with a Warning log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="print">
+					<h1><span class="realm shared"></span></span>print(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_logging.lua#L31">View source &raquo;</a>
+
+					<p>Print a message out to console</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable instances to print.</p>
 							</li>
 					</ul>
 

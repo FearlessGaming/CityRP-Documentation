@@ -2,13 +2,13 @@
 
 <html>
 	<head>
-		<title>cityrp.lang - CityRP Documentation</title>
+		<title>Logger - CityRP Documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="cityrp.lang - CityRP Documentation" />
+		<meta property="og:title" content="Logger - CityRP Documentation" />
 		<meta property="og:site_name" content="CityRP Documentation" />
 
-			<meta property="og:description" content="Multi-language phrase support." />
+			<meta property="og:description" content="Logging Instance" />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -1991,7 +1991,7 @@ use											</a>
 									</details>
 							</li>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../libraries/cityrp.lang/">cityrp.lang</a></summary>
 
 									<ul>
@@ -2762,7 +2762,7 @@ SetNetVar											</a>
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../classes/logger/">Logger</a></summary>
 
 									<ul>
@@ -3754,57 +3754,27 @@ Random											</a>
 					<div class="wrapper">
 
 <header class="module">
-	<h1>cityrp.lang</h1>
-	<h2>Multi-language phrase support.</h2>
+	<h1>Logger</h1>
+	<h2>Logging Instance</h2>
 </header>
 
 <p>
 
-
-<p>Helix has support for multiple languages, and you can easily leverage this system for use in your own schema, plugins, etc.
-Languages will be loaded from the schema and any plugins in <code>languages/sh_languagename.lua</code>, where <code>languagename</code> is the id of a
-language (<code>english</code> for English, <code>french</code> for French, etc). The structure of a language file is a table of phrases with the key
-as its phrase ID and the value as its translation for that language. For example, in <code>plugins/area/sh_english.lua</code>:</p>
-<pre><code>LANGUAGE = {
-    area = "Area",
-    areas = "Areas",
-    areaEditMode = "Area Edit Mode",
-    -- etc.
-}
-</code></pre>
-
-<p>The phrases defined in these language files can be used with the <code>L</code> global function:</p>
-<pre><code>print(L("areaEditMode"))
-&gt; Area Edit Mode
-</code></pre>
-
-<p>All phrases are formatted with <a href="https://www.lua.org/manual/5.2/manual.html#pdf-string.format">string.format</a>, so if you wish to add some info in a phrase you can use standard Lua string
-formatting arguments:</p>
-<pre><code>print(L("areaDeleteConfirm", "Test"))
-&gt; Are you sure you want to delete the area "Test"?
-</code></pre>
-
-<p>Phrases are also usable on the server, but only when trying to localize a phrase based on a client's preferences. The server
-does not have a set language. An example:</p>
-<pre><code>Entity(1):ChatPrint(L("areaEditMode"))
-&gt; -- "Area Edit Mode" will print in the player's chatbox
-</code></pre>
 </p>
 
 	<h1 class="title">Functions</h1>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="cityrp.lang.AddTable">
-					<h1><span class="realm shared"></span></span>cityrp.lang.AddTable(language, data)</h1>
+				<a class="anchor" id="Critical">
+					<h1><span class="realm shared"></span></span>Logger:Critical(...)</h1>
 				</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_language.lua#L67">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L55">View source &raquo;</a>
 
-					<p>Adds phrases to a language.  This is used when you aren't adding entries through the files in the <code>languages/</code> folder. A
- common use case is adding language phrases in a single-file plugin.</p>
+					<p>Emit a log with a Critical log level.</p>
 			</header>
 
 
@@ -3814,50 +3784,221 @@ does not have a set language. An example:</p>
 					<ul>
 
 							<li>
-								<span class="tag parameter">language</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+								<span class="tag parameter">...</span>
 
 
-								<p> The ID of the language</p>
+
+								<p> Stringable arguments.</p>
 							</li>
 					</ul>
 
-					<ul>
+
+				<h3>Returns</h3>
+				<ul>
 
 							<li>
-								<span class="tag parameter">data</span>
+									<a class="type" href="../../classes/logger/#">Logger</a>
 
-									<span class="tag"><span class="type">tab</span></span>
+								<p>
 
-
-								<p> Language data to add to the given language</p>
+</p>
 							</li>
-					</ul>
 
+				</ul>
 
-				<h3>Example Usage</h3>
-					<pre><code>cityrp.lang.AddTable("english", {
-	myPhrase = "My Phrase"
-})
-</code></pre>
 
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="cityrp.lang.LoadFromDir">
-					<h1><span class="realm shared"></span></span>cityrp.lang.LoadFromDir(directory)</h1>
+				<a class="anchor" id="Debug">
+					<h1><span class="realm shared"></span></span>Logger:Debug(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L76">View source &raquo;</a>
+
+					<p>Emit a log with a Debug log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="../../classes/logger/#">Logger</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Error">
+					<h1><span class="realm shared"></span></span>Logger:Error(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L60">View source &raquo;</a>
+
+					<p>Emit a log with a Error log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="../../classes/logger/#">Logger</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Fatal">
+					<h1><span class="realm shared"></span></span>Logger:Fatal(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L50">View source &raquo;</a>
+
+					<p>Emit a log with a Fatal log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="../../classes/logger/#">Logger</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetChild">
+					<h1><span class="realm shared"></span></span>Logger:GetChild(name)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L41">View source &raquo;</a>
+
+					<p>Gets the given child logger.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The child component of the name.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="../../classes/logger/#">Logger</a>
+
+								<p>The child logger.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetChildName">
+					<h1><span class="realm shared"></span></span>Logger:GetChildName(name)</h1>
 				</a>
 
 					<div class="notice error">
 						<div class="title">Internal</div>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+							<p>Use <a href="../../classes/logger/#GetChild">GetChild</a> instead.</p>
 					</div>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_language.lua#L41">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L36">View source &raquo;</a>
 
-					<p>Loads language files from a directory.</p>
+					<p>Gets the name of the child name of this logger.</p>
 			</header>
 
 
@@ -3867,15 +4008,456 @@ does not have a set language. An example:</p>
 					<ul>
 
 							<li>
-								<span class="tag parameter">directory</span>
+								<span class="tag parameter">name</span>
 
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
 
 
-								<p> Directory to load language files from</p>
+								<p> The child component of the name.</p>
 							</li>
 					</ul>
 
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>Child logger name.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetEffectiveLevel">
+					<h1><span class="realm shared"></span></span>Logger:GetEffectiveLevel()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L45">View source &raquo;</a>
+
+					<p>Gets the effective logging level of the logger, taking into account its parent loggers.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">number</span>
+
+								<p>The parsed logging level.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetLevel">
+					<h1><span class="realm shared"></span></span>Logger:GetLevel()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L21">View source &raquo;</a>
+
+					<p>Gets the logging level of this logger.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">number</span>
+
+								<p>The parsed logging level of this logger.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetParent">
+					<h1><span class="realm shared"></span></span>Logger:GetParent()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L30">View source &raquo;</a>
+
+					<p>Gets the parent logger of this logger.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									optional <a class="type" href="../../classes/logger/#">Logger</a>
+
+								<p>Parent logger, or nil if this is the root logger.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetParentName">
+					<h1><span class="realm shared"></span></span>Logger:GetParentName()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+							<p>Use <a href="../../classes/logger/#GetParent">GetParent</a> instead.</p>
+					</div>
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L26">View source &raquo;</a>
+
+					<p>Gets the name of the parent of this logger.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									optional <a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>Name of the parent, or nil if none exists.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Info">
+					<h1><span class="realm shared"></span></span>Logger:Info(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L70">View source &raquo;</a>
+
+					<p>Emit a log with a Info log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="../../classes/logger/#">Logger</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="New">
+					<h1><span class="realm shared"></span></span>Logger:New(name)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+							<p>This should not be called directly. Use <a href="../../libraries/cityrp.logging/#GetLogger">cityrp.logging.GetLogger</a>, <a href="../../libraries/cityrp.logging/#Root">cityrp.logging.Root</a>, <a href="../../classes/logger/#GetChild">GetChild</a> or <a href="../../classes/logger/#GetParent">GetParent</a> instead.</p>
+					</div>
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L12">View source &raquo;</a>
+
+					<p>Create a new logger instance with the given name.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">name</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> Name of the lgger to create.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="../../classes/logger/#">Logger</a>
+
+								<p>The created logger.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetLevel">
+					<h1><span class="realm shared"></span></span>Logger:SetLevel(New)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L17">View source &raquo;</a>
+
+					<p>Sets the logging level of this logger.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">New</span>
+
+									<span class="tag"><span class="type">number</span> or <a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> logging level to set.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="../../classes/logger/#">Logger</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Trace1">
+					<h1><span class="realm shared"></span></span>Logger:Trace1(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L81">View source &raquo;</a>
+
+					<p>Emit a log with a level 1 trace log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="../../classes/logger/#">Logger</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Trace2">
+					<h1><span class="realm shared"></span></span>Logger:Trace2(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L86">View source &raquo;</a>
+
+					<p>Emit a log with a level 2 trace log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="../../classes/logger/#">Logger</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Trace3">
+					<h1><span class="realm shared"></span></span>Logger:Trace3(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L90">View source &raquo;</a>
+
+					<p>Emit a log with a level 3 trace log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="../../classes/logger/#">Logger</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="Warning">
+					<h1><span class="realm shared"></span></span>Logger:Warning(...)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/home/runner/work/CityRP/CityRP/cityrp/docs/stubs/logger.lua#L65">View source &raquo;</a>
+
+					<p>Emit a log with a Warning log level.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">...</span>
+
+
+
+								<p> Stringable arguments.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="../../classes/logger/#">Logger</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
 
 
 		</section>
