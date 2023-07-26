@@ -2949,6 +2949,41 @@ GetFakeSteamName											</a>
 										</li>
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetGender">
+GetGender											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetGenderAdjectivePronoun">
+GetGenderAdjectivePronoun											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetGenderDemonstrativePronoun">
+GetGenderDemonstrativePronoun											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetGenderPosessessivePronoun">
+GetGenderPosessessivePronoun											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetGenderPronoun">
+GetGenderPronoun											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetGenderReflexivePronoun">
+GetGenderReflexivePronoun											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetGenderTitle">
+GetGenderTitle											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/player/#GetLastDeath">
 GetLastDeath											</a>
 										</li>
@@ -2991,11 +3026,6 @@ GetOverridePropLimit											</a>
 											<span class="realm shared"></span>
 											<a href="../../classes/player/#GetPass">
 GetPass											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
-											<a href="../../classes/player/#GetPlayerGender">
-GetPlayerGender											</a>
 										</li>
 										<li>
 											<span class="realm shared"></span>
@@ -3474,11 +3504,6 @@ SetPass											</a>
 										</li>
 										<li>
 											<span class="realm shared"></span>
-											<a href="../../classes/player/#SetPlayerGender">
-SetPlayerGender											</a>
-										</li>
-										<li>
-											<span class="realm shared"></span>
 											<a href="../../classes/player/#SetPlayerModel">
 SetPlayerModel											</a>
 										</li>
@@ -3861,7 +3886,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L696">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L715">View source &raquo;</a>
 
 					<p>Check a player's custom pass title.</p>
 			</header>
@@ -4020,8 +4045,13 @@ Random											</a>
 				</a>
 
 
+					<div class="notice error">
+						<div class="title">Deprecated</div>
+						<p>This function is deprecated and may be removed in a future version.</p>
+							<p>Use <a href="../../classes/player/#GetGenderAdjectivePronoun">GetGenderAdjectivePronoun</a></p>
+					</div>
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L181">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L211">View source &raquo;</a>
 
 					<p>Get the possessive pronoun for this player.</p>
 			</header>
@@ -4050,8 +4080,13 @@ Random											</a>
 				</a>
 
 
+					<div class="notice error">
+						<div class="title">Deprecated</div>
+						<p>This function is deprecated and may be removed in a future version.</p>
+							<p>Use <a href="../../classes/player/#GetGenderAdjectivePronoun">GetGenderAdjectivePronoun</a></p>
+					</div>
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L193">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L218">View source &raquo;</a>
 
 					<p>Get the pronoun for this player.</p>
 			</header>
@@ -4081,7 +4116,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L740">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L759">View source &raquo;</a>
 
 					<p>Check if a player has is a group associate.</p>
 			</header>
@@ -4109,7 +4144,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L750">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L769">View source &raquo;</a>
 
 					<p>Check if a player can speak in IC chats.</p>
 			</header>
@@ -4139,7 +4174,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L760">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L779">View source &raquo;</a>
 
 					<p>Check if a player can speak in LOOC.</p>
 			</header>
@@ -4187,9 +4222,217 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L810">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L829">View source &raquo;</a>
 
 					<p>Gets a player's fake steam name.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetGender">
+					<h1><span class="realm shared"></span></span>Player:GetGender()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L160">View source &raquo;</a>
+
+					<p>Get a players gender.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>The player's gender, one of the GENDER_ enums.</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetGenderAdjectivePronoun">
+					<h1><span class="realm shared"></span></span>Player:GetGenderAdjectivePronoun()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L198">View source &raquo;</a>
+
+					<p>Get the gendered adjective pronoun for the player.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetGenderDemonstrativePronoun">
+					<h1><span class="realm shared"></span></span>Player:GetGenderDemonstrativePronoun()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L186">View source &raquo;</a>
+
+					<p>Get the gendered demonstrative pronoun for the player.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetGenderPosessessivePronoun">
+					<h1><span class="realm shared"></span></span>Player:GetGenderPosessessivePronoun()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L204">View source &raquo;</a>
+
+					<p>Get the gendered posessive pronoun for the player.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetGenderPronoun">
+					<h1><span class="realm shared"></span></span>Player:GetGenderPronoun()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L180">View source &raquo;</a>
+
+					<p>Get the gendered pronoun for the player.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetGenderReflexivePronoun">
+					<h1><span class="realm shared"></span></span>Player:GetGenderReflexivePronoun()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L192">View source &raquo;</a>
+
+					<p>Get the gendered reflexive pronoun for the player.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetGenderTitle">
+					<h1><span class="realm shared"></span></span>Player:GetGenderTitle()</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L174">View source &raquo;</a>
+
+					<p>Get the title of the gender for the player.</p>
 			</header>
 
 
@@ -4217,7 +4460,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L850">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L869">View source &raquo;</a>
 
 					<p>Gets a player's last death timestamp.</p>
 			</header>
@@ -4247,7 +4490,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L870">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L889">View source &raquo;</a>
 
 					<p>Gets a player's last death location name.</p>
 			</header>
@@ -4277,7 +4520,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L860">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L879">View source &raquo;</a>
 
 					<p>Gets a player's last death position.</p>
 			</header>
@@ -4467,7 +4710,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L890">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L909">View source &raquo;</a>
 
 					<p>Gets the number of OOC messages a player has recently sent.</p>
 			</header>
@@ -4515,7 +4758,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L723">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L742">View source &raquo;</a>
 
 					<p>Get a player's pass.</p>
 			</header>
@@ -4529,40 +4772,6 @@ Random											</a>
 									optional <a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
 
 								<p>Pass name</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="GetPlayerGender">
-					<h1><span class="realm shared"></span></span>Player:GetPlayerGender()</h1>
-				</a>
-
-
-					<div class="notice error">
-						<div class="title">Deprecated</div>
-						<p>This function is deprecated and may be removed in a future version.</p>
-					</div>
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L175">View source &raquo;</a>
-
-					<p>Get a players gender.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
-
-								<p>
-
-</p>
 							</li>
 
 				</ul>
@@ -4726,7 +4935,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L820">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L839">View source &raquo;</a>
 
 					<p>Gets a player's last scanned license plate.</p>
 			</header>
@@ -4756,7 +4965,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L830">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L849">View source &raquo;</a>
 
 					<p>Gets a player's last scanned vehicle name.</p>
 			</header>
@@ -4786,7 +4995,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L659">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L678">View source &raquo;</a>
 
 					<p>Get a player's rank color.</p>
 			</header>
@@ -4803,7 +5012,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L626">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L645">View source &raquo;</a>
 
 					<p>Gets rank data for a player.</p>
 			</header>
@@ -4833,7 +5042,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L690">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L709">View source &raquo;</a>
 
 					<p>Get a ranks display order.</p>
 			</header>
@@ -4863,7 +5072,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L672">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L691">View source &raquo;</a>
 
 					<p>Get a rank's rank icon.</p>
 			</header>
@@ -4880,7 +5089,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L678">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L697">View source &raquo;</a>
 
 					<p>Get a precached rank icon material.</p>
 			</header>
@@ -4910,7 +5119,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L684">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L703">View source &raquo;</a>
 
 					<p>Get the string representation of a rank icon.</p>
 			</header>
@@ -4940,7 +5149,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L652">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L671">View source &raquo;</a>
 
 					<p>Get a player's rank name.</p>
 			</header>
@@ -4968,7 +5177,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L666">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L685">View source &raquo;</a>
 
 					<p>Get a rank's physgun color.</p>
 			</header>
@@ -4993,7 +5202,7 @@ Random											</a>
 						<p>This function is deprecated and may be removed in a future version.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L368">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L387">View source &raquo;</a>
 
 					<p>Get the player's rank.</p>
 			</header>
@@ -5025,7 +5234,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L840">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L859">View source &raquo;</a>
 
 					<p>Gets a player's last scanned vehicle timestamp.</p>
 			</header>
@@ -5055,7 +5264,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L395">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L414">View source &raquo;</a>
 
 					<p>Get the player's rank.</p>
 			</header>
@@ -5129,7 +5338,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L770">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L789">View source &raquo;</a>
 
 					<p>Check if a player has admin help enabled.</p>
 			</header>
@@ -5157,7 +5366,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L790">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L809">View source &raquo;</a>
 
 					<p>Check if a player's NLR helper is enabled.</p>
 			</header>
@@ -5185,7 +5394,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L780">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L799">View source &raquo;</a>
 
 					<p>Check if the player's admin help is toggled.</p>
 			</header>
@@ -5260,7 +5469,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L715">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L734">View source &raquo;</a>
 
 					<p>Check if a player has a given number of RP Points.</p>
 			</header>
@@ -5307,7 +5516,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L563">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L582">View source &raquo;</a>
 
 					<p>Check if a player has tags which match with their rank.</p>
 			</header>
@@ -5335,7 +5544,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L539">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L558">View source &raquo;</a>
 
 					<p>Checks if the plaer has active veteran benefits.
  This can be from either having the veteran rank OR
@@ -5400,7 +5609,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L331">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L350">View source &raquo;</a>
 
 					<p>Check if a player is afk.</p>
 			</header>
@@ -5430,7 +5639,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L438">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L457">View source &raquo;</a>
 
 					<p>Check if the player holds admin permissions.</p>
 			</header>
@@ -5460,7 +5669,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L492">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L511">View source &raquo;</a>
 
 					<p>Gets if a player is a contributor.</p>
 			</header>
@@ -5495,7 +5704,7 @@ Random											</a>
 							<p>This should be two checks.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L513">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L532">View source &raquo;</a>
 
 					<p>Get if the player is a contributor+ or an administrator.</p>
 			</header>
@@ -5530,7 +5739,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L478">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L497">View source &raquo;</a>
 
 					<p>Check if the player is a developer.</p>
 			</header>
@@ -5560,7 +5769,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L432">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L451">View source &raquo;</a>
 
 					<p>Check if the player holds developer &amp; admin permissions</p>
 			</header>
@@ -5595,7 +5804,7 @@ Random											</a>
 							<p>Use <a href="../../classes/player/#IsDeveloper">IsDeveloper</a></p>
 					</div>
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L488">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L507">View source &raquo;</a>
 
 					<p>Once again, this is used in a LOT of places.</p>
 			</header>
@@ -5634,7 +5843,7 @@ Random											</a>
 							<p>This should be two checks.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L522">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L541">View source &raquo;</a>
 
 					<p>Get if the player is a developer+ or an administrator.</p>
 			</header>
@@ -5669,7 +5878,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L444">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L463">View source &raquo;</a>
 
 					<p>Check if the player has developer &amp; trial admin permissions.</p>
 			</header>
@@ -5704,7 +5913,7 @@ Random											</a>
 							<p>Use <a href="../../classes/player/#IsSupporter">IsSupporter</a> or <a href="../../classes/player/#IsSupporterPlus">IsSupporterPlus</a></p>
 					</div>
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L612">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L631">View source &raquo;</a>
 
 					<p>Gets if a player is a donator.</p>
 			</header>
@@ -5726,7 +5935,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L343">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L362">View source &raquo;</a>
 
 					<p>Check if a player is a ERU member.</p>
 			</header>
@@ -5756,7 +5965,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L504">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L523">View source &raquo;</a>
 
 					<p>Check if the player is an event coordonator.</p>
 			</header>
@@ -5786,7 +5995,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L498">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L517">View source &raquo;</a>
 
 					<p>Check if the player is an event manager.</p>
 			</header>
@@ -5844,7 +6053,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L295">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L314">View source &raquo;</a>
 
 					<p>Check if a player is a member of the government.</p>
 			</header>
@@ -5874,7 +6083,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L800">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L819">View source &raquo;</a>
 
 					<p>Check if a player is hidden.</p>
 			</header>
@@ -5904,7 +6113,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L582">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L601">View source &raquo;</a>
 
 					<p>Check if a player's rank is hidden from their lack of tags.</p>
 			</header>
@@ -5934,7 +6143,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L301">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L320">View source &raquo;</a>
 
 					<p>Check if a player is a member of law enforcement.</p>
 			</header>
@@ -5964,7 +6173,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L319">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L338">View source &raquo;</a>
 
 					<p>Check if a player is a corelone.</p>
 			</header>
@@ -5999,7 +6208,7 @@ Random											</a>
 							<p>Use <a href="../../classes/player/#IsTrialAdmin">IsTrialAdmin</a></p>
 					</div>
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L474">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L493">View source &raquo;</a>
 
 					<p>Check if the player has moderator powers.
  Currently this just checks for Trial Admin, but this function is used in >50 places in the GM.</p>
@@ -6039,7 +6248,7 @@ Random											</a>
 							<p>Use <a href="../../classes/player/#IsTrialAdmin">IsTrialAdmin</a></p>
 					</div>
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L466">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L485">View source &raquo;</a>
 
 					<p>Check if the player has moderator powers.
  Currently this just checks for Trial Admin, but this function is used in >100 places in the GM.</p>
@@ -6104,7 +6313,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L414">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L433">View source &raquo;</a>
 
 					<p>Check if the player holds the owner permissions.</p>
 			</header>
@@ -6134,7 +6343,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L307">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L326">View source &raquo;</a>
 
 					<p>Check if a player is a police officer.</p>
 			</header>
@@ -6164,7 +6373,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L349">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L368">View source &raquo;</a>
 
 					<p>Check if a player is a president.</p>
 			</header>
@@ -6194,7 +6403,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L356">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L375">View source &raquo;</a>
 
 					<p>Check if the player is a member of the Presidential Administration.
  Members of this class are able to do administrative duties, such as issuing passes.</p>
@@ -6225,7 +6434,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L880">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L899">View source &raquo;</a>
 
 					<p>Gets if a player is in a quiz.</p>
 			</header>
@@ -6259,7 +6468,7 @@ Random											</a>
 						<p>This function is deprecated and may be removed in a future version.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L410">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L429">View source &raquo;</a>
 
 					<p>Check if the player is a given rank.</p>
 			</header>
@@ -6310,7 +6519,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L325">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L344">View source &raquo;</a>
 
 					<p>Check if a player is a rebel.</p>
 			</header>
@@ -6340,7 +6549,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L313">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L332">View source &raquo;</a>
 
 					<p>Check if a player is a swat officer.</p>
 			</header>
@@ -6370,7 +6579,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L337">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L356">View source &raquo;</a>
 
 					<p>Check if a player is a spectator.</p>
 			</header>
@@ -6400,7 +6609,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L426">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L445">View source &raquo;</a>
 
 					<p>Check if the player holds super admin permissions.</p>
 			</header>
@@ -6430,7 +6639,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L420">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L439">View source &raquo;</a>
 
 					<p>Check if the player holds super developer permissions.</p>
 			</header>
@@ -6520,7 +6729,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L275">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L294">View source &raquo;</a>
 
 					<p>Check if a player is in a given team group.</p>
 			</header>
@@ -6577,7 +6786,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L456">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L475">View source &raquo;</a>
 
 					<p>Check if a player has trial admin permissions.</p>
 			</header>
@@ -6607,7 +6816,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L450">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L469">View source &raquo;</a>
 
 					<p>Check if the player is exclusively a trial admin (not including inheritance).</p>
 			</header>
@@ -6637,7 +6846,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L400">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L419">View source &raquo;</a>
 
 					<p>Check if the player is a given rank.</p>
 			</header>
@@ -6687,7 +6896,7 @@ Random											</a>
 					</div>
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L530">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L549">View source &raquo;</a>
 
 					<p>Checks if the player has the veteran rank.</p>
 			</header>
@@ -6721,7 +6930,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L546">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L565">View source &raquo;</a>
 
 					<p>Get a player's name, or attempt to find their undercover name.</p>
 			</header>
@@ -6895,7 +7104,7 @@ Random											</a>
 						<p>This function is deprecated and may be removed in a future version.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L734">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L753">View source &raquo;</a>
 
 					<p>Get a player's pass.</p>
 			</header>
@@ -6984,7 +7193,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L592">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L611">View source &raquo;</a>
 
 					<p>Get a player's RP name.</p>
 			</header>
@@ -7014,7 +7223,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L708">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L727">View source &raquo;</a>
 
 					<p>Get a player's RPPoint count.</p>
 			</header>
@@ -7125,7 +7334,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L774">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L793">View source &raquo;</a>
 
 					<p>Set the player's admin help status</p>
 			</header>
@@ -7158,7 +7367,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L794">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L813">View source &raquo;</a>
 
 					<p>Sets the player's NLR helper is enabled.</p>
 			</header>
@@ -7191,7 +7400,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L784">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L803">View source &raquo;</a>
 
 					<p>Sets the player's admin help.</p>
 			</header>
@@ -7224,7 +7433,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L744">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L763">View source &raquo;</a>
 
 					<p>Sets the player's new pass</p>
 			</header>
@@ -7257,7 +7466,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L754">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L773">View source &raquo;</a>
 
 					<p>Sets the player's new pass</p>
 			</header>
@@ -7289,7 +7498,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L764">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L783">View source &raquo;</a>
 
 					<p>Sets the player's new pass</p>
 			</header>
@@ -7321,7 +7530,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L814">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L833">View source &raquo;</a>
 
 					<p>Set's a player's fake steam name.</p>
 			</header>
@@ -7354,7 +7563,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L804">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L823">View source &raquo;</a>
 
 					<p>Sets the player's hidden status.</p>
 			</header>
@@ -7387,7 +7596,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L854">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L873">View source &raquo;</a>
 
 					<p>Set's a player's last death timestamp.</p>
 			</header>
@@ -7420,7 +7629,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L874">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L893">View source &raquo;</a>
 
 					<p>Set's a player's last death location name.</p>
 			</header>
@@ -7453,7 +7662,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L864">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L883">View source &raquo;</a>
 
 					<p>Set's a player's last death position.</p>
 			</header>
@@ -7635,7 +7844,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L894">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L913">View source &raquo;</a>
 
 					<p>Sets if a player is in a quiz.</p>
 			</header>
@@ -7701,7 +7910,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L727">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L746">View source &raquo;</a>
 
 					<p>Sets the player's new pass</p>
 			</header>
@@ -7720,42 +7929,6 @@ Random											</a>
 									<span class="tag default">optional</span>
 
 								<p> New pass type.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetPlayerGender">
-					<h1><span class="realm shared"></span></span>Player:SetPlayerGender(gender)</h1>
-				</a>
-
-
-					<div class="notice error">
-						<div class="title">Deprecated</div>
-						<p>This function is deprecated and may be removed in a future version.</p>
-					</div>
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L161">View source &raquo;</a>
-
-					<p>Set a players gender.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">gender</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> New gender string</p>
 							</li>
 					</ul>
 
@@ -7844,7 +8017,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L824">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L843">View source &raquo;</a>
 
 					<p>Set's a player's last scanned license plate.</p>
 			</header>
@@ -7877,7 +8050,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L834">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L853">View source &raquo;</a>
 
 					<p>Set's a player's last scanned vehicle name.</p>
 			</header>
@@ -7910,7 +8083,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L884">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L903">View source &raquo;</a>
 
 					<p>Sets if a player is in a quiz.</p>
 			</header>
@@ -7943,7 +8116,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L844">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L863">View source &raquo;</a>
 
 					<p>Set's a player's last scanned vehicle timestamp.</p>
 			</header>
@@ -8270,7 +8443,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L702">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L721">View source &raquo;</a>
 
 					<p>Get if a player is talking over radio.</p>
 			</header>
@@ -8463,7 +8636,7 @@ Random											</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L598">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/metatables/sh_player.lua#L617">View source &raquo;</a>
 
 					<p>Function that returns the current location of the player.</p>
 			</header>
