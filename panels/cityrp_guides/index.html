@@ -2,13 +2,13 @@
 
 <html>
 	<head>
-		<title>cityRPTooltipRow - CityRP Documentation</title>
+		<title>cityrp_guides - CityRP Documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="cityRPTooltipRow - CityRP Documentation" />
+		<meta property="og:title" content="cityrp_guides - CityRP Documentation" />
 		<meta property="og:site_name" content="CityRP Documentation" />
 
-			<meta property="og:description" content="Text container for `cityRPTooltip`." />
+			<meta property="og:description" content="Guides Page." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -145,7 +145,7 @@ SetWarrant											</a>
 									</details>
 							</li>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../panels/cityrptooltiprow/">cityRPTooltipRow</a></summary>
 
 									<ul>
@@ -382,7 +382,7 @@ SetText											</a>
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../panels/cityrp_guides/">cityrp_guides</a></summary>
 
 									<ul>
@@ -3807,223 +3807,27 @@ Random											</a>
 					<div class="wrapper">
 
 <header class="module">
-	<h1>cityRPTooltipRow</h1>
-	<h2>Text container for <code>cityRPTooltip</code>.</h2>
+	<h1>cityrp_guides</h1>
+	<h2>Guides Page.</h2>
 </header>
 
-<p> Rows are the main way of interacting with <code>cityRPTooltip</code>s. These derive from
- <a href="https://wiki.garrysmod.com/page/Category:DLabel">DLabel</a> panels, which means that making use of this panel
- will be largely the same as any DLabel panel.
- This has been taken from Helix: https://github.com/NebulousCloud/helix/blob/master/gamemode/core/derma/cl_tooltip.lua</p>
+<p>
+
+</p>
 
 	<h1 class="title">Functions</h1>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="IsMinimal">
-					<h1><span class="realm client"></span></span>cityRPTooltipRow:IsMinimal()</h1>
+				<a class="anchor" id="Init">
+					<h1><span class="realm client"></span></span>cityrp_guides:Init()</h1>
 				</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/derma/cl_tooltip.lua#L84">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/derma/cl_guides.lua#L8">View source &raquo;</a>
 
-					<p>Whether or not this tooltip row should be displayed in a minimal format.  This usually means no background and/or
- smaller font. You probably won't need this if you're using regular <code>cityrpTooltipRow</code> panels, but you should take into
- account if you're creating your own panels that derive from <code>cityrpTooltipRow</code>.</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">bool</span>
-
-								<p>True if this tooltip row should be displayed in a minimal format</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="Paint">
-					<h1><span class="realm client"></span></span>cityRPTooltipRow:Paint(width, height)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/derma/cl_tooltip.lua#L153">View source &raquo;</a>
-
-					<p>Called when the foreground of this row should be painted.  If you are overriding this in a subclassed panel,
- make sure you call <code>cityrpTooltipRow:PaintBackground</code> at the <em>beginning</em> of your function to make its style
- consistent with the rest of the framework.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">width</span>
-
-									<span class="tag"><span class="type">number</span></span>
-
-
-								<p> Width of the panel</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">height</span>
-
-									<span class="tag"><span class="type">number</span></span>
-
-
-								<p> Height of the panel</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="PaintBackground">
-					<h1><span class="realm client"></span></span>cityRPTooltipRow:PaintBackground(width, height)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/derma/cl_tooltip.lua#L141">View source &raquo;</a>
-
-					<p>Called when the background of this row should be painted.  This will paint the background with the
- <code>DrawImportantBackground</code> function set in the skin by default.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">width</span>
-
-									<span class="tag"><span class="type">number</span></span>
-
-
-								<p> Width of the panel</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">height</span>
-
-									<span class="tag"><span class="type">number</span></span>
-
-
-								<p> Height of the panel</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetBackgroundColor">
-					<h1><span class="realm client"></span></span>cityRPTooltipRow:SetBackgroundColor(color)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/derma/cl_tooltip.lua#L103">View source &raquo;</a>
-
-					<p>Sets the background color of this row.  This should be used sparingly to avoid overwhelming players with a
- bunch of different colors that could convey different meanings.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">color</span>
-
-									<span class="tag"><span class="type">Color</span></span>
-
-
-								<p> New color of the background. The alpha is clamped to 100-255 to ensure visibility</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetImportant">
-					<h1><span class="realm client"></span></span>cityRPTooltipRow:SetImportant()</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/derma/cl_tooltip.lua#L93">View source &raquo;</a>
-
-					<p>Sets this row to be more prominent with a larger font and more noticable background color.  This should usually
- be used once per tooltip as a title row. For example, item tooltips have one "important" row consisting of the
- item's name. Note that this function is a fire-and-forget function; you cannot revert a row back to it's regular state
- unless you set the font/colors manually.</p>
-			</header>
-
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SizeToContents">
-					<h1><span class="realm client"></span></span>cityRPTooltipRow:SizeToContents()</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/derma/cl_tooltip.lua#L112">View source &raquo;</a>
-
-					<p>Resizes this panel to fit its contents.  This should be called after setting the text.</p>
-			</header>
-
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SizeToContentsY">
-					<h1><span class="realm client"></span></span>cityRPTooltipRow:SizeToContentsY()</h1>
-				</a>
-
-					<div class="notice error">
-						<div class="title">Internal</div>
-						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
-					</div>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/derma/cl_tooltip.lua#L131">View source &raquo;</a>
-
-					<p>Resizes the height of this panel to fit its contents.</p>
+					<p>Initialize the panel and create child elements.</p>
 			</header>
 
 
