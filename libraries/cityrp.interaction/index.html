@@ -1550,39 +1550,39 @@ writeMessages											</a>
 
 
 										<li>
-											<span class="realm server"></span>
+											<span class="realm shared"></span>
+											<a href="../../libraries/cityrp.interaction/#cityrp.interaction.CanUse">
+CanUse											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../libraries/cityrp.interaction/#cityrp.interaction.Get">
 Get											</a>
 										</li>
 										<li>
-											<span class="realm server"></span>
+											<span class="realm shared"></span>
 											<a href="../../libraries/cityrp.interaction/#cityrp.interaction.GetAllByClass">
 GetAllByClass											</a>
 										</li>
 										<li>
-											<span class="realm server"></span>
+											<span class="realm shared"></span>
+											<a href="../../libraries/cityrp.interaction/#cityrp.interaction.GetValid">
+GetValid											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../libraries/cityrp.interaction/#cityrp.interaction.Has">
 Has											</a>
 										</li>
 										<li>
-											<span class="realm server"></span>
+											<span class="realm shared"></span>
 											<a href="../../libraries/cityrp.interaction/#cityrp.interaction.HasValid">
 HasValid											</a>
 										</li>
 										<li>
-											<span class="realm server"></span>
+											<span class="realm shared"></span>
 											<a href="../../libraries/cityrp.interaction/#cityrp.interaction.Register">
 Register											</a>
-										</li>
-										<li>
-											<span class="realm server"></span>
-											<a href="../../libraries/cityrp.interaction/#cityrp.interaction.Start">
-Start											</a>
-										</li>
-										<li>
-											<span class="realm server"></span>
-											<a href="../../libraries/cityrp.interaction/#cityrp.interaction.Use">
-Use											</a>
 										</li>
 
 
@@ -6572,238 +6572,65 @@ SupporterWarning											</a>
  Tap E: Regular entity use functionality
  Don't register interactions in this file, do it in some plugin or something.
  Data structure for an interaction looks like the following, everything is required unless otherwise stated:
-  data = {</p>
-<pre><code>id = "Interaction ID", -- The id of the interaction, must be unique for the given class
-name = "Interaction Name", -- The name of the interaction
-description = "Interaction Description", -- The description of the interaction
-condition = function(client, ent) -- The condition to check if the interaction should be shown, do context dependent checks here
-    return true -- True if the interaction should be shown, false if not
-end,
-action = function(client, ent) -- The action to perform when the interaction is clicked
-    print("Clicked!")
-end
-</code></pre>
-<p> }</p>
+  data = {
+ id = "Interaction ID", -- The id of the interaction, must be unique for the given class
+ name = "Interaction Name", -- The name of the interaction
+ description = "Interaction Description", -- The description of the interaction
+ condition = function(client, ent) -- The condition to check if the interaction should be shown, do context dependent checks here. This is executed on BOTH the client and server.
+ return true -- True if the interaction should be shown, false if not
+ end,
+ action = function(client, ent) -- The action to perform when the interaction is clicked
+ print("Clicked!")
+ end
+ }</p>
 
 	<h1 class="title">Functions</h1>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="cityrp.interaction.Get">
-					<h1><span class="realm server"></span></span>cityrp.interaction.Get(string, id)</h1>
+				<a class="anchor" id="cityrp.interaction.CanUse">
+					<h1><span class="realm shared"></span></span>cityrp.interaction.CanUse(client, entity, data)</h1>
 				</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sv_interaction.lua#L65">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_interaction.lua#L84">View source &raquo;</a>
 
-					<p>Gets an interaction by entity and id</p>
+					<div class="notice warning">
+						<div class="title">Incomplete</div>
+						<p>Documentation for this section is incomplete and needs expanding.</p>
+					</div>
 			</header>
 
 
 					<h3>Parameters</h3>
 
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">string</span>
-
-
-
-								<p> The entity class to get the interaction from</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">id</span>
-
-
-
-								<p> The id of the interaction</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a>
-
-								<p>The interaction</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="cityrp.interaction.GetAllByClass">
-					<h1><span class="realm server"></span></span>cityrp.interaction.GetAllByClass(string)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sv_interaction.lua#L116">View source &raquo;</a>
-
-					<p>Gets all interactions by entity</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">string</span>
-
-
-
-								<p> The entity class to get the interactions fromn</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a>
-
-								<p>All interactions for this entity</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="cityrp.interaction.Has">
-					<h1><span class="realm server"></span></span>cityrp.interaction.Has(entity, client)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sv_interaction.lua#L74">View source &raquo;</a>
-
-					<p>Checks if an entity has any interactions</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">entity</span>
-
-
-
-								<p> Entity to check for interactions</p>
-							</li>
-					</ul>
 
 					<ul>
 
 							<li>
 								<span class="tag parameter">client</span>
 
+									<span class="tag"><span class="type">Player</span></span>
 
-									<span class="tag default">optional</span>
 
-								<p> Player to check interaction validity for (if they can perform it)</p>
+								<p>
+
+</p>
 							</li>
 					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">boolean</span>
-
-								<p>If there is an interacton or not</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="cityrp.interaction.HasValid">
-					<h1><span class="realm server"></span></span>cityrp.interaction.HasValid(entity)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sv_interaction.lua#L97">View source &raquo;</a>
-
-					<p>Checks if this entity has any interactions that are avaliable for use</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
 
 					<ul>
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+									<span class="tag"><span class="type">Entity</span></span>
 
 
-								<p> The entity to check for interactions</p>
-							</li>
-					</ul>
+								<p>
 
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">boolean</span>
-
-								<p>If there is an interacton or not</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="cityrp.interaction.Register">
-					<h1><span class="realm server"></span></span>cityrp.interaction.Register(string, data, class, data, quickCond)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sv_interaction.lua#L47">View source &raquo;</a>
-
-					<p>Register an interaction</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">string</span>
-
-									<span class="tag"><span class="type">The</span></span>
-
-
-								<p> entity class to register the interaction on</p>
+</p>
 							</li>
 					</ul>
 
@@ -6820,6 +6647,334 @@ end
 </p>
 							</li>
 					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">boolean</span>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="cityrp.interaction.Get">
+					<h1><span class="realm shared"></span></span>cityrp.interaction.Get(class, id)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_interaction.lua#L66">View source &raquo;</a>
+
+					<p>Gets an interaction by entity and id</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">id</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									optional
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="cityrp.interaction.GetAllByClass">
+					<h1><span class="realm shared"></span></span>cityrp.interaction.GetAllByClass(class)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_interaction.lua#L76">View source &raquo;</a>
+
+					<p>Gets all interactions by entity class</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">class</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									optional
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="cityrp.interaction.GetValid">
+					<h1><span class="realm shared"></span></span>cityrp.interaction.GetValid(entity, client)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_interaction.lua#L129">View source &raquo;</a>
+
+					<div class="notice warning">
+						<div class="title">Incomplete</div>
+						<p>Documentation for this section is incomplete and needs expanding.</p>
+					</div>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">entity</span>
+
+									<span class="tag"><span class="type">Entity</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">client</span>
+
+									<span class="tag"><span class="type">Player</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table<string, table></a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="cityrp.interaction.Has">
+					<h1><span class="realm shared"></span></span>cityrp.interaction.Has(entity, client)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_interaction.lua#L153">View source &raquo;</a>
+
+					<p>Checks if an entity has any interactions</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">entity</span>
+
+									<span class="tag"><span class="type">Entity</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">client</span>
+
+									<span class="tag"><span class="type">Player</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">boolean</span>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="cityrp.interaction.HasValid">
+					<h1><span class="realm shared"></span></span>cityrp.interaction.HasValid(entity, client)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_interaction.lua#L111">View source &raquo;</a>
+
+					<p>Checks if this entity has any interactions that are avaliable for use</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">entity</span>
+
+									<span class="tag"><span class="type">Entity</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">client</span>
+
+									<span class="tag"><span class="type">Player</span></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">boolean</span>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="cityrp.interaction.Register">
+					<h1><span class="realm shared"></span></span>cityrp.interaction.Register(class, data, quickCond)</h1>
+				</a>
+
+
+
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_interaction.lua#L41">View source &raquo;</a>
+
+					<p>Register an interaction</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
 
 					<ul>
 
@@ -6865,122 +7020,17 @@ end
 
 
 		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="cityrp.interaction.Start">
-					<h1><span class="realm server"></span></span>cityrp.interaction.Start(client, entity)</h1>
-				</a>
-
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sv_interaction.lua#L136">View source &raquo;</a>
-
-					<p>Start the interaction menu on an entity, this will also start the menu on the client.
- This is intended to be used after a player succesfully indicates they wish to see the interaction menu on an entity.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">client</span>
-
-									<span class="tag"><span class="type">Player</span></span>
-
-
-								<p> who is calling the interaction menu</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">entity</span>
-
-									<span class="tag"><span class="type">Entity</span></span>
-
-
-								<p> call the interaction menu on</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="cityrp.interaction.Use">
-					<h1><span class="realm server"></span></span>cityrp.interaction.Use(client, id, entity)</h1>
-				</a>
-
-					<div class="notice error">
-						<div class="title">Internal</div>
-						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
-					</div>
-
-
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sv_interaction.lua#L170">View source &raquo;</a>
-
-					<p>Use an interaction on an entity</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">client</span>
-
-									<span class="tag"><span class="type">Player</span></span>
-
-
-								<p> who is using the interaction</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">id</span>
-
-									<span class="tag"><span class="type">The</span></span>
-
-
-								<p> id of the interaction</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">entity</span>
-
-									<span class="tag"><span class="type">Entity</span></span>
-
-
-								<p> to use the interaction on</p>
-							</li>
-					</ul>
-
-
-
-		</section>
 	<h1 class="title">Tables</h1>
 
 		<section class="method">
 			<header>
 				<a class="anchor" id="interactionData">
-					<h1><span class="realm server"></span></span>interactionData</h1>
+					<h1><span class="realm shared"></span></span>interactionData</h1>
 				</a>
 
 
 
-					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sv_interaction.lua#L30">View source &raquo;</a>
+					<a class="reference" href="https://github.com/FearlessGaming/CityRP/blob/master/gamemode/core/libraries/sh_interaction.lua#L29">View source &raquo;</a>
 
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
